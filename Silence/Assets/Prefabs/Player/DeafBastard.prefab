@@ -9717,6 +9717,7 @@ GameObject:
   - component: {fileID: 6577894244852968232}
   - component: {fileID: 4332942316594556322}
   - component: {fileID: 7910356310910671068}
+  - component: {fileID: -7701550964989212567}
   - component: {fileID: 6316581119124564773}
   - component: {fileID: 8976205168012217148}
   - component: {fileID: 5285547584846283083}
@@ -9742,6 +9743,7 @@ GameObject:
   - component: {fileID: 88797573535208947}
   - component: {fileID: 9075116306530476742}
   - component: {fileID: 4088242004591875224}
+  - component: {fileID: -9078081338335654085}
   m_Layer: 9
   m_Name: DeafBastard
   m_TagString: Player
@@ -10050,7 +10052,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e24d0eb5fa7640038713564930581a9, type: 3}
   m_Name: 
@@ -10077,6 +10079,41 @@ MonoBehaviour:
   TouchTheGroundFeedback: {fileID: 267473137947893830}
   MinimumAirTimeBeforeFeedback: 0.2
   StopWalkingWhenCollidingWithAWall: 0
+--- !u!114 &-7701550964989212567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432795268487586649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26531636c7df95449f93f01c6823ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartFeedbacks: {fileID: 2315148685804459975}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
+  WalkSpeed: 6
+  ResetHorizontalSpeedBtn: 0
+  MovementSpeedMultiplier: 1
+  AbilityMovementSpeedMultiplier: 1
+  PushSpeedMultiplier: 1
+  StateSpeedMultiplier: 1
+  FlipCharacterToFaceDirection: 1
+  ReadInput: 1
+  InstantAcceleration: 0
+  InputThreshold: 0.1
+  AirControl: 1
+  AllowFlipInTheAir: 1
+  ActiveAfterDeath: 0
+  TouchTheGroundFeedback: {fileID: 267473137947893830}
+  MinimumAirTimeBeforeFeedback: 0.2
+  StopWalkingWhenCollidingWithAWall: 0
+  runThresholdTime: 0.6
 --- !u!114 &6316581119124564773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10745,6 +10782,19 @@ MonoBehaviour:
   BlockingWeaponStates: 
   StunButton: 0
   ExitStunButton: 0
+--- !u!114 &-9078081338335654085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432795268487586649}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b680b1aac2ab094095977f714e5e44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updaterTime: 0
 --- !u!1 &1622702577201251552
 GameObject:
   m_ObjectHideFlags: 0

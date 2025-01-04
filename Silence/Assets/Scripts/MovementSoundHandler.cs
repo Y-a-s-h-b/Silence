@@ -1,11 +1,11 @@
 using MoreMountains.CorgiEngine;
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class MovementSoundHandler : MonoBehaviour
 {
-    CharacterHorizontalMovement charMove;
-    public Health charHealth;
+    CharacterHorizontalMovement charMove;    
     Vector2 oldPosition;
     Vector2 newPosition;
     public float updaterTime;
@@ -14,11 +14,8 @@ public class MovementSoundHandler : MonoBehaviour
     {
         charMove = GetComponent<CharacterHorizontalMovement>();
         oldPosition = transform.position;
-        StartCoroutine(CalculateDistance());
-        
+        StartCoroutine(CalculateDistance());        
     }
-
-
     
     IEnumerator CalculateDistance()
     {        
@@ -33,9 +30,7 @@ public class MovementSoundHandler : MonoBehaviour
 
     void UpdateSoundBar(Vector2 oldPosition, Vector3 newPosition)
     {
-        float disVal = Vector3.Distance(oldPosition, newPosition);
-        //Debug.Log(charHealth.CurrentHealth);
-        //charHealth.CurrentHealth = disVal+1;
-        charHealth.CurrentHealth = disVal+1;
+        float disVal = Vector3.Distance(oldPosition, newPosition);        
+        Debug.Log(Math.Round(disVal,2)*5f);
     }
 }
