@@ -2,30 +2,33 @@ using UnityEngine;
 
 public class AudioTesting : MonoBehaviour
 {
-    public int sampleSize = 1024; // Number of audio samples to analyze
-    public float audioLevel;     // The calculated audio level (RMS)
+    public float audioLevel; // Audio level in dB
 
-    private float[] audioSamples;
+    private const int sampleSize = 1024; // Number of audio samples to analyze
+    private float[] samples;
 
     void Start()
     {
-        audioSamples = new float[sampleSize];
+        samples = new float[sampleSize];
     }
 
     void Update()
     {
-        // Get audio samples from the AudioListener
-        AudioListener.GetOutputData(audioSamples, 0);
+        // Get audio data from the listener
+        AudioListener.GetOutputData(samples, 0);
 
-        // Calculate RMS (Root Mean Square) to represent the audio level
-        float sum = 0f;
-        for (int i = 0; i < sampleSize; i++)
+        // Calculate RMS (Root Mean Square) value of the audio samples
+        float rms = 0f;
+        foreach (float sample in samples)
         {
-            sum += audioSamples[i] * audioSamples[i];
+            rms += sample * sample;
         }
-        audioLevel = Mathf.Sqrt(sum / sampleSize);
+        rms = Mathf.Sqrt(rms / sampleSize);
 
-        // Log or use the audio level
-        Debug.Log($"Audio Level: {audioLevel}");
+        // Convert RMS to decibels (dB)
+        audioLevel = rms > 0 ? 20f * Mathf.Log10(rms) : -74.8f; // -80 dB is silence
+        audioLevel = Mathf.Clamp(audioLevel, -74.8f, 0f); // Clamp to a reasonable range
+
+        Debug.Log($"Audio Level: {audioLevel:F2} dB");
     }
 }

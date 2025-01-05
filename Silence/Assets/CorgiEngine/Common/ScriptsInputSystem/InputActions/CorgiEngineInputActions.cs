@@ -123,7 +123,7 @@ namespace MoreMountains.CorgiEngine
                     ""name"": ""Run"",
                     ""type"": ""Button"",
                     ""id"": ""6b5c4b16-7607-4f0a-ad5b-62efd798065d"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -333,7 +333,7 @@ namespace MoreMountains.CorgiEngine
                 {
                     ""name"": """",
                     ""id"": ""d6b36ab1-5730-4ee6-934d-0da3fd9ad3c7"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
@@ -344,7 +344,7 @@ namespace MoreMountains.CorgiEngine
                 {
                     ""name"": """",
                     ""id"": ""44ef3905-a71f-42e8-b234-953799ede87d"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
