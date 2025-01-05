@@ -9723,6 +9723,7 @@ GameObject:
   - component: {fileID: 5285547584846283083}
   - component: {fileID: 5572637428127691658}
   - component: {fileID: 2600788682234557398}
+  - component: {fileID: 8435766905576682756}
   - component: {fileID: 478682469526808790}
   - component: {fileID: 7389007516657526004}
   - component: {fileID: 3742416773171785225}
@@ -10052,7 +10053,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e24d0eb5fa7640038713564930581a9, type: 3}
   m_Name: 
@@ -10097,23 +10098,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WalkSpeed: 6
-  ResetHorizontalSpeedBtn: 0
-  MovementSpeedMultiplier: 1
-  AbilityMovementSpeedMultiplier: 1
-  PushSpeedMultiplier: 1
-  StateSpeedMultiplier: 1
-  FlipCharacterToFaceDirection: 1
-  ReadInput: 1
-  InstantAcceleration: 0
-  InputThreshold: 0.1
-  AirControl: 1
-  AllowFlipInTheAir: 1
-  ActiveAfterDeath: 0
-  TouchTheGroundFeedback: {fileID: 267473137947893830}
-  MinimumAirTimeBeforeFeedback: 0.2
-  StopWalkingWhenCollidingWithAWall: 0
   runThresholdTime: 0.6
+  sprintThresholdTime: 1.2
 --- !u!114 &6316581119124564773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10255,10 +10241,34 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
+  RunSpeed: 10
+  StopRunAtLowSpeed: 0
+  RunLowSpeedThreshold: 1
+  ReadInput: 0
+  AutoRun: 0
+  AutoRunThreshold: 0.6
+--- !u!114 &8435766905576682756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432795268487586649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e40671150cb0f544a9258f72469f839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BlockingWeaponStates: 
   RunSpeed: 16
   StopRunAtLowSpeed: 0
   RunLowSpeedThreshold: 1
-  ReadInput: 1
+  ReadInput: 0
   AutoRun: 0
   AutoRunThreshold: 0.6
 --- !u!114 &478682469526808790

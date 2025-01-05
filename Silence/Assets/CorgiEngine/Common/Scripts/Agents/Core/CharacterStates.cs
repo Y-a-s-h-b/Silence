@@ -31,6 +31,7 @@ namespace MoreMountains.CorgiEngine
 			Walking,
 			Falling,
 			Running,
+			Sprinting,
 			Crouching,
 			Crawling, 
 			Dashing,

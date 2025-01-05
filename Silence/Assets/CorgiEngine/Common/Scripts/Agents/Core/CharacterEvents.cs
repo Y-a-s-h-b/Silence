@@ -31,6 +31,7 @@ namespace MoreMountains.CorgiEngine
 		LookUp,
 		Roll,
 		Run,
+		Sprint,
 		Stun,
 		Swap,
 		TimeControl,
