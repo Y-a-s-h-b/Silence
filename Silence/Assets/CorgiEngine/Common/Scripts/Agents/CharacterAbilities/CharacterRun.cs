@@ -163,6 +163,7 @@ namespace MoreMountains.CorgiEngine
 			// if we're not already running, we trigger our sounds
 			if (_movement.CurrentState != CharacterStates.MovementStates.Running)
 			{
+				Debug.Log("PlayFeedback");
 				PlayAbilityStartFeedbacks();
 				MMCharacterEvent.Trigger(_character, MMCharacterEventTypes.Run, MMCharacterEvent.Moments.Start);
 			}
