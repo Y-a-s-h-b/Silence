@@ -14,11 +14,8 @@ public class MicInput : MonoBehaviour
     {
         AudioSource micAudioSource = GetComponent<AudioSource>();
         
-        micAudioSource.clip = Microphone.Start(null, true, 100, 44100);
-        micAudioSource.loop = true;
-        while (!(Microphone.GetPosition(null) > 0)) {
-
-        }
+       // micAudioSource.clip = Microphone.Start(null, true, 100, 44100);
+       // micAudioSource.loop = true;
 
         text.text = "Hearing microphone";
 
