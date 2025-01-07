@@ -56,7 +56,7 @@ public class CharacterMovementController : CharacterAbility
             runFunOnce = true;
             charRun.ShouldRun = false;
             charSprint.ShouldSprint = false;
-            Debug.Log("cancle speed move");
+            //Debug.Log("cancle speed move");
         }
     }
 
@@ -64,12 +64,12 @@ public class CharacterMovementController : CharacterAbility
     {
         charRun.ShouldRun = false;
         charSprint.ShouldSprint = true;
-        Debug.Log("change to sprint");
+        //Debug.Log("change to sprint");
     }
 
     void ChangeToRunning()
     {
         charRun.ShouldRun = true;
-        Debug.Log("change to run");
+        //Debug.Log("change to run");
     }
 }
