@@ -9744,7 +9744,7 @@ GameObject:
   - component: {fileID: 88797573535208947}
   - component: {fileID: 9075116306530476742}
   - component: {fileID: 4088242004591875224}
-  - component: {fileID: -9078081338335654085}
+  - component: {fileID: 3099449015128681982}
   m_Layer: 9
   m_Name: DeafBastard
   m_TagString: Player
@@ -10001,7 +10001,7 @@ MonoBehaviour:
   CurrentHealth: 0
   TemporarilyInvulnerable: 0
   PostDamageInvulnerable: 0
-  InitialHealth: 100
+  InitialHealth: 50
   MaximumHealth: 100
   Invulnerable: 0
   ImmuneToDamage: 0
@@ -10339,7 +10339,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WallClingingSlowFactor: 0.2
+  WallClingingSlowFactor: 0.15
   RaycastVerticalOffset: 0
   WallClingingTolerance: 0.3
   ResetVerticalForceOnEntry: 1
@@ -10793,19 +10793,19 @@ MonoBehaviour:
   BlockingWeaponStates: 
   StunButton: 0
   ExitStunButton: 0
---- !u!114 &-9078081338335654085
+--- !u!114 &3099449015128681982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b680b1aac2ab094095977f714e5e44c, type: 3}
+  m_Script: {fileID: 11500000, guid: fd37b3b1772534a4e9e06162529e4945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updaterTime: 0
+  audioLevel: 0
 --- !u!1 &1622702577201251552
 GameObject:
   m_ObjectHideFlags: 0
@@ -38152,7 +38152,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da00467d14642e4449d99327701d5737, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
