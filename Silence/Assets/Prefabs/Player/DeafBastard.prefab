@@ -38545,7 +38545,7 @@ MonoBehaviour:
           ButtonText: 
         Owner: {fileID: 2145035329045699151}
         DebugActive: 0
-        SoundFX: {fileID: 8300000, guid: 10529216ae6632a45a2ade1ca8f87633, type: 3}
+        SoundFX: {fileID: 8300000, guid: 5b4992e827eca384f833b3f4a266b4ce, type: 3}
         Loop: 0
 --- !u!1 &5275435761655739496
 GameObject:
@@ -85649,7 +85649,7 @@ MonoBehaviour:
           ButtonText: 
         Owner: {fileID: 5241443951052793499}
         DebugActive: 0
-        SoundFX: {fileID: 8300000, guid: 10529216ae6632a45a2ade1ca8f87633, type: 3}
+        SoundFX: {fileID: 8300000, guid: 5b4992e827eca384f833b3f4a266b4ce, type: 3}
         Loop: 0
 --- !u!1 &8848425778028937597
 GameObject:
