@@ -1,15 +1,17 @@
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class AudioTesting : MonoBehaviour
 {
     public float audioLevel; // Audio level in dB
-
+    private Health health;
     private const int sampleSize = 1024; // Number of audio samples to analyze
     private float[] samples;
 
     void Start()
     {
         samples = new float[sampleSize];
+        health = GetComponent<Health>();
     }
 
     void Update()
@@ -29,6 +31,8 @@ public class AudioTesting : MonoBehaviour
         audioLevel = rms > 0 ? 20f * Mathf.Log10(rms) : -74.8f; // -80 dB is silence
         audioLevel = Mathf.Clamp(audioLevel, -74.8f, 0f); // Clamp to a reasonable range
 
-        Debug.Log($"Audio Level: {audioLevel:F2} dB");
+        float n = ((audioLevel + 74.8f) / 74.8f) * 100f;
+        Debug.Log($"Audio Level: {audioLevel:F2} dB" + n);
+        health.SetHealth(Mathf.RoundToInt(n) + 10, gameObject);        
     }
 }
