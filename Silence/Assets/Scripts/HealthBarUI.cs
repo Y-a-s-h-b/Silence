@@ -16,7 +16,7 @@ public class HealthBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(progressBar.BarProgress);
+        //Debug.Log(progressBar.BarProgress);
         healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - (progressBar.BarProgress * healthBar.SegmentCount.Value);
     }
 }
