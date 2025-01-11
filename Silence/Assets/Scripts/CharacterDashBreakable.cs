@@ -5,12 +5,40 @@ using Cainos.PixelArtPlatformer_Dungeon;
 
 public class CharacterDashBreakable : CharacterDash
 {
+    public float dashBreakDetectDistance = 5f;
+    public LayerMask dashBreakableLayer;
+    public override void ProcessAbility()
+    {
+        base.ProcessAbility();
+        ComputeBreakableCollisionRay();
+    }
+
+    private void ComputeBreakableCollisionRay()
+    {
+        var direction = _character.IsFacingRight ? Vector2.right : Vector2.left;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position+new Vector3(0,1,0), direction, dashBreakDetectDistance, dashBreakableLayer); ;
+        if (hit.collider != null)
+        {
+            if (_movement.CurrentState == CharacterStates.MovementStates.Dashing)
+            {
+                hit.transform.GetComponent<Collider2D>().enabled = false;
+                hit.transform.gameObject.GetComponent<Door>().IsOpened = true;                
+
+            }
+            Debug.Log("collided with obstacle");
+        }
+        // Debug the ray in the scene view
+        Debug.DrawRay(transform.position + new Vector3(0, 1, 0), direction * dashBreakDetectDistance, Color.red);
+    }
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("in");
         if (collision.gameObject.layer == LayerMask.NameToLayer("DashBreakableObstacle"))
         {
             if (_movement.CurrentState == CharacterStates.MovementStates.Dashing)
             {
+                Debug.Log("in");
                 collision.gameObject.GetComponent<Door>().IsOpened = true;
                 collision.gameObject.GetComponent<Collider2D>().enabled = false;
             }
@@ -18,6 +46,8 @@ public class CharacterDashBreakable : CharacterDash
     }
     private void OnTriggerEnter2D(Collider2D collision) //this breaks the obstacle
     {
+
+        Debug.Log("in");
         if (collision.gameObject.layer == LayerMask.NameToLayer("DashBreakableObstacle"))
         {
             if (_movement.CurrentState == CharacterStates.MovementStates.Dashing)
@@ -26,7 +56,7 @@ public class CharacterDashBreakable : CharacterDash
             }
         }
     }
-
+    */
     protected override void ComputeDashDirection()
     {
         base.ComputeDashDirection();
