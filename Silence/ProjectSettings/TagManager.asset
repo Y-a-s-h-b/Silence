@@ -38,7 +38,7 @@ TagManager:
   - MidHeightOneWayPlatforms
   - Pushables
   - Stairs
-  - 
+  - DashBreakableObstacle
   - 
   - 
   m_SortingLayers:
