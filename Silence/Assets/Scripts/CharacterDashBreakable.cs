@@ -12,6 +12,7 @@ public class CharacterDashBreakable : CharacterDash
             if (_movement.CurrentState == CharacterStates.MovementStates.Dashing)
             {
                 collision.gameObject.GetComponent<Door>().IsOpened = true;
+                collision.gameObject.GetComponent<Collider2D>().enabled = false;
             }
         }
     }

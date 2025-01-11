@@ -7,7 +7,7 @@ using UnityEditor;
 
 namespace MoreMountains.CorgiEngine
 {
-	public struct CharacterAbilityTypePair
+	/*public struct CharacterAbilityTypePair
 	{
 		public System.Type AbilityType;
 		public string AbilityName;
@@ -22,7 +22,7 @@ namespace MoreMountains.CorgiEngine
 		public static List<CharacterAbilityTypePair> _typesAndNames = new List<CharacterAbilityTypePair>();
 
 		protected SerializedProperty _abilityType;
-		protected int _abilityIndex = 0;
+		protected int _abilityIndex = 8;
         
 		protected int _lastIndex = 0;
 		protected string _currentTypeAsString;
@@ -108,5 +108,5 @@ namespace MoreMountains.CorgiEngine
 
 			serializedObject.ApplyModifiedProperties();
 		}
-	}    
+	}  */ 
 }

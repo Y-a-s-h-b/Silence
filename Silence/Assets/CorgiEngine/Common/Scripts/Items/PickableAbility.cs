@@ -1,4 +1,9 @@
 ﻿using UnityEngine;
+using MoreMountains.CorgiEngine;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using MoreMountains.Feedbacks;
 
 namespace MoreMountains.CorgiEngine
 {
@@ -8,6 +13,7 @@ namespace MoreMountains.CorgiEngine
 	[AddComponentMenu("Corgi Engine/Items/Pickable Ability")]
 	public class PickableAbility : PickableItem
 	{
+		public MMF_Player DestroyFeedback;
 		public enum Methods
 		{
 			Permit,
@@ -21,15 +27,14 @@ namespace MoreMountains.CorgiEngine
 		/// whether or not only characters of Player type should be able to pick this 
 		[Tooltip("whether or not only characters of Player type should be able to pick this")]
 		public bool OnlyPickableByPlayerCharacters = true;
-
-		[HideInInspector] public string AbilityTypeAsString;
-
-		/// <summary>
-		/// Checks if the object is pickable 
-		/// </summary>
-		/// <returns>true</returns>
-		/// <c>false</c>
-		protected override bool CheckIfPickable()
+		public string AbilityTypeAsString;
+        public float timeToFreeze;
+        /// <summary>
+        /// Checks if the object is pickable 
+        /// </summary>
+        /// <returns>true</returns>
+        /// <c>false</c>
+        protected override bool CheckIfPickable()
 		{
 			_character = _pickingCollider.GetComponent<Character>();
 
@@ -52,8 +57,43 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected override void Pick(GameObject picker)
 		{
+			
 			bool newState = Method == Methods.Permit ? true : false;
 			(_character.gameObject.GetComponent(AbilityTypeAsString) as CharacterAbility)?.PermitAbility(newState);
-		}
+            StartCoroutine(FreezePlayerFor(timeToFreeze, _character));
+            StartCoroutine(MoveObjectCoroutine(this.transform, _character.gameObject.transform.position + new Vector3(0, 3, 0)));
+        }
+        public IEnumerator FreezePlayerFor(float timeToFreeze, Character playerGO)
+        {
+            _character.ChangeCharacterConditionTemporarily(CharacterStates.CharacterConditions.Frozen,timeToFreeze,true,false);
+            //_character.Freeze();
+			_character.Reset();
+            _character._animator.SetBool("AbilityGain", true);
+            yield return new WaitForSeconds(timeToFreeze);
+            _character._animator.SetBool("AbilityGain", false);
+            //Destroy(gameObject);
+        }
+        private IEnumerator MoveObjectCoroutine(Transform objectToMove, Vector3 targetPosition)
+        {
+            Vector3 startPosition = objectToMove.position;
+            Vector3 distance = targetPosition - startPosition;
+            float elapsedTime = 0f;
+
+            while (elapsedTime < timeToFreeze)
+            {
+                // Calculate the movement for this frame
+                float deltaTime = Time.deltaTime;
+                Vector3 movement = distance * (deltaTime / timeToFreeze);
+                objectToMove.Translate(movement);
+
+                elapsedTime += deltaTime;
+                yield return null; // Wait until the next frame
+            }
+
+            // Ensure the object ends at the exact target position
+            objectToMove.position = targetPosition;
+			DestroyFeedback.PlayFeedbacks();
+        }
+    
 	}
 }

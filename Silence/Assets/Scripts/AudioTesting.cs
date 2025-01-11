@@ -54,6 +54,6 @@ public class AudioTesting : MonoBehaviour
         }
 
         // For testing, log the values
-        Debug.Log($"Current: {currentValue}, Smoothed: {smoothedValue}");
+        //Debug.Log($"Current: {currentValue}, Smoothed: {smoothedValue}");
     }
 }

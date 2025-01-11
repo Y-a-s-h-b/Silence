@@ -6,8 +6,8 @@ public class AbilityEnabler : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public string ablilityName;
-    public float timeToFreeze;
-    private void OnCollisionEnter2D(Collision2D collision)
+
+/*    private void OnCollisionEnter2D(Collision2D collision)
     {
 
         Debug.Log("colliderd");
@@ -19,13 +19,8 @@ public class AbilityEnabler : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
         }
-    }
+    }*/
 
-    IEnumerator FreezePlayerFor(float timeToFreeze, GameObject playerGO)
-    {
-        playerGO.GetComponent<Character>().ConditionState.ChangeState(CharacterStates.CharacterConditions.Frozen);
-        yield return new WaitForSeconds(timeToFreeze);
-        playerGO.GetComponent<Character>().ConditionState.ChangeState(CharacterStates.CharacterConditions.Normal);
-        Destroy(gameObject);
-    } 
+
+   
 }
