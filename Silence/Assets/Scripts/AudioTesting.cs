@@ -37,7 +37,7 @@ public class AudioTesting : MonoBehaviour
         currentValue = ((audioLevel + 74.8f) / 74.8f) * 100f;
         //Debug.Log($"Audio Level: {audioLevel:F2} dB" + n);
         BarSetter();
-        health.SetHealth(Mathf.RoundToInt(smoothedValue) + 10, gameObject);        
+        health.SetHealth(Mathf.RoundToInt(smoothedValue), gameObject);        
     }
 
     void BarSetter()

@@ -65,13 +65,15 @@ namespace MoreMountains.CorgiEngine
         }
         public IEnumerator FreezePlayerFor(float timeToFreeze, Character playerGO)
         {
-            _character.ChangeCharacterConditionTemporarily(CharacterStates.CharacterConditions.Frozen,timeToFreeze,true,false);
-            //_character.Freeze();
-			_character.Reset();
+            _character.ChangeCharacterConditionTemporarily(CharacterStates.CharacterConditions.Stunned,timeToFreeze,true,false);
             _character._animator.SetBool("AbilityGain", true);
+			_character.Reset();
             yield return new WaitForSeconds(timeToFreeze);
+            
+        }
+		public void SetTriggerFalse()
+		{
             _character._animator.SetBool("AbilityGain", false);
-            //Destroy(gameObject);
         }
         private IEnumerator MoveObjectCoroutine(Transform objectToMove, Vector3 targetPosition)
         {
@@ -79,11 +81,11 @@ namespace MoreMountains.CorgiEngine
             Vector3 distance = targetPosition - startPosition;
             float elapsedTime = 0f;
 
-            while (elapsedTime < timeToFreeze)
+            while (elapsedTime < 1)
             {
                 // Calculate the movement for this frame
                 float deltaTime = Time.deltaTime;
-                Vector3 movement = distance * (deltaTime / timeToFreeze);
+                Vector3 movement = distance * (deltaTime / 1);
                 objectToMove.Translate(movement);
 
                 elapsedTime += deltaTime;
