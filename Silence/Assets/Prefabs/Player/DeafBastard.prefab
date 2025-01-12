@@ -10079,7 +10079,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WalkSpeed: 6
+  WalkSpeed: 2
   ResetHorizontalSpeedBtn: 0
   MovementSpeedMultiplier: 1
   AbilityMovementSpeedMultiplier: 1
@@ -10115,6 +10115,7 @@ MonoBehaviour:
   BlockingWeaponStates: 
   runThresholdTime: 0.6
   sprintThresholdTime: 1
+  stateTextTest: {fileID: 0}
 --- !u!114 &6316581119124564773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10216,7 +10217,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  RunSpeed: 10
+  RunSpeed: 15
   StopRunAtLowSpeed: 0
   RunLowSpeedThreshold: 1
   ReadInput: 0
@@ -10240,7 +10241,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  RunSpeed: 16
+  RunSpeed: 15
   StopRunAtLowSpeed: 0
   RunLowSpeedThreshold: 1
   ReadInput: 0
@@ -10336,7 +10337,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WallJumpForce: {x: 25, y: 4}
+  WallJumpForce: {x: 40, y: 6}
   ForceMode: 0
   ForceFlipTowardsDirection: 0
   ShouldReduceNumberOfJumpsLeft: 1

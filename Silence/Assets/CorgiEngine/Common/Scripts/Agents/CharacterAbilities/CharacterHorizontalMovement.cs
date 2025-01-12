@@ -110,8 +110,9 @@ namespace MoreMountains.CorgiEngine
 		/// On Initialization, we set our movement speed to WalkSpeed.
 		/// </summary>
 		protected override void Initialization()
-		{
+		{			
 			base.Initialization ();
+			Debug.Log("inintilizing walking");
 			MovementSpeed = WalkSpeed;
 			MovementSpeedMultiplier = 1f;
 			AbilityMovementSpeedMultiplier = 1f;
@@ -125,7 +126,7 @@ namespace MoreMountains.CorgiEngine
 		public override void ProcessAbility()
 		{
 			base.ProcessAbility();
-
+			
 			HandleHorizontalMovement();
 			DetectWalls(true);
 		}
@@ -180,6 +181,11 @@ namespace MoreMountains.CorgiEngine
 				StopStartFeedbacks();
 			}
 
+			if(_movement.CurrentState == CharacterStates.MovementStates.Walking)
+            {
+				MovementSpeed = WalkSpeed;
+            }
+
 			// if movement is prevented, or if the character is dead/frozen/can't move, we exit and do nothing
 			if (!ActiveAfterDeath)
 			{
@@ -190,7 +196,6 @@ namespace MoreMountains.CorgiEngine
 					return;
 				}
 			}
-
 			// check if we just got grounded
 			CheckJustGotGrounded();
 			StoreLastTimeGrounded();

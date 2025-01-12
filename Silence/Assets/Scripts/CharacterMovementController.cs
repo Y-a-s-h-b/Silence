@@ -1,5 +1,6 @@
 using MoreMountains.CorgiEngine;
 using System;
+using TMPro;
 using UnityEngine;
 
 public class CharacterMovementController : CharacterAbility
@@ -13,6 +14,8 @@ public class CharacterMovementController : CharacterAbility
     private CharacterHorizontalMovement charMove;
     private CharacterRun charRun;
     private CharacterSprint charSprint;
+    public TextMeshProUGUI stateTextTest;
+    
 
     protected override void Initialization()
     {
@@ -24,6 +27,7 @@ public class CharacterMovementController : CharacterAbility
     
     private void Update()
     {
+        stateTextTest.text  =  _character.MovementState.CurrentState.ToString();
         if (Input.GetKeyDown(KeyCode.K))
         {
             charRun.ShouldRun = true;
