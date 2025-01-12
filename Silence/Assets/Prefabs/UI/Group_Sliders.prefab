@@ -760,7 +760,7 @@ RectTransform:
   m_GameObject: {fileID: 6615298380621540427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2323731321235381863}
@@ -1188,6 +1188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
+      propertyPath: m_MinValue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
@@ -1208,18 +1213,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5979795037287020385}
+    - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetVolumeSfx
+      value: UpdateVolume
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MoreMountains.Tools.MMSoundManager, MoreMountains.Tools
+      value: MoreMountains.Tools.MMSoundManagerTrackVolumeSlider, MoreMountains.Tools
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
@@ -1331,6 +1341,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider01_Demo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6155405589680600775, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369112885205364570, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
+      propertyPath: Track
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1342,6 +1362,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 765574054540580923}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5979795037287020385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6369112885205364570, guid: a48e0580a62a34a35a7987b3a7612d7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 765574054540580923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487bb7f14f728c74ca3bfc0020509b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6762185382584553896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1382,6 +1414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
+      propertyPath: m_MinValue
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
       propertyPath: m_WholeNumbers
       value: 0
       objectReference: {fileID: 0}
@@ -1389,7 +1426,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 452643555303931972}
+      objectReference: {fileID: 413127937933311730}
     - target: {fileID: 4320151260979719818, guid: a48e0580a62a34a35a7987b3a7612d7f,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1505,14 +1542,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slider01_Demo
       objectReference: {fileID: 0}
+    - target: {fileID: 6155405589680600775, guid: a48e0580a62a34a35a7987b3a7612d7f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48e0580a62a34a35a7987b3a7612d7f, type: 3}
---- !u!114 &452643555303931972 stripped
+--- !u!114 &413127937933311730 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6597781345857458668, guid: a48e0580a62a34a35a7987b3a7612d7f,
+  m_CorrespondingSourceObject: {fileID: 6369112885205364570, guid: a48e0580a62a34a35a7987b3a7612d7f,
     type: 3}
   m_PrefabInstance: {fileID: 6762185382584553896}
   m_PrefabAsset: {fileID: 0}
