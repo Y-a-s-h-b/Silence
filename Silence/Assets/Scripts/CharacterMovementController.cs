@@ -27,7 +27,7 @@ public class CharacterMovementController : CharacterAbility
     
     private void Update()
     {
-        stateTextTest.text  =  _character.MovementState.CurrentState.ToString();
+        if(stateTextTest != null)   stateTextTest.text  =  _character.MovementState.CurrentState.ToString();
         if (Input.GetKeyDown(KeyCode.K))
         {
             charRun.ShouldRun = true;
