@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AbilityTrigger : MonoBehaviour
 {
-    public string[] AbilitiesToToggle;
+    public Abilities[] AbilitiesToToggle;
 
     public bool SlowPlayer;
     public float SlowSpeedMultiplier = 0.5f;
