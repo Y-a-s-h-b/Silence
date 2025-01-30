@@ -1,31 +1,46 @@
 using MoreMountains.CorgiEngine;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioTesting : MonoBehaviour
 {
     public float audioLevel; // Audio level in dB
+    public AudioMixer audioMixer;
+    public AudioMixerGroup amg;
     private Health health;
     private const int sampleSize = 1024; // Number of audio samples to analyze
     private float[] samples;
     private float smoothedValue;
     private float currentValue;
     public float lerpSpeed = 0.05f;
+    
     void Start()
     {
         samples = new float[sampleSize];
         health = GetComponent<Health>();
         smoothedValue = 0f;
+        float val = 0;
+        //audioMixer.GetFloat("SfxVolume" ,out val);
+        
+
+        //float sfxGroup = audioMixer.GetFloat()
+        
     }
 
     void Update()
     {
+        float val = 0;
+        audioMixer.GetFloat("SfxVolume", out val);
+        //Debug.Log("value vol" + val);
         // Get audio data from the listener
         AudioListener.GetOutputData(samples, 0);
+        //AudioListener
 
         // Calculate RMS (Root Mean Square) value of the audio samples
         float rms = 0f;
         foreach (float sample in samples)
         {
+            //Debug.Log("audio:"+sample.ToString());
             rms += sample * sample;
         }
         rms = Mathf.Sqrt(rms / sampleSize);
@@ -37,7 +52,7 @@ public class AudioTesting : MonoBehaviour
         currentValue = ((audioLevel + 74.8f) / 74.8f) * 100f;
         //Debug.Log($"Audio Level: {audioLevel:F2} dB" + n);
         BarSetter();
-        health.SetHealth(Mathf.RoundToInt(smoothedValue), gameObject);        
+        //health.SetHealth(Mathf.RoundToInt(smoothedValue), gameObject);        
     }
 
     void BarSetter()

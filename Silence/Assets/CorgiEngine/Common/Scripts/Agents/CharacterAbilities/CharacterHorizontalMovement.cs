@@ -112,7 +112,6 @@ namespace MoreMountains.CorgiEngine
 		protected override void Initialization()
 		{			
 			base.Initialization ();
-			Debug.Log("inintilizing walking");
 			MovementSpeed = WalkSpeed;
 			MovementSpeedMultiplier = 1f;
 			AbilityMovementSpeedMultiplier = 1f;

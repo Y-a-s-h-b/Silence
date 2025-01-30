@@ -173,11 +173,12 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected virtual void Update()
 		{
+			Debug.Log("in");
 			if (_weaponAim == null)
 			{
 				return;
 			}
-
+			Debug.Log(" real in");
 			DetermineRaycastOrigin();
 			ScanIfNeeded();
 			HandleTarget();
@@ -193,7 +194,7 @@ namespace MoreMountains.CorgiEngine
 		protected virtual void DetermineRaycastOrigin()
 		{
 			if (_character != null)
-			{
+			{ 
 				_facingDirection = _character.IsFacingRight ? Vector2.right : Vector2.left;
 				if (AimOrigin == AimOrigins.Owner)
 				{

@@ -67,6 +67,7 @@ namespace MoreMountains.CorgiEngine
 		/// <returns></returns>
 		public override bool Decide()
 		{
+			
 			return DetectTarget();
 		}
 

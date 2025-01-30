@@ -337,7 +337,7 @@ namespace MoreMountains.CorgiEngine
 		{
 			_characterHorizontalMovement.ReadInput = true;
 			_characterHorizontalMovement.AbilityMovementSpeedMultiplier = _originalMultiplier;
-	        
+			_characterHorizontalMovement.SetHorizontalMove(0f);
 			if (PreventDamageCollisionsDuringRoll)
 			{
 				if (_health != null)
@@ -361,10 +361,12 @@ namespace MoreMountains.CorgiEngine
 			{
 				if (_controller.State.IsGrounded)
 				{
+					Debug.Log("goinngt to idle "+ gameObject.GetInstanceID());
 					_movement.ChangeState(CharacterStates.MovementStates.Idle);
 				}
 				else
 				{
+					Debug.Log("going to prev state");
 					_movement.RestorePreviousState();
 				}                
 			}
