@@ -8,6 +8,7 @@ TagManager:
   - Music
   - Background
   - NoMask
+  - HellCheckPoint
   layers:
   - Default
   - TransparentFX
