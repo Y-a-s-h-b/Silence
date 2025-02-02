@@ -16,6 +16,11 @@ public class Vines : MonoBehaviour
 
     private bool isTrapped = false;
 
+    private void Start()
+    {
+        trappedCharacter = LevelManager.Instance.SceneCharacters[0];
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GetComponent<SpriteRenderer>().color = Color.red;
@@ -55,16 +60,16 @@ public class Vines : MonoBehaviour
 
     private void RestrictCharacter()
     {
+        //Other Abilities
+        trappedCharacter.GetComponent<CharacterJump>().AbilityPermitted = false;
+        trappedCharacter.GetComponent<CharacterDashBreakable>().AbilityPermitted = false;
+        
         //Speed Multiplier
         characterHorizontalMovement = trappedCharacter.GetComponent<CharacterHorizontalMovement>();
         originalSpeedMultiplier = characterHorizontalMovement.MovementSpeedMultiplier;
         abilitySpeedMultiplier = characterHorizontalMovement.AbilityMovementSpeedMultiplier;
         characterHorizontalMovement.MovementSpeedMultiplier = speedMultiplier;
         characterHorizontalMovement.AbilityMovementSpeedMultiplier = speedMultiplier;
-
-        //Other Abilities
-        trappedCharacter.GetComponent<CharacterJump>().AbilityPermitted = false;
-        trappedCharacter.GetComponent<CharacterDashBreakable>().AbilityPermitted = false;
     }
 
     private void FreeCharacter()
@@ -83,8 +88,6 @@ public class Vines : MonoBehaviour
         //Other Ability 
         trappedCharacter.GetComponent<CharacterJump>().AbilityPermitted = true;
         trappedCharacter.GetComponent<CharacterDashBreakable>().AbilityPermitted = true;
-
-        trappedCharacter = null;
     }
 
     #region Reworked
