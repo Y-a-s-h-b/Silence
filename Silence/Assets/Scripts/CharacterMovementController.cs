@@ -40,7 +40,7 @@ public class CharacterMovementController : CharacterAbility, MMEventListener<MMC
             switch (characterEvent.EventType)
             {
                 case MMCharacterEventTypes.Jump:
-                    Debug.Log("prev state was " + prevOnFootMovementState);                    
+                                   
                     Invoke("ChangeJumpPostBool", 0.5f);                    
                     break;
             }
