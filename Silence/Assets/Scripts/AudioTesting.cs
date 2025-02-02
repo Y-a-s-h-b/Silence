@@ -5,14 +5,15 @@ using UnityEngine.Audio;
 public class AudioTesting : MonoBehaviour
 {
     public float audioLevel; // Audio level in dB
-    public AudioMixer audioMixer;
-    public AudioMixerGroup amg;
+    public float lerpSpeed = 0.05f;
+    public float audioBar;
+    private AudioMixer audioMixer;
+    private AudioMixerGroup amg;
     private Health health;
     private const int sampleSize = 1024; // Number of audio samples to analyze
     private float[] samples;
     private float smoothedValue;
     private float currentValue;
-    public float lerpSpeed = 0.05f;
     
     void Start()
     {
@@ -29,8 +30,8 @@ public class AudioTesting : MonoBehaviour
 
     void Update()
     {
-        float val = 0;
-        audioMixer.GetFloat("SfxVolume", out val);
+        //float val = 0;
+        //audioMixer.GetFloat("SfxVolume", out val);
         //Debug.Log("value vol" + val);
         // Get audio data from the listener
         AudioListener.GetOutputData(samples, 0);
@@ -52,7 +53,8 @@ public class AudioTesting : MonoBehaviour
         currentValue = ((audioLevel + 74.8f) / 74.8f) * 100f;
         //Debug.Log($"Audio Level: {audioLevel:F2} dB" + n);
         BarSetter();
-        //health.SetHealth(Mathf.RoundToInt(smoothedValue), gameObject);        
+        audioBar = Mathf.RoundToInt(smoothedValue);
+        //Debug.Log("audio:" + audioBar);
     }
 
     void BarSetter()
