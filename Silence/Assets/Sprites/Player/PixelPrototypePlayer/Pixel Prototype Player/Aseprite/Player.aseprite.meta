@@ -2,7 +2,267 @@ fileFormatVersion: 2
 guid: b380334b9776bcc439e3ddfa8f06470a
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbDownLeft
+    second: {fileID: 7400000, guid: 8bc9185c53663a64abff55008cc8b4d9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbDownRight
+    second: {fileID: 7400000, guid: c60c1bf027e065f4ca8744112c218377, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbGrab
+    second: {fileID: 7400000, guid: bf2b3ae381c15324391444235e71f89b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbIdle
+    second: {fileID: 7400000, guid: 918fef6257c920e4985f174826282cdc, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbJumpPrepare
+    second: {fileID: 7400000, guid: 67ce686a7bfbff24aba60cb7bb8b4b3e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbLeft
+    second: {fileID: 7400000, guid: 0919ce846bf9cb04ebc7128f1b7333b9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbRight
+    second: {fileID: 7400000, guid: 5ec33c38d79cbec448faf04792d9067c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbUpLeft
+    second: {fileID: 7400000, guid: 9c862af519a15be41b368264ce6165a4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ClimbUpRight
+    second: {fileID: 7400000, guid: 3b59176964a45724191e2d0d81571b6e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Crawl
+    second: {fileID: 7400000, guid: d01b76f011794354080d9fe05c5e0c07, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Crouch
+    second: {fileID: 7400000, guid: 93609be8178de8e4499119ba5cbc3ae5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Dash
+    second: {fileID: 7400000, guid: f8bea3810affddf4c8c270f8fa9804ec, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DashEnd
+    second: {fileID: 7400000, guid: cb4158fce088ab049b212a65add7a009, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DashLoop
+    second: {fileID: 7400000, guid: db5320fd0bb4450439c815352e597a50, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DashStart
+    second: {fileID: 7400000, guid: 19e1f97db10bab0469f311d47b7552de, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Die
+    second: {fileID: 7400000, guid: 2ad34cdaaa3567e45b024fe18463a641, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Die_0
+    second: {fileID: 7400000, guid: 92119c5edc483ca4392bfeccb534a38c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: FrontFlip
+    second: {fileID: 7400000, guid: 446c4941be516b64d9f2a0ac369555fe, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GoingToDie
+    second: {fileID: 7400000, guid: 673def3cfd8976345bfc845cef5e81f6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: eddbf1d9371fb8a41850b91ca28e02c2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: InteractionPull
+    second: {fileID: 7400000, guid: 91914cc119b89a746bface0c99c9ad87, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Jump
+    second: {fileID: 7400000, guid: 18a3896e8eb031049a52efa728849e52, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: JumpFall
+    second: {fileID: 7400000, guid: 383c536b0c04a4a498c894054f814c83, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: JumpMid
+    second: {fileID: 7400000, guid: 79be572ed29d3584c967ec138ed11b89, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: JumpRise
+    second: {fileID: 7400000, guid: 34e6ccd38ddca6a439262309aa4bef3b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Kill
+    second: {fileID: 7400000, guid: d1768ce37d74e6a46b74f534b1f9fee9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Knockback
+    second: {fileID: 7400000, guid: a90a0dd4f47381840b00594c7b4c6be4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LadderClimb
+    second: {fileID: 7400000, guid: da15d33b9401c974eb72c0572869a293, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LadderClimbFinish
+    second: {fileID: 7400000, guid: 5179b2dcf4d4636408be5b8b3f30f69c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LadderClimbHorizontal
+    second: {fileID: 7400000, guid: f21103838a2eebd4383d5421f76e9f6d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Land
+    second: {fileID: 7400000, guid: f57fad666c6504c45a590179ba4cd431, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LedgeClimb
+    second: {fileID: 7400000, guid: 5e87f88dc7f37dd49b08fc8e98849fd5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LedgeGrab
+    second: {fileID: 7400000, guid: 118591fcbab067246a94c9b4945c0aa8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LedgeHang
+    second: {fileID: 7400000, guid: 8e1f9ecd9605686489d12f39728d0413, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LookUp
+    second: {fileID: 7400000, guid: fbf944a8c37d1a3428afbc497e03e1c1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: MonkeyBarIdle
+    second: {fileID: 7400000, guid: 411dfcfeff8087b4cba9186484a5fe34, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: MonkeyBarsClimb
+    second: {fileID: 7400000, guid: 438f84df028438c459e612c5679b7930, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Pull
+    second: {fileID: 7400000, guid: ca4b8314b42eee84794a83c6544fd2fe, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Push
+    second: {fileID: 7400000, guid: 8cdea76b93f045548998b588f954c10f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: PushIdle
+    second: {fileID: 7400000, guid: 2ad4745c7ae25ae419d71a3705b79539, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Roll
+    second: {fileID: 7400000, guid: 3423d4d58fa990a439185bb58e9cfc69, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Run
+    second: {fileID: 7400000, guid: 7cebc0cb053d336448ba737a4268485c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RunToIdle
+    second: {fileID: 7400000, guid: b40612cac9b3f3b4493d6b2af51c3120, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Save
+    second: {fileID: 7400000, guid: 17f54f358c368214b99f8ca27248ce5d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Slide
+    second: {fileID: 7400000, guid: 49ac8f97c604ec743bb0315afecc1c03, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Spin
+    second: {fileID: 7400000, guid: 3f699b0dc6fdcd4458cc0d3046382411, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Sprint
+    second: {fileID: 7400000, guid: 39dd92c89d2563d42b430cea420e3683, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk
+    second: {fileID: 7400000, guid: 006264e82fa1fe84ea94a129bc354062, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallClimb
+    second: {fileID: 7400000, guid: 0704a5c97cf868245a4a06fa93fe321d, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallClimbIdle
+    second: {fileID: 7400000, guid: c5f685a7066476c47bd93052dfe8fbf2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallJump
+    second: {fileID: 7400000, guid: 8f86c04211b023a4b9822a63a9599683, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallSlide
+    second: {fileID: 7400000, guid: c7ef40bdd41b59448bda51e66cfb1010, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -98,7 +358,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638715288474331579
+  platformSettingsDirtyTick: 638742800091920780
   textureAssetName: 
   singleSpriteImportData:
   - name: 

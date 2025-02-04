@@ -299,7 +299,7 @@ namespace MoreMountains.CorgiEngine
 		/// <summary>
 		/// Activates the zone
 		/// </summary>
-		protected virtual void ActivateZone()
+		public virtual void ActivateZone()
 		{
 			if (OnActivation != null)
 			{

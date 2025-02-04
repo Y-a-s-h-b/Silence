@@ -2,7 +2,272 @@ fileFormatVersion: 2
 guid: c4e9ea17ca47b6d4b8a70d2c2b7bf5d2
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: AirSlash
+    second: {fileID: 7400000, guid: 5933f41905a17ce49ada14d0db353004, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: AirSlashDown
+    second: {fileID: 7400000, guid: 57cf8fab72b86f04c96cc3b5ea0ea1be, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: AirSlashUp
+    second: {fileID: 7400000, guid: 80845868965e142458bd590b22be5dfb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowAim
+    second: {fileID: 7400000, guid: 649b2fbaa9b4eb34d9b39cbbf900223f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowDraw
+    second: {fileID: 7400000, guid: 46a0be5130f4c9b44a5d61a49a82167f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowFire
+    second: {fileID: 7400000, guid: 3f0354de961288840b7e58bec971ce3c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: CrouchSlash
+    second: {fileID: 7400000, guid: f4a578483418c1548ad1025328ce9cff, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GroundSlam
+    second: {fileID: 7400000, guid: 26aae7fb40fd2a941b41e2184dc02fec, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Guard
+    second: {fileID: 7400000, guid: 59325b8311686f84bb1766ce67dcda40, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GuardImpact
+    second: {fileID: 7400000, guid: de4a0491e80990642bde998ddc2562b8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunAim
+    second: {fileID: 7400000, guid: d17e5b1ac568c6043b2749b05a68fe08, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunCrouch
+    second: {fileID: 7400000, guid: a03ddedf71c40644f9d39142b2e605e4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunCrouchFire
+    second: {fileID: 7400000, guid: 5b92e2d60fd015542a50167399ca71eb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunFire
+    second: {fileID: 7400000, guid: 1c1d2cf000492b745999480a8c020dfd, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunFire2H
+    second: {fileID: 7400000, guid: 1af5ae572afcf454688758d7f529fbb7, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunReload
+    second: {fileID: 7400000, guid: 4ed4a9132e5571b4abe4d6477ff7e541, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunRun
+    second: {fileID: 7400000, guid: e510e4d92d3f2c543b9c4b226189e85a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunRunFire
+    second: {fileID: 7400000, guid: 9ddaacb64ac7f0e43aaf64912fe5442e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunSprint
+    second: {fileID: 7400000, guid: 486d701335afe374c849fe0cdd2cdad2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunSprintFire
+    second: {fileID: 7400000, guid: d7ba933ad4cf761449ebd06699d2fc2f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunWalk
+    second: {fileID: 7400000, guid: 52a8d9a58b15db247a13c497f5db07b4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GunWalkFire
+    second: {fileID: 7400000, guid: 758b0da8c943a49489e5181894450bb9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hit
+    second: {fileID: 7400000, guid: 6a07ce9a417223a4981c65961a598e81, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: HitUp
+    second: {fileID: 7400000, guid: f2ba1dbb253c6e747a7904b21f09b9f0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Kick01
+    second: {fileID: 7400000, guid: 0d2147d32bcc2774eb6d7aa42aaa45d0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Kick02
+    second: {fileID: 7400000, guid: 602a1f3b718c9ce47b8f5357d5a1a2a6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Kick03
+    second: {fileID: 7400000, guid: f9927b8207f1a304791e63ebfd6dec2a, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Punch01
+    second: {fileID: 7400000, guid: 43262b3dc35ea95499cd8a351f1e8405, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Punch02
+    second: {fileID: 7400000, guid: c90d77955e748534aa0422c80de9a446, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Punch03
+    second: {fileID: 7400000, guid: 740840734dc0c474fb0fb4fd504fd2d6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ShockHeavy
+    second: {fileID: 7400000, guid: fada1fb2353353d4a8b135ef47b183d6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ShockLight
+    second: {fileID: 7400000, guid: 4cc4e09af5b54804d8cbf4eb1e7d50a3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: StandingSlash
+    second: {fileID: 7400000, guid: 8ebf2519ac4996d438d4dcb5bcf23fb8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Stunned
+    second: {fileID: 7400000, guid: 0ad5cfe8819011a4387ce63732c1ced4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordCombo01
+    second: {fileID: 7400000, guid: 8843b41091224724eadc12cd5beaf292, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordCombo02
+    second: {fileID: 7400000, guid: 9616aca509b8219479e3d6dd3d0ce680, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordCombo03
+    second: {fileID: 7400000, guid: 6cea4e39934725d44be822c55a1aa851, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordCombo04
+    second: {fileID: 7400000, guid: 551879f1258e3e247803a9d9c3a8e1bb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordCrouch
+    second: {fileID: 7400000, guid: a8d8af0e019575941b8b69b096ab3d1b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordIdle
+    second: {fileID: 7400000, guid: 4d2b638be3c71f94bb2cb60e0c62f31e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordJump
+    second: {fileID: 7400000, guid: 372749dd67525ed419828eef4a2d5a24, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordJumpFall
+    second: {fileID: 7400000, guid: 8a2e5c0ced5c200478234a194ccebd15, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordJumpMid
+    second: {fileID: 7400000, guid: 813fd27f76bdb7e40b572f71d74042c2, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordJumpRise
+    second: {fileID: 7400000, guid: ec9c31e712c2aed45bf654a890da9912, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordRun
+    second: {fileID: 7400000, guid: 90d615a97652cf3459425ff799fbff56, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordRunAlt
+    second: {fileID: 7400000, guid: 4d54ea90c5a80ba418bcbb7d37e998f9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordRunSlash
+    second: {fileID: 7400000, guid: 114567b982a33ec44b67c6b106061250, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordSlash01
+    second: {fileID: 7400000, guid: ef99c489e57e4894fa96977c37593ce8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordSprint
+    second: {fileID: 7400000, guid: f6216420b5c7a75448d56f9ada65d5ab, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordSprintSlash
+    second: {fileID: 7400000, guid: 8dc7caf079682504f8cd795222c89dab, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SwordWalk
+    second: {fileID: 7400000, guid: 4191e55885f43894bb328d95242b86e0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ThrowOverarm
+    second: {fileID: 7400000, guid: 7ed2d664b5323f942b47712d7faea740, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: ThrowUnderarm
+    second: {fileID: 7400000, guid: 3349c31f8d3caa54c858d91aca0adbff, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -98,7 +363,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638715288474281494
+  platformSettingsDirtyTick: 638742883487565258
   textureAssetName: 
   singleSpriteImportData:
   - name: 
