@@ -10,8 +10,6 @@ public class AbilityTrigger : MonoBehaviour
     public bool SlowPlayer;
     public float SlowSpeedMultiplier = 0.5f;
 
-    public bool StopPlayer;
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
