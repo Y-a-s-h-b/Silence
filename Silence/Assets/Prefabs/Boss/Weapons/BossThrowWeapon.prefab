@@ -32,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7133927099571997512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3012486853704780684
@@ -50,7 +51,7 @@ MonoBehaviour:
   TriggerMode: 0
   Interruptable: 0
   InitializeOnStart: 0
-  DelayBeforeUse: 1
+  DelayBeforeUse: 2.5
   DelayBeforeUseReleaseInterruption: 1
   TimeBetweenUses: 1
   TimeBetweenUsesReleaseInterruption: 1
@@ -154,13 +155,13 @@ MonoBehaviour:
     Delay: 0
     RecoilFeedback: {fileID: 0}
   ProjectileSpawnTransform: {fileID: 0}
-  ProjectileSpawnOffset: {x: 0, y: 2.1, z: 0}
+  ProjectileSpawnOffset: {x: 0, y: 0, z: 0}
   ProjectilesPerShot: 1
   Spread: {x: 0, y: 0, z: 0}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
   ObjectPooler: {fileID: -8799126509550091900}
-  SpawnPosition: {x: 0, y: 2.1, z: 0}
+  SpawnPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-8799126509550091900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +214,7 @@ MonoBehaviour:
   FirstTargetFoundFeedback: {fileID: 0}
   NewTargetFoundFeedback: {fileID: 0}
   NoMoreTargetsFeedback: {fileID: 0}
+  TargetOffset: {x: 0, y: -1, z: 0}
   Target: {fileID: 0}
   DrawDebugRadius: 1
 --- !u!114 &-7906792665936878142
@@ -229,7 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AimControl: 4
   RotationMode: 0
-  WeaponRotationSpeed: 100
+  WeaponRotationSpeed: 10
   InstantFlip: 1
   PreventAimWhileWeaponIsInUse: 0
   MinimumAngle: -180
@@ -244,3 +246,77 @@ MonoBehaviour:
   RotateReticle: 0
   ReplaceMousePointer: 1
   DisableReticleOnDeath: 1
+--- !u!1001 &7893566792837356573
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5346515606964529148}
+    m_Modifications:
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1409142157802557672, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_Name
+      value: AimMarker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08b7a0189cb5bf447b1f95fad82b3d1a, type: 3}
+--- !u!4 &7133927099571997512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1048030067888117589, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7893566792837356573}
+  m_PrefabAsset: {fileID: 0}

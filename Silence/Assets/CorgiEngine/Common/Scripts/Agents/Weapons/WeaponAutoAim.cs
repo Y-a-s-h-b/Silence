@@ -92,6 +92,10 @@ namespace MoreMountains.CorgiEngine
 		[Tooltip("a feedback to play when no more targets are found, and we just lost our last target")]
 		public MMFeedbacks NoMoreTargetsFeedback;
 
+		[Header("Target Offset")]
+		[Tooltip("Target Offset")]
+		public Vector3 TargetOffset;
+
 		[Header("Debug")]
 		/// the current target of the auto aim module
 		[Tooltip("the current target of the auto aim module")]
@@ -267,7 +271,8 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected virtual void SetAim()
 		{
-			_aimDirection = (Target.transform.position - _raycastOrigin).normalized;
+			var finalPos = Target.transform.position + TargetOffset;
+			_aimDirection = (finalPos - _raycastOrigin).normalized;
 			_weaponAim.SetCurrentAim(_aimDirection);
 		}
 
