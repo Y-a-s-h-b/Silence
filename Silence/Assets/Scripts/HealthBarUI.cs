@@ -1,3 +1,4 @@
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using RengeGames.HealthBars;
 using UnityEngine;
@@ -5,18 +6,23 @@ using UnityEngine;
 public class HealthBarUI : MonoBehaviour
 {
     public RadialSegmentedHealthBar healthBar;
-    public MMProgressBar progressBar;
+    public LevelManager levelManager;
+    public AudioHealthController audioHealthController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         healthBar = GetComponent<RadialSegmentedHealthBar>();
-        progressBar = GetComponentInParent<MMProgressBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(levelManager == null) levelManager = LevelManager.Instance;
+        else
+        {
+            audioHealthController = levelManager.Players[0].GetComponent<AudioHealthController>();
+        }
         //Debug.Log(progressBar.BarProgress);
-        healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - (progressBar.BarProgress * healthBar.SegmentCount.Value);
+        healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - ((audioHealthController.audioBar * healthBar.SegmentCount.Value)/85);
     }
 }

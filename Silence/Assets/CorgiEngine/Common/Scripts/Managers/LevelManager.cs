@@ -632,7 +632,8 @@ namespace MoreMountains.CorgiEngine
 				if (GameManager.Instance.MaximumLives > 0)
 				{
 					// we lose a life
-					GameManager.Instance.LoseLife ();
+					//GameManager.Instance.LoseLife();// -------------------- // Now handled by Sacrifice.cs Script
+
 					// if we're out of lives, we check if we have an exit scene, and move there
 					if (GameManager.Instance.CurrentLives <= 0)
 					{

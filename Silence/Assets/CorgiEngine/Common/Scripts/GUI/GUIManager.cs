@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using MoreMountains.Tools;
 using UnityEngine.EventSystems;
-
 namespace MoreMountains.CorgiEngine
 {	
 	/// <summary>

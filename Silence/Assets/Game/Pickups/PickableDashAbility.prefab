@@ -152,7 +152,7 @@ MonoBehaviour:
   PickFeedbacks: {fileID: 0}
   DisableObjectOnPick: 0
   DisableRendererOnPick: 0
-  DisableColliderOnPick: 0
+  DisableColliderOnPick: 1
   DisableTargetObjectOnPick: 0
   TargetObjectToDisable: {fileID: 0}
   TargetObjectDisableDelay: 1
