@@ -199,7 +199,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 264448
   AimOrigin: 1
-  ScanRadius: 20
+  ScanRadius: 40
   LineOfFireBoxcastSize: {x: 0.1, y: 0.1}
   DurationBetweenScans: 1
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
