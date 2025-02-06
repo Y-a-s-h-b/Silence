@@ -34,5 +34,11 @@ namespace MoreMountains.CorgiEngine
 			StoreCharacterSelection ();
 			MMSceneLoadingManager.LoadScene(DestinationSceneName);
 		}
+		public virtual void LoadNextSceneAsync()
+		{
+			StoreCharacterSelection ();
+			MMSceneLoadingManager.LoadScene(DestinationSceneName);
+			MMAdditiveSceneLoadingManager.LoadScene("Hell");
+		}
 	}
 }

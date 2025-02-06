@@ -1,6 +1,7 @@
 using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEvent>
 {
@@ -21,11 +22,19 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
     private void Awake()
     {
         character = GetComponent<Character>();
+        //SceneManager.LoadScene("Hell", LoadSceneMode.Additive);
     }
 
     private void Start()
     {
-        hellCheckPoint = GameObject.FindGameObjectWithTag("HellCheckPoint").GetComponent<CheckPoint>();
+        for (int j = 0; j < SceneManager.sceneCount; j++)
+        {
+            Scene loadedScene = SceneManager.GetSceneAt(j);
+            if (loadedScene.name == "Hell")
+            {
+                hellCheckPoint = GameObject.FindGameObjectWithTag("HellCheckPoint").GetComponent<CheckPoint>();
+            }
+        }
         gameManager = GameManager.Instance;
     }
 

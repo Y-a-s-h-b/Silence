@@ -6,6 +6,7 @@ using MoreMountains.Tools;
 using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class StartSequence : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class StartSequence : MonoBehaviour
     public Transform killer;
     public bool FollowPlayer = false;
     public MMF_Player playerFeedback;
+    public MMF_Player runFeedback;
+    private bool playFeedback = false;
     void Start()
     {
         InputManager.Instance.InputDetectionActive = false; 
@@ -36,6 +39,7 @@ public class StartSequence : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(npcAnimator.GetCurrentAnimatorStateInfo(0));
         if(player != null && Vector2.Distance(player.transform.position, killer.position) > 0.1f)
         {
             FollowPlayer = true;
@@ -46,6 +50,15 @@ public class StartSequence : MonoBehaviour
             if(InputManager.Instance.InputDetectionActive && player.MovementState.CurrentState != CharacterStates.MovementStates.Idle)
             {
                 npcAnimator.SetBool("Idle", false);
+            }
+            if(npcAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run") && !playFeedback)
+            {
+                StartCoroutine(RepeatFunction());
+            }
+            if (!npcAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+            {
+                StopCoroutine(RepeatFunction());
+                runFeedback.StopFeedbacks();
             }
         }
     }
@@ -66,19 +79,20 @@ public class StartSequence : MonoBehaviour
 
         yield return new WaitForSeconds(.25f);
 
-        StartCoroutine(ShowMoveIcon());
+        //StartCoroutine(ShowMoveIcon());
         jailDoorAnimator.SetBool("IsOpened",true);
         npcDialogue.StartDialogue();
 
         yield return new WaitForSeconds(1.5f);
 
         InputManager.Instance.InputDetectionActive = true;
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.D));
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.RightArrow));
         player = LevelManager.Instance.Players[0];
         camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(2, 5, -10);
         camera.Follow = player.CameraTarget.transform;
         player.CharacterAnimator.SetBool("Vibing",false);
-        yield return new WaitUntil(() => (npc.transform.position.x < player.transform.position.x));
+        yield return new WaitUntil(() => (npc.transform.position.x < player.transform.position.x + 1));
+        Debug.Log("Waitin");
         while (Vector2.Distance(npc.transform.position, player.transform.position) > 0.1f && FollowPlayer)
         {
             npcAnimator.SetTrigger("Walk");
@@ -95,5 +109,16 @@ public class StartSequence : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         player.GetComponentInChildren<DialogueZone>().ShowPrompt();
+    }
+    IEnumerator RepeatFunction()
+    {
+        playFeedback = true;
+        while (npcAnimator.GetBool("Idle") == false)
+        {
+            runFeedback.PlayFeedbacks();
+            yield return new WaitForSeconds(.8f);
+            runFeedback.StopFeedbacks();// Waits 1 second
+        }
+        playFeedback = false;
     }
 }
