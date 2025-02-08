@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
+using TMPro;
 
 namespace MoreMountains.CorgiEngine
 {
@@ -27,13 +28,13 @@ namespace MoreMountains.CorgiEngine
 		public bool ArrowVisible=true;
 		/// the font that should be used to display the text
 		[Tooltip("the font that should be used to display the text")]
-		public Font TextFont;
+		public TMP_FontAsset TextFont;
 		/// the size of the font
 		[Tooltip("the size of the font")]
 		public int TextSize = 20;
 		/// the text alignment in the box used to display the text
 		[Tooltip("the text alignment in the box used to display the text")]
-		public TextAnchor Alignment = TextAnchor.MiddleCenter;
+		public TextAlignmentOptions Alignment = TextAlignmentOptions.Center;
 
 		[MMInspectorGroup("Dialogue Speed (in seconds)", true, 23)]
 

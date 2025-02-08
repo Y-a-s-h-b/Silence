@@ -47,7 +47,8 @@ namespace MoreMountains.Feedbacks
 		/// the duration for the player to consider. This won't impact your animation, but is a way to communicate to the MMF Player the duration of this feedback. Usually you'll want it to match your actual animation, and setting it can be useful to have this feedback work with holding pauses.
 		[Tooltip("the duration for the player to consider. This won't impact your animation, but is a way to communicate to the MMF Player the duration of this feedback. Usually you'll want it to match your actual animation, and setting it can be useful to have this feedback work with holding pauses.")]
 		public float DeclaredDuration = 0f;
-        
+
+		public bool UseCharacterAnimator;
 		[MMFInspectorGroup("Trigger", true, 16)]
 		/// if this is true, will update the specified trigger parameter
 		[Tooltip("if this is true, will update the specified trigger parameter")]
@@ -215,6 +216,10 @@ namespace MoreMountains.Feedbacks
 			{
 				return;
 			}
+			if(UseCharacterAnimator)
+			{
+				BoundAnimator = GameObject.Find("DeafBastard").GetComponentInChildren<Animator>();
+			}
 
 			if (BoundAnimator == null)
 			{
@@ -323,8 +328,11 @@ namespace MoreMountains.Feedbacks
 			{
 				return;
 			}
-            
-			BoundAnimator.SetBool(_boolParameter, false);
+			if (UseCharacterAnimator)
+			{
+                BoundAnimator = GameObject.Find("DeafBastard").GetComponentInChildren<Animator>();
+            }
+            BoundAnimator.SetBool(_boolParameter, false);
 			foreach (Animator animator in ExtraBoundAnimators)
 			{
 				animator.SetBool(_boolParameter, false);

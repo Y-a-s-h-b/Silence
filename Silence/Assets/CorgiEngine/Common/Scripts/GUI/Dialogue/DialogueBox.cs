@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using MoreMountains.Tools;
+using TMPro;
 
 namespace MoreMountains.CorgiEngine
 {	
@@ -18,7 +19,7 @@ namespace MoreMountains.CorgiEngine
 		public Image TextPanelArrowDown;
 		/// the text to display
 		[Tooltip("the text to display")]
-		public Text DialogueText;
+		public TextMeshProUGUI DialogueText;
 		/// the Button A prompt
 		[Tooltip("the Button A prompt")]
 		public GameObject ButtonA;

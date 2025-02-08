@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using TMPro;
+
 #if MM_UI
 using UnityEngine.UI;
 using System.Collections;
@@ -43,7 +45,7 @@ namespace MoreMountains.Tools
 		/// <param name="target">Target.</param>
 		/// <param name="opacity">Opacity.</param>
 		/// <param name="duration">Duration.</param>
-		public static IEnumerator FadeText(Text target, float duration, Color color)
+		public static IEnumerator FadeText(TextMeshProUGUI target, float duration, Color color)
 		{
 			if (target==null)
 				yield break;

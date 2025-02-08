@@ -2,7 +2,47 @@ fileFormatVersion: 2
 guid: 2e4b4a7e8c8beb44a9a6570bdfe6c037
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Arrow
+    second: {fileID: 7400000, guid: a0b91e89ca05c494e8828a10a0de4e78, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BladeSpin
+    second: {fileID: 7400000, guid: cab54489a25e9ac4d8344cce35c3735e, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BladeThrow
+    second: {fileID: 7400000, guid: 27608e22fceb3924197b319a117d3e23, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BladeWallImpact
+    second: {fileID: 7400000, guid: 95eda37fa95a7934d95889c03db4e437, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowAim
+    second: {fileID: 7400000, guid: 3fdee8dd3dd182e4596862bb221c62b1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowDraw
+    second: {fileID: 7400000, guid: e807e8f794f02a84d92d259b90f4c1a5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BowFire
+    second: {fileID: 7400000, guid: c677f6237c893db439b4fa1a51d8afe3, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Bullet
+    second: {fileID: 7400000, guid: 95181b8412d6fd54c97262c52f26e2e9, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -98,7 +138,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638715304650595239
+  platformSettingsDirtyTick: 638746562167694254
   textureAssetName: 
   singleSpriteImportData:
   - name: 

@@ -39,7 +39,6 @@ public class StartSequence : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(npcAnimator.GetCurrentAnimatorStateInfo(0));
         if(player != null && Vector2.Distance(player.transform.position, killer.position) > 0.1f)
         {
             FollowPlayer = true;
@@ -75,6 +74,7 @@ public class StartSequence : MonoBehaviour
             yield return null;
         }
         npcAnimator.SetTrigger("Open");
+        GameObject.Find("Expression").TryGetComponent<MMF_Player>(out MMF_Player playerFeedback);
         playerFeedback.PlayFeedbacks(this.transform.position);
 
         yield return new WaitForSeconds(.25f);
@@ -93,11 +93,11 @@ public class StartSequence : MonoBehaviour
         player.CharacterAnimator.SetBool("Vibing",false);
         yield return new WaitUntil(() => (npc.transform.position.x < player.transform.position.x + 1));
         Debug.Log("Waitin");
-        while (Vector2.Distance(npc.transform.position, player.transform.position) > 0.1f && FollowPlayer)
+        while (Vector2.Distance(npc.transform.position, player.transform.position + new Vector3(2,0,0)) > 0.1f && FollowPlayer)
         {
             npcAnimator.SetTrigger("Walk");
             npc.GetComponentInChildren<SpriteRenderer>().gameObject.transform.rotation = player.CharacterModel.transform.rotation;
-            npc.transform.position = Vector2.MoveTowards(npc.transform.position, player.transform.position + new Vector3(-2,0,0), speed+2 * Time.deltaTime);
+            npc.transform.position = Vector2.MoveTowards(npc.transform.position, player.transform.position + new Vector3(-2,-1.25f,0), speed+2 * Time.deltaTime);
             yield return null;
         }
     }

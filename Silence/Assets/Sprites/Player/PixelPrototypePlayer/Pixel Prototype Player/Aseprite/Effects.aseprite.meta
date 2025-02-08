@@ -2,7 +2,87 @@ fileFormatVersion: 2
 guid: 30b2d42f8843e8f4abc088bf10ebb4f5
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: BulletImpact
+    second: {fileID: 7400000, guid: c159e961414c8554e9179ac6f8e1e3d9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: CrouchDustBack
+    second: {fileID: 7400000, guid: 92fdc0a24287c714d92d8c54a611e8fb, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DashDust
+    second: {fileID: 7400000, guid: d6156f39ae1bfe94bb2e6c39dec73b80, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DoubleJump
+    second: {fileID: 7400000, guid: 5dbcbada67448154ebb6f6d0ba591a87, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: GroundSlam
+    second: {fileID: 7400000, guid: 9b87103b874a4434694152ecfb551453, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: JumpDust
+    second: {fileID: 7400000, guid: 2710875bab4431846bc45329591f32d7, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LandingDust
+    second: {fileID: 7400000, guid: 324506c8598bea84798c77ef7d737f27, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: LedgeHangDust
+    second: {fileID: 7400000, guid: f4755b62aafec584ab560e8a5a5e98a5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: MuzzleFlash
+    second: {fileID: 7400000, guid: a9b6baa149f89a44690bed953c9abbf7, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RollDust
+    second: {fileID: 7400000, guid: 88068eb35a5830d43ba33ccdc0a26b00, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RunDustBack
+    second: {fileID: 7400000, guid: 191de2b0637b69c408965d6dd9ad4e6f, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RunDustFront
+    second: {fileID: 7400000, guid: 0f585f2e1821fea45b19d1a7285783d1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: RunDustFront_0
+    second: {fileID: 7400000, guid: 11f2e2cc6bb43784488d4c82958e9a71, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SlideDust
+    second: {fileID: 7400000, guid: 5a996699dc561354b890181c4d90ffe5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallJumpDust
+    second: {fileID: 7400000, guid: de94a462ae6092342bd4214f90e8a42b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WallSlideDust
+    second: {fileID: 7400000, guid: 7f10e232c9bc9494ab017bfacac6d50e, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -98,7 +178,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638746564012401291
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -3349,6 +3429,42 @@ ScriptedImporter:
     overridden: 0
     ignorePlatformSupport: 0
     maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
