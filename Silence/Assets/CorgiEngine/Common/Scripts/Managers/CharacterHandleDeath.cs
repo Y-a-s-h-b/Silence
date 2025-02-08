@@ -40,7 +40,6 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
 
     private void Update()
     {
-        Debug.Log(GameManager.Instance.Points);
     }
 
     public void OnMMEvent(CorgiEngineEvent eventType)

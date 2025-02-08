@@ -209,16 +209,16 @@ namespace MoreMountains.CorgiEngine
 		/// <param name="collider">Collider.</param>
 		protected override void OnTriggerEnter2D(Collider2D collider)
 		{
-			// if the object that collides with the teleporter is on its ignore list, we do nothing and exit.
-			if (_ignoreList.Contains(collider.transform))
+            // if the object that collides with the teleporter is on its ignore list, we do nothing and exit.
+            if (_ignoreList.Contains(collider.transform))
 			{
-				return;
+                return;
 			}			
             
 			// if the teleporter is supposed to only affect the player (well, corgiControllers), we do nothing and exit
 			if (OnlyAffectsPlayer || !AutoActivation)
 			{
-				base.OnTriggerEnter2D(collider);
+                base.OnTriggerEnter2D(collider);
 			}
 			else
 			{
@@ -551,6 +551,13 @@ namespace MoreMountains.CorgiEngine
 				// draws an arrow to the destination room
 				MMDebug.DrawGizmoArrow(this.transform.position, TargetRoom.transform.position - this.transform.position, MMColors.Pink, 1f, 25f);
 			}
+		}
+		public void SetAutoActivationTrue()
+		{
+			AutoActivation = true;
+		}public void SetAutoActivationFalse()
+		{
+			AutoActivation = false;
 		}
 	}
 }
