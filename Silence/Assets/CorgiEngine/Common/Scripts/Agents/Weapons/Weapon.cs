@@ -378,6 +378,8 @@ namespace MoreMountains.CorgiEngine
 		protected bool _gravityBeforeUse = true;
 		protected bool _canFlipBeforeUse = true;
 
+		public event Action<Weapon> OnWeaponUse;
+
 		#region Initialization
 
 		protected virtual void Start()
@@ -559,7 +561,8 @@ namespace MoreMountains.CorgiEngine
 			}
 
 			_lastTurnWeaponOnAt = Time.time;
-			
+			OnWeaponUse?.Invoke(this);
+
 			TriggerWeaponStartFeedback();
 
 			WeaponState.ChangeState(WeaponStates.WeaponStart);

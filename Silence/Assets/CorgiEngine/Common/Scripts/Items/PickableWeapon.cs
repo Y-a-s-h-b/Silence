@@ -19,6 +19,7 @@ namespace MoreMountains.CorgiEngine
 
 		protected CharacterHandleWeapon _characterHandleWeapon = null;
 
+		public RuntimeAnimatorController weaponAnimatorController = null;
 		/// <summary>
 		/// What happens when the weapon gets picked
 		/// </summary>
@@ -34,6 +35,11 @@ namespace MoreMountains.CorgiEngine
 			if (_characterHandleWeapon != null)
 			{
 				_characterHandleWeapon.ChangeWeapon(WeaponToGive, null);
+				
+				if (weaponAnimatorController != null)
+				{
+					character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = weaponAnimatorController;
+				}
 			}
 		}
 

@@ -94,7 +94,7 @@ namespace MoreMountains.CorgiEngine
 		protected bool _killEventSent = false;
 		protected bool _eventsRegistered = false;
 		protected Coroutine _meleeWeaponAttack;
-        
+
 		/// <summary>
 		/// Initialization
 		/// </summary>
