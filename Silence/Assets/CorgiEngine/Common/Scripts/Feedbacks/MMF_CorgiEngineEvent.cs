@@ -29,7 +29,7 @@ namespace MoreMountains.CorgiEngine
 		/// an optional Character to pass to the event
 		[Tooltip("an optional Character to pass to the event")]
 		public Character TargetCharacter;
-
+		public bool UseSceneCharacter = false;
 		/// <summary>
 		/// On play, we ask for a floating text to be spawned
 		/// </summary>
@@ -39,8 +39,16 @@ namespace MoreMountains.CorgiEngine
 		{
 			if (Active)
 			{
-				CorgiEngineEvent.Trigger(EventType, TargetCharacter);
-			}
+				if (UseSceneCharacter)
+				{
+					TargetCharacter = LevelManager.Instance.Players[0].GetComponent<Character>();
+					CorgiEngineEvent.Trigger(EventType, TargetCharacter);
+				}
+                else
+                {
+					CorgiEngineEvent.Trigger(EventType, TargetCharacter);
+                }
+            }
 		}
 	}
 }

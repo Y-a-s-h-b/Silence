@@ -17,6 +17,7 @@ public class StartSequence : MonoBehaviour
     private float elapsedTime = 0f;
     public GameObject npc; // Assign NPC GameObject
     public Animator npcAnimator;
+    public Animator playerAnimator;
     public GameObject jailDoor; // Assign jail door with Animator
     public Transform jailDoorPosition; // Position to stop at before opening
     public Animator jailDoorAnimator; // Assign the door's animator
@@ -101,9 +102,13 @@ public class StartSequence : MonoBehaviour
             yield return null;
         }
     }
-    public void ShootSequence()
+    public void ResetCharacter()
     {
-
+        player.GetComponent<Character>().ChangeAnimator(playerAnimator);
+    }
+    public void StopCo()
+    {
+        StopAllCoroutines();
     }
     IEnumerator ShowMoveIcon()
     {

@@ -10,14 +10,19 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private SceneField _levelScene;
 
     private List<AsyncOperation> _sceneToLoad = new List<AsyncOperation>();
+    bool started = false;
     private void Awake()
     {
-        
+        started = false;   
     }
     public void StartGame()
     {
-        _sceneToLoad.Add(SceneManager.LoadSceneAsync(_persistentGameplay));
-        _sceneToLoad.Add(SceneManager.LoadSceneAsync(_levelScene,LoadSceneMode.Additive));
+        if (!started)
+        {
+            _sceneToLoad.Add(SceneManager.LoadSceneAsync(_persistentGameplay));
+            _sceneToLoad.Add(SceneManager.LoadSceneAsync(_levelScene, LoadSceneMode.Additive));
+            started = true;
+        }
     }
 
     // Update is called once per frame
