@@ -10535,7 +10535,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   runThresholdTime: 0.6
-  sprintThresholdTime: 999
+  sprintThresholdTime: 2
   stateTextTest: {fileID: 0}
 --- !u!114 &6316581119124564773
 MonoBehaviour:
@@ -10599,7 +10599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 2145035329045699151}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 0
+  AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
@@ -10731,7 +10731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 523968632134262600}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 0
+  AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
@@ -10857,7 +10857,8 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 0}
+  InitialWeapon: {fileID: 7293977679009917868, guid: 72dc23ebc7ea0034eac93426a28c8679,
+    type: 3}
   CanPickupWeapons: 1
   WeaponAttachment: {fileID: 0}
   ForceWeaponScaleResetOnEquip: 0
@@ -39183,7 +39184,7 @@ Animator:
   m_GameObject: {fileID: 4537877254104301185}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ec27a97b1d78f942b9e7d848f0d928f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09d9ecfd314702144b16392b1608a5db, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
