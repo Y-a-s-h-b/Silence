@@ -49,5 +49,6 @@ public class Sacrifice : MonoBehaviour
     {
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
+        if(OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
     }
 }
