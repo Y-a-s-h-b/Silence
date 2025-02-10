@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tabicon_0: -7944714410139967485
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

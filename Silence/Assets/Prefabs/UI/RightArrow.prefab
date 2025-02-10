@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Border: {fileID: 8932596327497071809}
-  Background: {fileID: 0}
+  Background: {fileID: 8932596327497071809}
   ContainerCanvasGroup: {fileID: 3917676532734554712}
   PromptText: {fileID: 114479785764892692}
   FadeInDuration: 0.2

@@ -16,10 +16,10 @@ public class OpenDoor : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponent<Door>().IsOpened = true;
+        if(collision.CompareTag("Player"))  GetComponent<Door>().IsOpened = true;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GetComponent<Door>().IsOpened = false;
+        if (collision.CompareTag("Player")) GetComponent<Door>().IsOpened = false;
     }
 }

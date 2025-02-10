@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      altgricon_0: -1579263780985335135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

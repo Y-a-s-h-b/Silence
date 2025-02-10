@@ -14,10 +14,14 @@ public class CharacterReset : MonoBehaviour
     public void ResetCharacter()
     {
         character = LevelManager.Instance.Players[0];
-        character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = CharacterAnimator;
         //Animator.runtimeAnimatorController = CharacterAnimator;
         character.GetComponent<CharacterHorizontalMovement>().PermitAbility(true);
         character.GetComponent<CharacterJump>().PermitAbility(true);
+    }
+    public void ResetAnimator()
+    {
+        character = LevelManager.Instance.Players[0];
+        character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = CharacterAnimator;
     }
 
 }

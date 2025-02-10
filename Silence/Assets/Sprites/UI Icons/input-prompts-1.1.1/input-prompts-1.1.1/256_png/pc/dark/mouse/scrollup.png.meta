@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      scrollup_0: 4363292256234178617
+      scrollup_1: 7927582563102799439
+      scrollup_2: -3654971579664500216
+      scrollup_3: -1392358208191480007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
