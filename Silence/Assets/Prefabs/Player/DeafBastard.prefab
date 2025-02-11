@@ -10417,8 +10417,8 @@ MonoBehaviour:
   audioLevelAll: 0
   audioLevelMusic: 0
   lerpSpeed: 0.1
-  thresholdMusic: 1
   audioSourceTest: {fileID: 0}
+  cc: {fileID: 0}
   audioBar: 0
   audioMixer: {fileID: 0}
 --- !u!114 &6577894244852968232
@@ -10758,7 +10758,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  WallJumpForce: {x: 10, y: 4}
+  WallJumpForce: {x: 10, y: 6}
   ForceMode: 0
   ForceFlipTowardsDirection: 0
   ShouldReduceNumberOfJumpsLeft: 1
