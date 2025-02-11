@@ -8,7 +8,7 @@ using UnityEngine;
 public class QTEManager : MonoBehaviour
 {
     public static QTEManager Instance;
-
+    public float holdTime; 
     private void Awake()
     {
         if (Instance == null)
@@ -45,11 +45,11 @@ public class QTEManager : MonoBehaviour
     public async Task<bool> HoldAsync(float holdDuration, KeyCode interactionKey)
     {
         float elapsedTime = 0f;
-
+        holdTime = elapsedTime;
         while (Input.GetKey(interactionKey))
         {
             elapsedTime += Time.deltaTime;
-
+            holdTime = elapsedTime;
             Debug.Log($"Holding: {elapsedTime}/{holdDuration}");
 
             if (elapsedTime >= holdDuration)

@@ -107,7 +107,7 @@ MonoBehaviour:
   PathElements:
   - PathElementPosition: {x: -2, y: 0, z: 0}
     Delay: 0
-  - PathElementPosition: {x: -4, y: 0, z: 0}
+  - PathElementPosition: {x: -3.7, y: 0, z: 0}
     Delay: 0
   AlignmentMode: 0
   MovementSpeed: 10
