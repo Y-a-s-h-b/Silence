@@ -27217,7 +27217,7 @@ MonoBehaviour:
   - rid: 0
   - rid: 1
   - rid: 2
-  - rid: 3
+  - rid: 5261572416772243456
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   RestoreInitialValuesOnDisable: 0
@@ -27388,7 +27388,7 @@ MonoBehaviour:
         Owner: {fileID: 1181275090622403911}
         DebugActive: 0
         m_ImpulseDefinition:
-          ImpulseChannel: 1
+          ImpulseChannel: -1
           ImpulseShape: 0
           CustomImpulseShape:
             serializedVersion: 2
@@ -27506,13 +27506,13 @@ MonoBehaviour:
         DebugActive: 0
         SoundFX: {fileID: 8300000, guid: d4f963e1fb34c6441b5188289f973106, type: 3}
         Loop: 0
-    - rid: 3
-      type: {class: MMF_Bloom, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
+    - rid: 5261572416772243456
+      type: {class: MMF_Bloom_URP, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
       data:
         Active: 1
-        UniqueID: -1118072955
-        Label: Bloom
-        OriginalLabel: Bloom
+        UniqueID: 63403645
+        Label: Bloom URP
+        OriginalLabel: Bloom URP
         ChannelMode: 0
         Channel: 0
         MMChannelDefinition: {fileID: 0}
@@ -27544,7 +27544,7 @@ MonoBehaviour:
         AutomatedTargetAcquisition:
           Mode: 0
           ChildIndex: 0
-        RandomizeOutput: 0
+        RandomizeOutput: 1
         RandomMultiplier: {x: 0.8, y: 1}
         RandomizeDuration: 0
         RandomDurationMultiplier: {x: 0.5, y: 2}

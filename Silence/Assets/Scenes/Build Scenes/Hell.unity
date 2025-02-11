@@ -2134,6 +2134,108 @@ Texture2D:
     offset: 0
     size: 0
     path: 
+--- !u!1 &364595396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7386390634566173946, guid: 3643a0c7743945648889b9dd54734a6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135601254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &364595409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364595396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 485e02e02c638cf4b9ca8344fd6213a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  ShakeDuration: 0.2
+  PlayOnAwake: 0
+  PermanentShake: 0
+  Interruptible: 1
+  AlwaysResetTargetValuesAfterShake: 0
+  OnlyUseShakerValues: 0
+  CooldownBetweenShakes: 0
+  Shaking: 0
+  ForwardDirection: 1
+  TimescaleMode: 0
+  RelativeValues: 1
+  ShakeIntensity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapIntensityZero: 0
+  RemapIntensityOne: 1
+  ShakeThreshold:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapThresholdZero: 0
+  RemapThresholdOne: 0
 --- !u!1 &382206180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,11 +9085,9 @@ Material:
   - _ALIGNEMPTYTEXTURE_ON
   - _ALIGNINNERTEXTURE_ON
   - _ALIGNSPACETEXTURE_ON
-  - _BORDERTEXTURESCALEWITHSEGMENTS_ON
-  - _EMPTYGRADIENTENABLED_ON
   - _EMPTYTEXTURESCALEWITHSEGMENTS_ON
   - _INNERGRADIENTENABLED_ON
-  - _INNERTEXTURESCALEWITHSEGMENTS_ON
+  - _PULSATEWHENLOW_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -16910,6 +17010,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239102994738834096, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: ChannelMask
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239102994738834096, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: UseCameraSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 239102994738834096, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: ReactionSettings.m_SecondaryNoise
+      value: 
+      objectReference: {fileID: 11400000, guid: 69ac3640b321a7d49bcfc8497e9a7469,
+        type: 2}
     - target: {fileID: 1558137670199775183, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17690,6 +17806,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034827963902885510, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1165.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034827963902885510, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 85.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9216657284108268447, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_Material
@@ -17698,7 +17824,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7386390634566173946, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 364595409}
   m_SourcePrefab: {fileID: 100100000, guid: 3643a0c7743945648889b9dd54734a6f, type: 3}
 --- !u!1 &2139775396
 GameObject:
