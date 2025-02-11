@@ -369,6 +369,12 @@ PrefabInstance:
       addedObject: {fileID: 511967689}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6954efde93f97cb4482b8fce88e91fbe, type: 3}
+--- !u!95 &1487523 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8990999463524922032, guid: 6954efde93f97cb4482b8fce88e91fbe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1487522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3464788
 GameObject:
   m_ObjectHideFlags: 0
@@ -11007,7 +11013,7 @@ MonoBehaviour:
         PlayEvents:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 511967685}
+            - m_Target: {fileID: 511967686}
               m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Teleporter, MoreMountains.CorgiEngine
               m_MethodName: SetAutoActivationFalse
               m_Mode: 1
@@ -11019,7 +11025,7 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
-            - m_Target: {fileID: 2123924888}
+            - m_Target: {fileID: 1487523}
               m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
               m_MethodName: SetTrigger
               m_Mode: 5
@@ -18500,7 +18506,7 @@ MonoBehaviour:
         PlayEvents:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 811198961}
+            - m_Target: {fileID: 811198960}
               m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.Teleporter, MoreMountains.CorgiEngine
               m_MethodName: SetAutoActivationFalse
               m_Mode: 1
@@ -18512,7 +18518,7 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
-            - m_Target: {fileID: 1197743744}
+            - m_Target: {fileID: 1197743745}
               m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
               m_MethodName: SetTrigger
               m_Mode: 5
@@ -24342,8 +24348,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -82.91775, y: 3.0326004, z: 0}
-    m_Extent: {x: 198.66324, y: 69.4299, z: 0}
+    m_Center: {x: -110.694145, y: 1.2584496, z: 0}
+    m_Extent: {x: 170.88684, y: 71.204056, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -24355,8 +24361,8 @@ MonoBehaviour:
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -228.5827, y: -9.450531, z: 0}
-  - {x: 62.605835, y: -13.3989105, z: 0}
-  - {x: 62.74701, y: 18.946514, z: 0}
+  - {x: 5.406067, y: -16.94748, z: 0}
+  - {x: 7.1952515, y: 19.126205, z: 0}
   - {x: -214.63947, y: 19.46225, z: 0}
 --- !u!1 &1169505359
 GameObject:
@@ -24389,8 +24395,8 @@ Transform:
   m_Children:
   - {fileID: 2115730441}
   - {fileID: 603085383}
-  - {fileID: 1016453337}
   - {fileID: 2123924889}
+  - {fileID: 1016453337}
   - {fileID: 1197743743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24895,9 +24901,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1197743742}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1197743744 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7199688042497123315, guid: 6954efde93f97cb4482b8fce88e91fbe,
+--- !u!95 &1197743745 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8990999463524922032, guid: 6954efde93f97cb4482b8fce88e91fbe,
     type: 3}
   m_PrefabInstance: {fileID: 1197743742}
   m_PrefabAsset: {fileID: 0}
@@ -39418,12 +39424,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5523379, y: 2.8129842}
   m_EdgeRadius: 0
---- !u!1 &2123924888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7199688042497123315, guid: 6954efde93f97cb4482b8fce88e91fbe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1487522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2123924889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5591186911091590826, guid: 6954efde93f97cb4482b8fce88e91fbe,
