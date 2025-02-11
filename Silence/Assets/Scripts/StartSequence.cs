@@ -35,6 +35,7 @@ public class StartSequence : MonoBehaviour
         npcAnimator = npc.GetComponentInChildren<Animator>();
         npcDialogue = npc.GetComponentInChildren<DialogueZone>();
         player = LevelManager.Instance.Players[0];
+        if (camera == null) camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera;
         StartCoroutine(StartSequenceCo());
 
     }
@@ -61,6 +62,8 @@ public class StartSequence : MonoBehaviour
                 runFeedback.StopFeedbacks();
             }
         }
+        //if(camera == null) camera = GameObject.Find("CinemachineCamera").GetComponent<CinemachineCamera>(); 
+        if(camera == null) camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera; 
     }
     IEnumerator StartSequenceCo()
     {
