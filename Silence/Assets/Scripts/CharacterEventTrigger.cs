@@ -21,5 +21,6 @@ public class CharacterEventTrigger : MonoBehaviour
     {
             //_currentCharacter.Freeze();
             //_currentCharacter.enabled = false;
+           
     }
 }

@@ -197,9 +197,9 @@ MonoBehaviour:
     m_Bits: 512
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 264448
+    m_Bits: 0
   AimOrigin: 1
-  ScanRadius: 40
+  ScanRadius: 30
   LineOfFireBoxcastSize: {x: 0.1, y: 0.1}
   DurationBetweenScans: 1
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
@@ -214,7 +214,7 @@ MonoBehaviour:
   FirstTargetFoundFeedback: {fileID: 0}
   NewTargetFoundFeedback: {fileID: 0}
   NoMoreTargetsFeedback: {fileID: 0}
-  TargetOffset: {x: 0, y: -1, z: 0}
+  TargetOffset: {x: 0, y: -2.1, z: 0}
   Target: {fileID: 0}
   DrawDebugRadius: 1
 --- !u!114 &-7906792665936878142
@@ -308,6 +308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AimMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820122057993008207, guid: 08b7a0189cb5bf447b1f95fad82b3d1a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

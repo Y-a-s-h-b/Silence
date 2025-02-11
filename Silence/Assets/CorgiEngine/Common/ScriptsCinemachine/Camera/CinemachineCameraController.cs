@@ -8,18 +8,18 @@ using Unity.Cinemachine;
 #endif
 
 namespace MoreMountains.CorgiEngine
-{  
-
+{
+	
 	/// <summary>
 	/// A class that handles camera follow for Cinemachine powered cameras
 	/// </summary>
 	public class CinemachineCameraController : CorgiMonoBehaviour, MMEventListener<MMCameraEvent>, MMEventListener<CorgiEngineEvent>
 	{
 		public enum PerspectiveZoomMethods { FieldOfView, FramingTransposerDistance }
-
+		
 		/// True if the camera should follow the player
 		public bool FollowsPlayer { get; set; }
-
+		
 		[Header("Settings")]
 
 		/// if this is true, this camera will follow a player
@@ -51,6 +51,13 @@ namespace MoreMountains.CorgiEngine
 		/// Whether this camera should zoom in or out as the character moves
 		[Tooltip("Whether this camera should zoom in or out as the character moves")]
 		public bool UseOrthographicZoom = false;
+
+		public bool UseCustomOrthographicZoom = false;
+
+		[MMCondition("UseCustomOrthographicZoom", true)]
+        [Tooltip("the value of volumebar after which the zoomout will be max")]
+		public float fullZoomOutThreshold = 40;
+
 		/// the minimum & maximum orthographic camera zoom
 		[MMCondition("UseOrthographicZoom", true)]
 		[MMVector("Min", "Max")]
@@ -68,7 +75,7 @@ namespace MoreMountains.CorgiEngine
 		[Space(10)]
 		[Header("Perspective Zoom")]
 		[MMInformation("Determine here the min and max zoom, and the zoom speed when the camera is in perspective mode. You can pick two zoom methods, either playing with the field of view or the transposer's distance.", MoreMountains.Tools.MMInformationAttribute.InformationType.Info, false)]
-
+	
 		/// if this is true, perspective zoom will be processed every frame
 		[Tooltip("if this is true, perspective zoom will be processed every frame")]
 		public bool UsePerspectiveZoom = false;
@@ -128,6 +135,7 @@ namespace MoreMountains.CorgiEngine
 		protected virtual void Awake()
 		{
 			Initialization();
+			
 		}
 
 		protected virtual void Initialization()
@@ -211,7 +219,7 @@ namespace MoreMountains.CorgiEngine
 		public virtual void SetTarget(Character character)
 		{
 			TargetCharacter = character;
-			TargetController = character.gameObject.MMGetComponentNoAlloc<CorgiController>();
+			TargetController = character.gameObject.MMGetComponentNoAlloc<CorgiController>();			
 		}
 
 		/// <summary>
@@ -264,7 +272,11 @@ namespace MoreMountains.CorgiEngine
 			#elif MM_CINEMACHINE3
 			lensIsOrthographic = _virtualCamera.Lens.Orthographic;
 			#endif
-			
+
+            if (UseCustomOrthographicZoom)
+            {
+				return;
+            }
 			if (lensIsOrthographic)
 			{
 				PerformOrthographicZoom();
@@ -288,6 +300,28 @@ namespace MoreMountains.CorgiEngine
 			float characterSpeed = Mathf.Abs(TargetController.Speed.x);
 			float currentVelocity = Mathf.Max(characterSpeed, CharacterSpeed.x);
 			float targetZoom = MMMaths.Remap(currentVelocity, CharacterSpeed.x, CharacterSpeed.y, OrthographicZoom.x, OrthographicZoom.y);
+			_currentZoom = Mathf.Lerp(_currentZoom, targetZoom, Time.deltaTime * OrthographicZoomSpeed);
+			#if MM_CINEMACHINE
+			_virtualCamera.m_Lens.OrthographicSize = _currentZoom;
+			#elif MM_CINEMACHINE3
+			_virtualCamera.Lens.OrthographicSize = _currentZoom;
+			#endif
+		}
+
+		public virtual void PerformCustomOrthographicZoom(float currentVal)
+        {
+			if (!UseOrthographicZoom || (TargetController == null))
+			{
+				return;
+			}
+
+			// 0-75 should be the health bar range
+			float targetZoom = MMMaths.Remap(currentVal, 0, 50, OrthographicZoom.x, OrthographicZoom.y);
+			if (currentVal >= fullZoomOutThreshold)
+            {
+				targetZoom = OrthographicZoom.y;
+            }			
+			 
 			_currentZoom = Mathf.Lerp(_currentZoom, targetZoom, Time.deltaTime * OrthographicZoomSpeed);
 			#if MM_CINEMACHINE
 			_virtualCamera.m_Lens.OrthographicSize = _currentZoom;
