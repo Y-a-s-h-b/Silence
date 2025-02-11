@@ -1,5 +1,6 @@
 using MoreMountains.CorgiEngine;
 using System;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -12,11 +13,8 @@ namespace test
         public float lerpSpeed = 0.05f;        
         public AudioSource audioSourceTest;
         public CinemachineCameraController cc;
-
+        private CinemachineCamera camera;
         [HideInInspector] public float audioBar;
-        public AudioMixer audioMixer;
-        private AudioMixerGroup amg;
-        private Health health;
         private const int sampleAllSize = 1024; // Number of audio samples to analyze
         private const int sampleMusicSize = 1024;
         private float[] samplesAll;
@@ -30,14 +28,14 @@ namespace test
         {
             samplesMusic = new float[sampleMusicSize];
             samplesAll = new float[sampleAllSize];
-            health = GetComponent<Health>();
             smoothedValue = 0f;
             
         }
 
         void Update()
         {
-
+            if(audioSourceTest == null) audioSourceTest = GameObject.Find("MMAudioSourcePool_0").GetComponent<AudioSource>();
+            Debug.Log(smoothedValue);
             BarSetter(GetDifferenceOfDecibles());
             audioBar = Mathf.RoundToInt(smoothedValue);
 
@@ -96,7 +94,15 @@ namespace test
 
         private void LateUpdate()
         {
-            cc.PerformCustomOrthographicZoom(smoothedValue);
+            if (cc == null)
+            {
+                camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera;
+                cc = camera.GetComponent<CinemachineCameraController>();
+            }
+            else
+            {
+                cc.PerformCustomOrthographicZoom(smoothedValue);
+            }
         }
     }
 }
