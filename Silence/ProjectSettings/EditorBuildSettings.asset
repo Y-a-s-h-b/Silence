@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Build Scenes/Level 1.unity
     guid: f5a6c9e481589ad47907c0402a88d7d0
   - enabled: 1
-    path: Assets/Scenes/Build Scenes/Abandoned station.unity
+    path: Assets/Scenes/Build Scenes/Level 2.unity
     guid: acb0ffbb2f8e88f42bac7ede6fdd07b7
   - enabled: 1
     path: Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Core/MMSceneLoading/LoadingScreens/LoadingScreen.unity
