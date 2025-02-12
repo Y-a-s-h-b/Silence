@@ -34,7 +34,7 @@ public class StartSequence : MonoBehaviour
         InputManager.Instance.InputDetectionActive = false; 
         npcAnimator = npc.GetComponentInChildren<Animator>();
         npcDialogue = npc.GetComponentInChildren<DialogueZone>();
-        player = LevelManager.Instance.Players[0];
+        //player = LevelManager.Instance.Players[0];
         if (camera == null) camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera;
         StartCoroutine(StartSequenceCo());
 

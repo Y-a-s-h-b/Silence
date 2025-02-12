@@ -10416,7 +10416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioLevelAll: 0
   audioLevelMusic: 0
-  lerpSpeed: 0.1
+  lerpSpeed: 0.5
   audioSourceTest: {fileID: 0}
   cc: {fileID: 0}
   audioBar: 0
@@ -92015,6 +92015,10 @@ PrefabInstance:
     - target: {fileID: 22411506, guid: 60d9326a4da9bc04ea2b81435df58c09, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22411506, guid: 60d9326a4da9bc04ea2b81435df58c09, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 22427506, guid: 60d9326a4da9bc04ea2b81435df58c09, type: 3}
       propertyPath: m_Pivot.x
