@@ -11,7 +11,8 @@ public class OnTriggerPlayFeedback : MMSingleton<OnTriggerPlayFeedback>
         {
             MMF_Player mMF_Player = GetComponent<MMF_Player>();
             mMF_Player.PlayFeedbacks();
-            m_IsPlaying=true;
+            m_IsPlaying=true;   
+            Destroy(this.gameObject,5);
         }
     }
 }

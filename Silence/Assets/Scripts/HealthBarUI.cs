@@ -22,6 +22,6 @@ public class HealthBarUI : MonoBehaviour
         {
             audioHealthController = LevelManager.Instance.Players[0].GetComponent<AudioHealthController>();
         }
-        healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - ((audioHealthController.audioBar * healthBar.SegmentCount.Value)/ 50);
+        healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - ((audioHealthController.audioBar * healthBar.SegmentCount.Value)/ maxVolume);
     }
 }

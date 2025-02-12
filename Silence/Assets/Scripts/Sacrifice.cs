@@ -10,11 +10,19 @@ public class Sacrifice : MonoBehaviour
     [SerializeField] private float holdDuration = 2f;
     [SerializeField] private KeyCode interactionKey = KeyCode.Space;
     [SerializeField] private bool isActive = false;
-
-    private GameObject player;
+    [HideInInspector]
+    public GameObject player;
     private bool isSuccess = false;
     public MMF_Player FadeFeedback;
+    public Material DefaultMat;
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+
+        player = collision.gameObject;
+
+        isActive = true;
+    } private void OnTriggerStay2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
 
@@ -52,6 +60,7 @@ public class Sacrifice : MonoBehaviour
     {
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
+        player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
         FadeFeedback.PlayFeedbacks();
         if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
     }

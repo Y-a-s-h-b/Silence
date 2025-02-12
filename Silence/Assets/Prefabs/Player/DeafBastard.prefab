@@ -5256,7 +5256,7 @@ MonoBehaviour:
         DebugActive: 0
         Players:
         - TargetPlayer: {fileID: 4662282947891068637}
-          Delay: {x: 0, y: 6}
+          Delay: {x: 10, y: 0}
           Inactive: 0
           WaitUntilComplete: 0
 --- !u!1 &1149318472578226387
@@ -10534,7 +10534,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   runThresholdTime: 0.6
-  sprintThresholdTime: 2
+  sprintThresholdTime: 999
   stateTextTest: {fileID: 0}
 --- !u!114 &6316581119124564773
 MonoBehaviour:
@@ -10598,7 +10598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 2145035329045699151}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
@@ -10856,8 +10856,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  InitialWeapon: {fileID: 7293977679009917868, guid: 72dc23ebc7ea0034eac93426a28c8679,
-    type: 3}
+  InitialWeapon: {fileID: 0}
   CanPickupWeapons: 1
   WeaponAttachment: {fileID: 0}
   ForceWeaponScaleResetOnEquip: 0
@@ -92094,7 +92093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22427506, guid: 60d9326a4da9bc04ea2b81435df58c09, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.49
+      value: 3.37
       objectReference: {fileID: 0}
     - target: {fileID: 22427506, guid: 60d9326a4da9bc04ea2b81435df58c09, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

@@ -35,7 +35,12 @@ public class StartSequence : MonoBehaviour
         npcAnimator = npc.GetComponentInChildren<Animator>();
         npcDialogue = npc.GetComponentInChildren<DialogueZone>();
         //player = LevelManager.Instance.Players[0];
-        if (camera == null) camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera;
+        if (camera == null) 
+        { 
+            camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera; 
+            ResetCamera(false); 
+        }
+        GUIManager.Instance.SetHUDActive(false);
         StartCoroutine(StartSequenceCo());
 
     }
@@ -87,10 +92,10 @@ public class StartSequence : MonoBehaviour
         jailDoorAnimator.SetBool("IsOpened",true);
         npcDialogue.StartDialogue();
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(9f);
 
         InputManager.Instance.InputDetectionActive = true;
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.RightArrow));
+        yield return new WaitUntil(() => InputManager.Instance.PrimaryMovement.x > 0);
         player = LevelManager.Instance.Players[0];
         camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(2, 5, -10);
         camera.Follow = player.CameraTarget.transform;
@@ -113,10 +118,10 @@ public class StartSequence : MonoBehaviour
     {
         StopAllCoroutines();
     }
-    IEnumerator ShowMoveIcon()
+    public void ResetCamera(bool state)
     {
-        yield return new WaitForSeconds(3);
-        player.GetComponentInChildren<DialogueZone>().ShowPrompt();
+        camera.GetComponent<CinemachineCameraController>().UseOrthographicZoom = state;
+        camera.GetComponent<CinemachineCameraController>().enabled = state;
     }
     IEnumerator RepeatFunction()
     {

@@ -86,7 +86,7 @@ namespace test
             else
             {
                 // If the new value is less, lerp towards it
-                smoothedValue = Mathf.Lerp(smoothedValue, value, Time.deltaTime * lerpSpeed);
+                smoothedValue = Mathf.Lerp(smoothedValue, 0, Time.deltaTime * lerpSpeed);
             }
             // For testing, log the values
             //Debug.Log($"Current: {currentValue}, Smoothed: {smoothedValue}");
