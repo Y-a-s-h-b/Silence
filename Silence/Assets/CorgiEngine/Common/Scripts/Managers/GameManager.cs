@@ -220,13 +220,14 @@ namespace MoreMountains.CorgiEngine
 		{
 			Application.targetFrameRate = TargetFrameRate;
 			_initialCurrentLives = CurrentLives;
-			_initialMaximumLives = MaximumLives;            
-		}
-					
-		/// <summary>
-		/// this method resets the whole game manager
-		/// </summary>
-		public virtual void Reset()
+			_initialMaximumLives = MaximumLives;       
+            //GUIManager.Instance.SetLivesCount(CurrentLives);
+        }
+
+        /// <summary>
+        /// this method resets the whole game manager
+        /// </summary>
+        public virtual void Reset()
 		{
 			Points = 0;
 			MMTimeScaleEvent.Trigger(MMTimeScaleMethods.For, 1f, 0f, false, 0f, true);
@@ -241,6 +242,7 @@ namespace MoreMountains.CorgiEngine
 		public virtual void LoseLife()
 		{
 			CurrentLives--;
+			GUIManager.Instance.SetLivesCount(CurrentLives);
 			CorgiEngineEvent.Trigger(CorgiEngineEventTypes.LivesCountChanged);
 		}
 
@@ -255,7 +257,8 @@ namespace MoreMountains.CorgiEngine
 			{
 				CurrentLives = MaximumLives;
 			}
-			CorgiEngineEvent.Trigger(CorgiEngineEventTypes.LivesCountChanged);
+            GUIManager.Instance.SetLivesCount(CurrentLives);
+            CorgiEngineEvent.Trigger(CorgiEngineEventTypes.LivesCountChanged);
 		}
 
 		/// <summary>
@@ -270,7 +273,8 @@ namespace MoreMountains.CorgiEngine
 			{
 				CurrentLives += lives;
 			}
-			CorgiEngineEvent.Trigger(CorgiEngineEventTypes.LivesCountChanged);
+            GUIManager.Instance.SetLivesCount(CurrentLives);
+            CorgiEngineEvent.Trigger(CorgiEngineEventTypes.LivesCountChanged);
 		}
 
 		/// <summary>

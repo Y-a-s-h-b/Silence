@@ -10419,9 +10419,7 @@ MonoBehaviour:
   lerpSpeed: 0.1
   audioSourceTest: {fileID: 0}
   cc: {fileID: 0}
-  camera: {fileID: 0}
   audioBar: 0
-  audioMixer: {fileID: 24100000, guid: 862506227fdeb0844a50302b11137f1d, type: 2}
 --- !u!114 &6577894244852968232
 MonoBehaviour:
   m_ObjectHideFlags: 0

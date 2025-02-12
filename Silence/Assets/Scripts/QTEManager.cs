@@ -9,6 +9,7 @@ public class QTEManager : MonoBehaviour
 {
     public static QTEManager Instance;
     public float holdTime; 
+    public bool holding = false;
     private void Awake()
     {
         if (Instance == null)
@@ -48,18 +49,20 @@ public class QTEManager : MonoBehaviour
         holdTime = elapsedTime;
         while (Input.GetKey(interactionKey))
         {
+            holding = true;
             elapsedTime += Time.deltaTime;
             holdTime = elapsedTime;
             Debug.Log($"Holding: {elapsedTime}/{holdDuration}");
 
             if (elapsedTime >= holdDuration)
             {
+                holding = false;
                 return true;
             }
 
             await Task.Yield();
         }
-
+        holding = false;
         return false;
     }
 }

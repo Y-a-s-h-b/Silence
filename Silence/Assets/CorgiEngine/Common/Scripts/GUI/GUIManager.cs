@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using MoreMountains.Tools;
 using UnityEngine.EventSystems;
+using TMPro;
 namespace MoreMountains.CorgiEngine
 {	
 	/// <summary>
@@ -45,6 +46,8 @@ namespace MoreMountains.CorgiEngine
 		/// the level display
 		[Tooltip("the level display")]
 		public Text LevelText;
+		[Tooltip("the level display")]
+		public TextMeshProUGUI LivesCount;
 
 		[Header("Settings")]
 
@@ -111,6 +114,9 @@ namespace MoreMountains.CorgiEngine
 			if (LevelText!= null)
 			{ 
 				LevelText.enabled = state;
+			}if (LivesCount!= null)
+			{ 
+				LivesCount.enabled = state;
 			}
 		}
 
@@ -341,6 +347,13 @@ namespace MoreMountains.CorgiEngine
 			if (LevelText!= null)
 			{ 
 				LevelText.text=name;
+			}
+		}
+		public virtual void SetLivesCount(int lives)
+		{
+			if (LivesCount != null)
+			{
+                LivesCount.text = lives.ToString();
 			}
 		}
 

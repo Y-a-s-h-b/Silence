@@ -1,4 +1,7 @@
+using Febucci.UI.Effects;
 using MoreMountains.CorgiEngine;
+using MoreMountains.Feedbacks;
+using MoreMountains.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,7 +13,7 @@ public class Sacrifice : MonoBehaviour
 
     private GameObject player;
     private bool isSuccess = false;
-
+    public MMF_Player FadeFeedback;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
@@ -49,6 +52,7 @@ public class Sacrifice : MonoBehaviour
     {
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
-        if(OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
+        FadeFeedback.PlayFeedbacks();
+        if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
     }
 }

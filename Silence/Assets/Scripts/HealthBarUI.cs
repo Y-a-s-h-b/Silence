@@ -7,7 +7,6 @@ using test;
 public class HealthBarUI : MonoBehaviour
 {
     public RadialSegmentedHealthBar healthBar;
-    public LevelManager levelManager;
     public AudioHealthController audioHealthController;
     public float maxVolume = 50f; //original is 75;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,13 +18,10 @@ public class HealthBarUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if(levelManager == null) levelManager = LevelManager.Instance;
-        else
+        if(LevelManager.Instance != null && LevelManager.Instance.Players[0] && audioHealthController == null)
         {
-            audioHealthController = levelManager.Players[0].GetComponent<AudioHealthController>();
+            audioHealthController = LevelManager.Instance.Players[0].GetComponent<AudioHealthController>();
         }
-        //Debug.Log(progressBar.BarProgress);
         healthBar.RemoveSegments.Value = healthBar.SegmentCount.Value - ((audioHealthController.audioBar * healthBar.SegmentCount.Value)/ 50);
     }
 }
