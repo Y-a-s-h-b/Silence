@@ -214,6 +214,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slimes_dark_0: -7708530859740908122
+      slimes_dark_1: 1388422637673126857
+      slimes_dark_10: 5747047607573814967
+      slimes_dark_11: 8891754199356052313
+      slimes_dark_12: -2392926531947737488
+      slimes_dark_13: -5407475297068506787
+      slimes_dark_14: -588546971565827829
+      slimes_dark_15: 9089315388169721738
+      slimes_dark_16: 5201689917312375000
+      slimes_dark_17: -253477556883113920
+      slimes_dark_18: -6344676827794707791
+      slimes_dark_19: -3413628698749385465
+      slimes_dark_2: 6680214429211660376
+      slimes_dark_20: -167867907477255670
+      slimes_dark_21: 5673004234888331608
+      slimes_dark_22: -7707083336593776544
+      slimes_dark_23: 4250415374384106405
+      slimes_dark_24: 8853593752906936916
+      slimes_dark_25: -4033777196861440076
+      slimes_dark_26: -5651258051495651283
+      slimes_dark_27: 2808935099049885484
+      slimes_dark_28: -6403905762590029437
+      slimes_dark_29: 3013171459157588437
+      slimes_dark_3: 7670540917442678958
+      slimes_dark_30: 5470122866454943227
+      slimes_dark_31: 130483138979159510
+      slimes_dark_32: 3722246050106613071
+      slimes_dark_33: -3329122575143634933
+      slimes_dark_34: 6976424911451632486
+      slimes_dark_35: -5406186480811687057
+      slimes_dark_4: -6920642332424954362
+      slimes_dark_5: -8053464767447612201
+      slimes_dark_6: -6343821509561258684
+      slimes_dark_7: -7403412849821179157
+      slimes_dark_8: 6571788788463197364
+      slimes_dark_9: 7597758808783593056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

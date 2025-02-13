@@ -214,6 +214,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slimes_blue_0: 595582134089853358
+      slimes_blue_1: 4742468896393395272
+      slimes_blue_10: -8674223069843367581
+      slimes_blue_11: 8091653913470654750
+      slimes_blue_12: -4334347749956790722
+      slimes_blue_13: 8098393917029102191
+      slimes_blue_14: 3458335143052234023
+      slimes_blue_15: 5537994844360295515
+      slimes_blue_16: -1824857137171785250
+      slimes_blue_17: -3135810381266268010
+      slimes_blue_18: 7684313312616276197
+      slimes_blue_19: -3960471591738824259
+      slimes_blue_2: -8121077969663585896
+      slimes_blue_20: -5612707715741493875
+      slimes_blue_21: 380966818233655985
+      slimes_blue_22: -4557136004652332634
+      slimes_blue_23: 305076406354322246
+      slimes_blue_24: -330403595300409989
+      slimes_blue_25: 48247232148977220
+      slimes_blue_26: 7798629076496268015
+      slimes_blue_27: -2949870787241382892
+      slimes_blue_28: 5899610591501837255
+      slimes_blue_29: -2008793786947922675
+      slimes_blue_3: 8409852231050745851
+      slimes_blue_30: -4046333942814472323
+      slimes_blue_31: -940369796644728005
+      slimes_blue_32: 3135883668482813027
+      slimes_blue_33: 335829350968468001
+      slimes_blue_34: 3384532893781441143
+      slimes_blue_35: 7187518536869307723
+      slimes_blue_4: 468075940879152791
+      slimes_blue_5: 3133794499447343367
+      slimes_blue_6: -4555522392008103460
+      slimes_blue_7: -6814047744797622993
+      slimes_blue_8: -8922968911748167117
+      slimes_blue_9: 2444831598749726951
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

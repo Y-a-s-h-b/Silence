@@ -214,6 +214,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slimes_white_0: -501703972278923257
+      slimes_white_1: -624619064060986151
+      slimes_white_10: 2509813171749164992
+      slimes_white_11: 4865495239983323608
+      slimes_white_12: 6498013667182954910
+      slimes_white_13: -5980626122088632262
+      slimes_white_14: 2635835790889184306
+      slimes_white_15: -8984678844113610933
+      slimes_white_16: 5195522140758617751
+      slimes_white_17: 5510817073217697590
+      slimes_white_18: -8468420311827785923
+      slimes_white_19: 968010116107857109
+      slimes_white_2: -3615592134138506539
+      slimes_white_20: -5738833671846398490
+      slimes_white_21: -6050204083960823458
+      slimes_white_22: 8156426311835464478
+      slimes_white_23: 153898620988125791
+      slimes_white_24: -1358490918233507140
+      slimes_white_25: 8885181536328468518
+      slimes_white_26: -8668047224682365896
+      slimes_white_27: -726259584560255560
+      slimes_white_28: 1471960004643874361
+      slimes_white_29: 8564480012136625085
+      slimes_white_3: 4868504467666312817
+      slimes_white_30: 865469597402005512
+      slimes_white_31: 7536421752730756937
+      slimes_white_32: 6728175910963082380
+      slimes_white_33: 2155400664251331639
+      slimes_white_34: -860313138123624651
+      slimes_white_35: 7107918778989817153
+      slimes_white_4: 4061607217456080449
+      slimes_white_5: -3577899684039960957
+      slimes_white_6: 8010543209667517381
+      slimes_white_7: -2393649529227295764
+      slimes_white_8: 7848371992867101295
+      slimes_white_9: 7355999144980581306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

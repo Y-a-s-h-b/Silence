@@ -214,6 +214,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slimes_yellow_0: -2377293018045493556
+      slimes_yellow_1: -1805310019163692762
+      slimes_yellow_10: 6346609644639136661
+      slimes_yellow_11: 5334129027283970707
+      slimes_yellow_12: 5356649815649779536
+      slimes_yellow_13: 8980987079850029670
+      slimes_yellow_14: -6375139369539046131
+      slimes_yellow_15: 1206753892862654325
+      slimes_yellow_16: -4475248858251027503
+      slimes_yellow_17: 9187351880056919445
+      slimes_yellow_18: 4615842771092838188
+      slimes_yellow_19: -5483312114984249510
+      slimes_yellow_2: 638257734458910378
+      slimes_yellow_20: -7375967790333684008
+      slimes_yellow_21: 4995558607025516180
+      slimes_yellow_22: -6354556352352566588
+      slimes_yellow_23: 5999408208216917887
+      slimes_yellow_24: 5198115518630152308
+      slimes_yellow_25: 6899639158651861040
+      slimes_yellow_26: -1223362787219199791
+      slimes_yellow_27: -984251333142913130
+      slimes_yellow_28: 1037214257764954192
+      slimes_yellow_29: 7989264393118679043
+      slimes_yellow_3: -3378864466425047222
+      slimes_yellow_30: 4845896755634469110
+      slimes_yellow_31: 8353612897674613496
+      slimes_yellow_32: 714622954812803563
+      slimes_yellow_33: 1567145671538160429
+      slimes_yellow_34: -438441798583660373
+      slimes_yellow_35: 7892460335420420449
+      slimes_yellow_4: -2997225957278574995
+      slimes_yellow_5: 5545314472982634949
+      slimes_yellow_6: 4799064886377360884
+      slimes_yellow_7: 4005445391471816159
+      slimes_yellow_8: 6088301565871715198
+      slimes_yellow_9: 8931634007149825350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

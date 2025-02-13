@@ -214,6 +214,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,7 +1035,43 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slimes_pink_0: -7349856038622133784
+      slimes_pink_1: -3251537392299130846
+      slimes_pink_10: 2710101421894187099
+      slimes_pink_11: -1822309955752836313
+      slimes_pink_12: 5809832079979628590
+      slimes_pink_13: -974245164506629065
+      slimes_pink_14: 6894651605975507581
+      slimes_pink_15: -8325307252043887362
+      slimes_pink_16: 5119504797844723269
+      slimes_pink_17: -5736978680777258857
+      slimes_pink_18: -331766953294495406
+      slimes_pink_19: 7569863160953046369
+      slimes_pink_2: -984660625878901313
+      slimes_pink_20: 5828318432819816857
+      slimes_pink_21: 810161916253825412
+      slimes_pink_22: -7158776275582257790
+      slimes_pink_23: 6356369793747047968
+      slimes_pink_24: -7519319277601118892
+      slimes_pink_25: -566557876237936009
+      slimes_pink_26: -7017431468336554556
+      slimes_pink_27: 2859469164701924467
+      slimes_pink_28: 6108308281574384601
+      slimes_pink_29: -725890416628995696
+      slimes_pink_3: 4910758086569204833
+      slimes_pink_30: -6918806902094139082
+      slimes_pink_31: -4227847270877247716
+      slimes_pink_32: 416578259944488869
+      slimes_pink_33: -1240862670377780290
+      slimes_pink_34: 5126607513621693452
+      slimes_pink_35: -1419465199386733002
+      slimes_pink_4: -987291810389807679
+      slimes_pink_5: -3898461686487151711
+      slimes_pink_6: -5948364140416147498
+      slimes_pink_7: 8060313896326478316
+      slimes_pink_8: 2772114410269076454
+      slimes_pink_9: -4943749013393664681
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
