@@ -177,12 +177,10 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected virtual void Update()
 		{
-			Debug.Log("in");
 			if (_weaponAim == null)
 			{
 				return;
 			}
-			Debug.Log(" real in");
 			DetermineRaycastOrigin();
 			ScanIfNeeded();
 			HandleTarget();

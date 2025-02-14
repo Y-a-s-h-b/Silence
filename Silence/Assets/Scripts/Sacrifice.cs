@@ -58,6 +58,9 @@ public class Sacrifice : MonoBehaviour
 
     private void SacrificeCompleted()
     {
+        //enable dieable
+        Debug.Log("enable dying");
+        player.GetComponent<AudioHealthController>().dieable = true;
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;

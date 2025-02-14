@@ -217,12 +217,14 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		public virtual void Flip()
 		{
+			Debug.Log("in flip");
 			if (_spriteRenderer != null)
 			{
 				_spriteRenderer.flipX = !_spriteRenderer.flipX;
 			}	
 			else
 			{
+				Debug.Log("flipping model");
 				this.transform.localScale = Vector3.Scale(this.transform.localScale,FlipValue) ;
 			}
 		}

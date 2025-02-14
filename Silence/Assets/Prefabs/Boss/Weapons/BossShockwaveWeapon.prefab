@@ -50,7 +50,7 @@ MonoBehaviour:
   TriggerMode: 0
   Interruptable: 0
   InitializeOnStart: 0
-  DelayBeforeUse: 1
+  DelayBeforeUse: 0.3
   DelayBeforeUseReleaseInterruption: 1
   TimeBetweenUses: 1
   TimeBetweenUsesReleaseInterruption: 1
@@ -66,9 +66,9 @@ MonoBehaviour:
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
-  WeaponAttachmentOffset: {x: 0, y: 0, z: 0}
+  WeaponAttachmentOffset: {x: 0, y: -1.2, z: 0}
   FlipWeaponOnCharacterFlip: 1
-  FlipValue: {x: -1, y: 1, z: 1}
+  FlipValue: {x: -1, y: 0, z: 0}
   LeftHandHandle: {fileID: 0}
   RightHandHandle: {fileID: 0}
   ModifyMovementWhileEquipped: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   MirrorCharacterAnimatorParameters: 0
   EquippedAnimationParameter: 
   IdleAnimationParameter: 
-  StartAnimationParameter: Crawling
+  StartAnimationParameter: Shockwave
   DelayBeforeUseAnimationParameter: 
   SingleUseAnimationParameter: 
   UseAnimationParameter: 
@@ -213,6 +213,7 @@ MonoBehaviour:
   FirstTargetFoundFeedback: {fileID: 0}
   NewTargetFoundFeedback: {fileID: 0}
   NoMoreTargetsFeedback: {fileID: 0}
+  TargetOffset: {x: 0, y: 0, z: 0}
   Target: {fileID: 0}
   DrawDebugRadius: 1
 --- !u!114 &-7906792665936878142

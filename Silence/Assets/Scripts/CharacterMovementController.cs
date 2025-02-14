@@ -75,7 +75,6 @@ public class CharacterMovementController : CharacterAbility, MMEventListener<MMC
         {
             if (_controller.State.IsGrounded)
             {
-                Debug.Log("start prev state restoration");
                 AssignPrevStateAfterJump();
                 ChangeJumpPostBool();
                 timeRunButtonPressed = 0f;
