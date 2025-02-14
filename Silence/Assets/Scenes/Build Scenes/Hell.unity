@@ -7317,7 +7317,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!222 &938498108
 CanvasRenderer:
@@ -7393,7 +7393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16594,7 +16594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16620,7 +16620,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!222 &1858379053
 CanvasRenderer:
@@ -19844,37 +19844,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 1
---- !u!114 &2054201186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054201173}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2065586459
 GameObject:
   m_ObjectHideFlags: 0
@@ -21579,6 +21549,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 71858297634779489, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1200561756946808275, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: MasterAudioMixerGroup
@@ -21691,6 +21666,11 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4795613145673386877, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5281327961081082105, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_IsActive
@@ -21732,6 +21712,16 @@ PrefabInstance:
       propertyPath: LevelBounds.m_Extent.x
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 5722234948565624961, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722826823512573061, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920842659312384829, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: MMFader
@@ -21747,6 +21737,11 @@ PrefabInstance:
       propertyPath: DoubleJump
       value: 
       objectReference: {fileID: 1858379050}
+    - target: {fileID: 6969587493091645214, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7118447053028608050, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_IsActive
@@ -21788,10 +21783,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2054201182}
-    - targetCorrespondingSourceObject: {fileID: 5281327961081082105, guid: 3643a0c7743945648889b9dd54734a6f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2054201186}
   m_SourcePrefab: {fileID: 100100000, guid: 3643a0c7743945648889b9dd54734a6f, type: 3}
 --- !u!224 &2135601255 stripped
 RectTransform:
