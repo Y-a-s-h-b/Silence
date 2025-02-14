@@ -6630,8 +6630,9 @@ MonoBehaviour:
   - {fileID: 114840706934889930}
   JetPackBars: []
   weaponCooldownBars:
-  - {fileID: 0}
-  dashCooldownBars: []
+  - {fileID: 3838887863408125430}
+  dashCooldownBars:
+  - {fileID: 4317597398851161171}
   AmmoDisplays: []
   PauseScreen: {fileID: 1824087420785206}
   TimeSplash: {fileID: 1005637650189584}
@@ -13196,7 +13197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4610723115796453160
 RectTransform:
   m_ObjectHideFlags: 0
