@@ -16,6 +16,10 @@ public class CrystalHandler : MMSingleton<CrystalHandler>
     public float moveDuration = 0.5f;
     public Vector2 startOffset = new Vector2(50, 50);
     public MMF_Player Shardfeedback;
+    public MMFader DashFader;
+    public MMFader DoubleJump;
+    public MMFader Weapon;
+    public MMFader Push;
     public void CollectShard()
     {
         if (currentShardIndex >= shards.Length)
@@ -53,12 +57,44 @@ public class CrystalHandler : MMSingleton<CrystalHandler>
         rect.anchoredPosition = originalPos;
         canvasGroup.alpha = 1;
         Shardfeedback.PlayFeedbacks();
-        GameManager.Instance.UnPause(PauseMethods.NoPauseMenu);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSecondsRealtime(.5f);
         SetAlpha();
+        yield return new WaitForSecondsRealtime(2f);
+        FadeOut();
+        GameManager.Instance.UnPause(PauseMethods.NoPauseMenu);
     }
     private void SetAlpha()
     {
         GetComponent<CanvasGroup>().alpha = 0;
+        if(currentShardIndex == 1 )
+        {
+            GameManager.Instance.UnPause(PauseMethods.NoPauseMenu);
+            //Weapon.FadeIn(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+        else if(currentShardIndex == 2 )
+        {
+            DoubleJump.FadeIn(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+        else if (currentShardIndex == 3)
+        {
+            DoubleJump.FadeIn(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+
+    }
+    private void FadeOut()
+    {
+        if (currentShardIndex == 1)
+        {
+            //Weapon.FadeOut(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+        else if (currentShardIndex == 2)
+        {
+            DoubleJump.FadeOut(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+        else if (currentShardIndex == 3)
+        {
+            DashFader.FadeOut(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+
     }
 }
