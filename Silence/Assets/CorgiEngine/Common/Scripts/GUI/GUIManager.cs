@@ -22,8 +22,12 @@ namespace MoreMountains.CorgiEngine
 		/// the jetpack bar
 		[Tooltip("the jetpack bar")]
 		public MMProgressBar[] JetPackBars;
-		/// the panels and bars used to display current weapon ammo
-		[Tooltip("the panels and bars used to display current weapon ammo")]
+		/// the weapon cooldown bar
+		public MMRadialProgressBar[] weaponCooldownBars;
+        /// the dash cooldown bar
+        public MMRadialProgressBar[] dashCooldownBars;
+        /// the panels and bars used to display current weapon ammo
+        [Tooltip("the panels and bars used to display current weapon ammo")]
 		public AmmoDisplay[] AmmoDisplays;
 		/// the pause screen game object
 		[Tooltip("the pause screen game object")]
@@ -312,17 +316,65 @@ namespace MoreMountains.CorgiEngine
 			}
 		}
 
-		/// <summary>
-		/// Updates the (optional) ammo displays.
-		/// </summary>
-		/// <param name="magazineBased">If set to <c>true</c> magazine based.</param>
-		/// <param name="totalAmmo">Total ammo.</param>
-		/// <param name="maxAmmo">Max ammo.</param>
-		/// <param name="ammoInMagazine">Ammo in magazine.</param>
-		/// <param name="magazineSize">Magazine size.</param>
-		/// <param name="playerID">Player I.</param>
-		/// <param name="displayTotal">If set to <c>true</c> display total.</param>
-		public virtual void UpdateAmmoDisplays(bool magazineBased, int totalAmmo, int maxAmmo, int ammoInMagazine, int magazineSize, string playerID, int ammoDisplayID, bool displayTotal)
+        /// <summary>
+        /// Updates the weapon cooldown bar.
+        /// </summary>
+        /// <param name="currentCooldown">Current Cooldown.</param>
+        /// <param name="minCooldown">Minimum Cooldown.</param>
+        /// <param name="maxCooldown">Max Cooldown.</param>
+        /// <param name="playerID">Player I.</param>
+        public virtual void UpdateWeaponBar(float currentCooldown, float minCooldown, float maxCooldown, string playerID)
+        {
+            if (weaponCooldownBars == null)
+            {
+                return;
+            }
+
+            foreach (MMRadialProgressBar weaponCooldownBar in weaponCooldownBars)
+            {
+                if (weaponCooldownBar == null) { return; }
+                if (weaponCooldownBar.PlayerID == playerID)
+                {
+                    weaponCooldownBar.UpdateBar(currentCooldown, minCooldown, maxCooldown);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the weapon cooldown bar.
+        /// </summary>
+        /// <param name="currentCooldown">Current Cooldown.</param>
+        /// <param name="minCooldown">Minimum Cooldown.</param>
+        /// <param name="maxCooldown">Max Cooldown.</param>
+        /// <param name="playerID">Player I.</param>
+        public virtual void UpdateDashBar(float currentCooldown, float minCooldown, float maxCooldown, string playerID)
+        {
+            if (dashCooldownBars == null)
+            {
+                return;
+            }
+
+            foreach (MMRadialProgressBar dashBar in dashCooldownBars)
+            {
+                if (dashBar == null) { return; }
+                if (dashBar.PlayerID == playerID)
+                {
+                    dashBar.UpdateBar(currentCooldown, minCooldown, maxCooldown);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the (optional) ammo displays.
+        /// </summary>
+        /// <param name="magazineBased">If set to <c>true</c> magazine based.</param>
+        /// <param name="totalAmmo">Total ammo.</param>
+        /// <param name="maxAmmo">Max ammo.</param>
+        /// <param name="ammoInMagazine">Ammo in magazine.</param>
+        /// <param name="magazineSize">Magazine size.</param>
+        /// <param name="playerID">Player I.</param>
+        /// <param name="displayTotal">If set to <c>true</c> display total.</param>
+        public virtual void UpdateAmmoDisplays(bool magazineBased, int totalAmmo, int maxAmmo, int ammoInMagazine, int magazineSize, string playerID, int ammoDisplayID, bool displayTotal)
 		{
 			if (AmmoDisplays == null)
 			{

@@ -32,6 +32,11 @@ namespace MoreMountains.CorgiEngine
 				return;
 			}
 
+			foreach(var bar in GUIManager.Instance.weaponCooldownBars)
+			{
+				bar.gameObject.SetActive(true);
+			}
+
 			if (_characterHandleWeapon != null)
 			{
 				_characterHandleWeapon.ChangeWeapon(WeaponToGive, null);

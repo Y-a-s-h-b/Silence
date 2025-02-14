@@ -804,7 +804,13 @@ namespace MoreMountains.CorgiEngine
 			}
 			
 			_delayBetweenUsesCounter -= Time.deltaTime;
-			if (_delayBetweenUsesCounter <= 0)
+			if (GUIManager.HasInstance)
+			{
+				float currentTime = _delayBetweenUsesCounter;
+				GUIManager.Instance.UpdateWeaponBar(currentTime, 0f, TimeBetweenUses, Owner.PlayerID);
+			}
+
+            if (_delayBetweenUsesCounter <= 0)
 			{
 				if ((TriggerMode == TriggerModes.Auto) && !_triggerReleased)
 				{

@@ -11,7 +11,7 @@ namespace MoreMountains.Tools
 	/// (make sure you pick FillAmount as the FillMode)
 	/// and much more options, such as delayed bars, events, bump, and more!
 	/// </summary>
-	[Obsolete("This component is obsolete, it's recommended to use MMProgressBar instead", true)]
+	//[Obsolete("This component is obsolete, it's recommended to use MMProgressBar instead", true)]
 	public class MMRadialProgressBar : MonoBehaviour 
 	{
 		/// the start fill amount value 
@@ -23,7 +23,7 @@ namespace MoreMountains.Tools
 		/// optional - the ID of the player associated to this bar
 		public string PlayerID;
 
-		protected Image _radialImage;
+		public Image _radialImage;
 		protected float _newPercent;
 
 		/// <summary>
@@ -31,7 +31,10 @@ namespace MoreMountains.Tools
 		/// </summary>
 		protected virtual void Awake()
 		{
-			_radialImage = GetComponent<Image>();
+			if (_radialImage == null)
+			{
+				_radialImage = GetComponent<Image>();
+			}
 		}
 
 		/// <summary>
