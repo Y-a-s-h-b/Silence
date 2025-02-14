@@ -55,8 +55,8 @@ namespace MoreMountains.Tools
 		/// the current sound settings 
 		[Tooltip("the current sound settings ")]
 		public MMSoundManagerSettingsSO settingsSo;
-
-		[Header("Pool")]
+        public AudioMixerGroup MasterAudioMixerGroup;
+        [Header("Pool")]
 		/// the size of the AudioSource pool, a reserve of ready-to-use sources that will get recycled. Should be approximately equal to the maximum amount of sounds that you expect to be playing at once 
 		[Tooltip("the size of the AudioSource pool, a reserve of ready-to-use sources that will get recycled. Should be approximately equal to the maximum amount of sounds that you expect to be playing at once")]
 		public int AudioSourcePoolSize = 10;
@@ -94,6 +94,7 @@ namespace MoreMountains.Tools
 			{
 				settingsSo.LoadSoundSettings();    
 			}
+			SetTrackVolume(MMSoundManagerTracks.Music, .7f);
 		}
 
 		/// <summary>
@@ -435,7 +436,8 @@ namespace MoreMountains.Tools
 				case MMSoundManagerTracks.Master:
 					if (mutedVolume)
 					{
-						return settingsSo.Settings.MutedMasterVolume;
+                        return settingsSo.Settings.MutedMasterVolume;
+;
 					}
 					else
 					{

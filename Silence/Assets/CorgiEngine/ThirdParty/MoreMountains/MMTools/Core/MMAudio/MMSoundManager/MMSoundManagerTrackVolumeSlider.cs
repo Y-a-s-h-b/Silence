@@ -1,5 +1,6 @@
 ﻿#if MM_UI
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace MoreMountains.Tools
@@ -58,11 +59,11 @@ namespace MoreMountains.Tools
 		protected Modes _resetToMode;
 		protected bool _resetNeeded = false;
 		protected float _resetTimestamp;
-		
-		/// <summary>
-		/// On awake we cache our slider
-		/// </summary>
-		protected virtual void Awake()
+
+        /// <summary>
+        /// On awake we cache our slider
+        /// </summary>
+        protected virtual void Awake()
 		{
 			_slider = this.gameObject.GetComponent<Slider>();
 		}

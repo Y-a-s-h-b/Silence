@@ -18,6 +18,7 @@ namespace MoreMountains.Tools
 		/// the audio mixer to use when playing sounds 
 		[Tooltip("the audio mixer to use when playing sounds")]
 		public AudioMixer TargetAudioMixer;
+		public AudioMixer MasterAudioMixer;
 		/// the master group
 		[Tooltip("the master group")]
 		public AudioMixerGroup MasterAudioMixerGroup;
@@ -100,11 +101,11 @@ namespace MoreMountains.Tools
 			switch (track)
 			{
 				case MMSoundManager.MMSoundManagerTracks.Master:
-					TargetAudioMixer.SetFloat(Settings.MasterVolumeParameter, NormalizedToMixerVolume(volume));
+					MasterAudioMixer.SetFloat(Settings.MasterVolumeParameter, NormalizedToMixerVolume(volume));
 					Settings.MasterVolume = volume;
 					break;
 				case MMSoundManager.MMSoundManagerTracks.Music:
-					TargetAudioMixer.SetFloat(Settings.MusicVolumeParameter, NormalizedToMixerVolume(volume));
+					MasterAudioMixer.SetFloat(Settings.MusicVolumeParameter, NormalizedToMixerVolume(volume));
 					Settings.MusicVolume = volume;
 					break;
 				case MMSoundManager.MMSoundManagerTracks.Sfx:
@@ -137,7 +138,7 @@ namespace MoreMountains.Tools
 					TargetAudioMixer.GetFloat(Settings.MasterVolumeParameter, out volume);
 					break;
 				case MMSoundManager.MMSoundManagerTracks.Music:
-					TargetAudioMixer.GetFloat(Settings.MusicVolumeParameter, out volume);
+					MasterAudioMixer.GetFloat(Settings.MusicVolumeParameter, out volume);
 					break;
 				case MMSoundManager.MMSoundManagerTracks.Sfx:
 					TargetAudioMixer.GetFloat(Settings.SfxVolumeParameter, out volume);

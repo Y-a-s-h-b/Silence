@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Tools;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace MoreMountains.Tools
 {
@@ -36,8 +37,10 @@ namespace MoreMountains.Tools
 		public string UIVolumeParameter = "UIVolume";
         
 		[Header("Master")]
-		/// the master volume
-		[Range(_minimalVolume,_maxVolume)]
+
+        public AudioMixerGroup MasterAudioMixerGroup;
+        /// the master volume
+        [Range(_minimalVolume,_maxVolume)]
 		[Tooltip("the master volume")]
 		[MMReadOnly]
 		public float MasterVolume = _defaultVolume;
