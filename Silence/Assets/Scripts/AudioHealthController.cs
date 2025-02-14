@@ -10,7 +10,7 @@ public class AudioHealthController : MonoBehaviour
     [HideInInspector]public float audioLevelAll; // Audio level in dB
     [HideInInspector]public float audioLevelMusic;        
     public float lerpSpeed = 0.05f;        
-    private AudioSource audioSourceTest;
+    public AudioSource audioSourceTest;
     public bool scriptEnabled;
     public bool dieable;
     public CinemachineCameraController cc;
@@ -43,7 +43,7 @@ public class AudioHealthController : MonoBehaviour
     void Update()
     {
         if (!scriptEnabled) return;
-        if(audioSourceTest == null) audioSourceTest = GameObject.Find("MMAudioSourcePool_0").GetComponent<AudioSource>();
+        if(audioSourceTest == null) audioSourceTest = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
         if (dieable)
         {
             time += Time.deltaTime;
@@ -99,7 +99,7 @@ public class AudioHealthController : MonoBehaviour
         else
         {
             // If the new value is less, lerp towards it
-            smoothedValue = Mathf.Lerp(smoothedValue, 0, Time.deltaTime * lerpSpeed);
+            smoothedValue = Mathf.Lerp(smoothedValue, value, Time.deltaTime * lerpSpeed);
         }
         // For testing, log the values
         //Debug.Log($"Current: {currentValue}, Smoothed: {smoothedValue}");

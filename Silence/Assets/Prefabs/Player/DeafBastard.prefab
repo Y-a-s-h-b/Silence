@@ -10418,8 +10418,11 @@ MonoBehaviour:
   audioLevelMusic: 0
   lerpSpeed: 0.5
   audioSourceTest: {fileID: 0}
+  scriptEnabled: 1
+  dieable: 0
   cc: {fileID: 0}
   audioBar: 0
+  smoothedValue: 0
 --- !u!114 &6577894244852968232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10534,7 +10537,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   runThresholdTime: 0.6
-  sprintThresholdTime: 999
+  sprintThresholdTime: 2
   stateTextTest: {fileID: 0}
 --- !u!114 &6316581119124564773
 MonoBehaviour:
@@ -38421,6 +38424,7 @@ MonoBehaviour:
   FeedbacksList:
   - rid: 0
   - rid: 5261572485039521883
+  - rid: 5261572490927800405
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   RestoreInitialValuesOnDisable: 0
@@ -38698,6 +38702,82 @@ MonoBehaviour:
           ButtonText: Debug Stop Sound
         ResetSequentialIndexButton:
           ButtonText: Reset Sequential Index
+    - rid: 5261572490927800405
+      type: {class: MMF_CorgiEngineSound, ns: MoreMountains.CorgiEngine, asm: MoreMountains.CorgiEngine}
+      data:
+        Active: 0
+        UniqueID: 1355294514
+        Label: Corgi Engine Sound
+        OriginalLabel: Corgi Engine Sound
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          PlayCount: 0
+          LimitPlayCount: 0
+          MaxPlayCount: 3
+          SetPlayCountToZeroOnReset: 0
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        AutomaticShakerSetupButton:
+          ButtonText: 
+        Owner: {fileID: 5871591669976631253}
+        DebugActive: 0
+        SoundFX: {fileID: 8300000, guid: 55a393ab8715c7349b55cdd3e402d463, type: 3}
+        Loop: 0
 --- !u!1 &4534248097315568369
 GameObject:
   m_ObjectHideFlags: 0
@@ -45261,7 +45341,7 @@ MonoBehaviour:
         MaxPitch: 1
         MmSoundManagerTrack: 0
         ID: 0
-        AudioGroup: {fileID: 0}
+        AudioGroup: {fileID: 24300002, guid: 862506227fdeb0844a50302b11137f1d, type: 2}
         RecycleAudioSource: {fileID: 0}
         Loop: 1
         Persistent: 0

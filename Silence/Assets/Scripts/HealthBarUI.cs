@@ -8,7 +8,7 @@ public class HealthBarUI : MonoBehaviour
 {
     public RadialSegmentedHealthBar healthBar;
     public AudioHealthController audioHealthController;
-    public float maxVolume = 50f; //original is 75;
+    private float maxVolume = 50f; //original is 75;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

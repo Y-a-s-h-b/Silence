@@ -38,6 +38,8 @@ public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     }
     void ChangeMaterial()
     {
+        if (character == null) character = LevelManager.Instance.Players[0];
+        if (GhostMat == null) return;
         character.CharacterModel.GetComponent<SpriteRenderer>().material = GhostMat;
         character.CharacterModel.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.black);
     }
