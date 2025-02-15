@@ -26,13 +26,15 @@ public class Vines : MonoBehaviour
 
     private void Start()
     {
-        trappedCharacter = LevelManager.Instance?.Players[0];
+        if (LevelManager.Instance.SceneCharacters.Count > 0)
+        {
+            trappedCharacter = LevelManager.Instance.SceneCharacters[0];
+        }
         qteManager = QTEManager.Instance;
     }
 
     private void Update()
     {
-
         if (isTrapped)
         {
             display.UpdateUI(requiredClicks - qteManager.clickCount, 0, requiredClicks, 0);
@@ -43,7 +45,6 @@ public class Vines : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         trappedCharacter = LevelManager.Instance.Players[0];
-        GetComponent<SpriteRenderer>().color = Color.red;
         if (!collision.gameObject.TryGetComponent(out Character character) || isTrapped)
         {
             return;
@@ -58,6 +59,7 @@ public class Vines : MonoBehaviour
         isTrapped = true;
         trappedCharacter = character;
 
+        GetComponent<SpriteRenderer>().color = Color.red;
         Debug.Log("Trapped!");
 
         RestrictCharacter();
@@ -67,8 +69,8 @@ public class Vines : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isTrapped = false;
         GetComponent<SpriteRenderer>().color = Color.white;
+        Debug.Log("false");
     }
 
     private async void StartRapidClicks()
@@ -98,10 +100,13 @@ public class Vines : MonoBehaviour
         
         //Speed Multiplier
         characterHorizontalMovement = trappedCharacter.GetComponent<CharacterHorizontalMovement>();
-        originalSpeedMultiplier = characterHorizontalMovement.MovementSpeedMultiplier;
-        abilitySpeedMultiplier = characterHorizontalMovement.AbilityMovementSpeedMultiplier;
-        characterHorizontalMovement.MovementSpeedMultiplier = speedMultiplier;
-        characterHorizontalMovement.AbilityMovementSpeedMultiplier = speedMultiplier;
+        //characterHorizontalMovement.AbilityPermitted = false;
+        trappedCharacter.ResetInput();
+        characterHorizontalMovement.MovementForbidden = true;
+        //originalSpeedMultiplier = characterHorizontalMovement.MovementSpeedMultiplier;
+        //abilitySpeedMultiplier = characterHorizontalMovement.AbilityMovementSpeedMultiplier;
+        //characterHorizontalMovement.MovementSpeedMultiplier = speedMultiplier;
+        //characterHorizontalMovement.AbilityMovementSpeedMultiplier = speedMultiplier;
     }
 
     private void FreeCharacter()
@@ -114,14 +119,18 @@ public class Vines : MonoBehaviour
     private void ResetCharacter()
     {
         //Speed Multipler
-        characterHorizontalMovement.MovementSpeedMultiplier = originalSpeedMultiplier;
-        characterHorizontalMovement.AbilityMovementSpeedMultiplier = abilitySpeedMultiplier;
+        //characterHorizontalMovement.MovementSpeedMultiplier = originalSpeedMultiplier;
+        //characterHorizontalMovement.AbilityMovementSpeedMultiplier = abilitySpeedMultiplier;
 
         //Other Ability 
         trappedCharacter.GetComponent<CharacterJump>().AbilityPermitted = true;
         trappedCharacter.GetComponent<CharacterDashBreakable>().AbilityPermitted = true;
+        characterHorizontalMovement.MovementForbidden = false;
+
+
 
         //Update Display
+        isTrapped = false;
         display.Deactivate();
     }
 
