@@ -89,15 +89,10 @@ public class StartSequence : MonoBehaviour
         npcAnimator.SetTrigger("Open");
         GameObject.Find("Expression").TryGetComponent<MMF_Player>(out MMF_Player playerFeedback);
         playerFeedback.PlayFeedbacks(this.transform.position);
-
         yield return new WaitForSeconds(.25f);
-
-        //StartCoroutine(ShowMoveIcon());
         jailDoorAnimator.SetBool("IsOpened",true);
         npcDialogue.StartDialogue();
-
-        yield return new WaitForSeconds(9f);
-
+        yield return new WaitForSeconds(13f);
         InputManager.Instance.InputDetectionActive = true;
         yield return new WaitUntil(() => InputManager.Instance.PrimaryMovement.x > 0);
         player = LevelManager.Instance.Players[0];
@@ -105,7 +100,6 @@ public class StartSequence : MonoBehaviour
         camera.Follow = player.CameraTarget.transform;
         player.CharacterAnimator.SetBool("Vibing",false);
         yield return new WaitUntil(() => (npc.transform.position.x < player.transform.position.x + 1));
-        Debug.Log("Waitin");
         while (Vector2.Distance(npc.transform.position, player.transform.position + new Vector3(2,0,0)) > 0.1f && FollowPlayer)
         {
             npcAnimator.SetTrigger("Walk");

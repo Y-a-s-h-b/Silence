@@ -36,7 +36,7 @@ public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
                 break;
         }
     }
-    void ChangeMaterial()
+    public void ChangeMaterial()
     {
         if (character == null) character = LevelManager.Instance.Players[0];
         if (GhostMat == null) return;

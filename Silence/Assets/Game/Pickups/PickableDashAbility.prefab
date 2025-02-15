@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20ef6cc07d3fa1f449e50c9aabc3038c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 040a523f93c0bb84d809bd4e5349a1f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13297606, y: 0.09042441}
+  m_Offset: {x: -0.07, y: 0.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -430,6 +430,19 @@ MonoBehaviour:
               m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.PickableAbility,
                 MoreMountains.CorgiEngine
               m_MethodName: SetTriggerFalse
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+            - m_Target: {fileID: 7665900626680475260}
+              m_TargetAssemblyTypeName: MoreMountains.CorgiEngine.PickableAbility,
+                MoreMountains.CorgiEngine
+              m_MethodName: SetDashUIActive
               m_Mode: 1
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}

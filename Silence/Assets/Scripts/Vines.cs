@@ -26,12 +26,13 @@ public class Vines : MonoBehaviour
 
     private void Start()
     {
-        trappedCharacter = LevelManager.Instance.SceneCharacters[0];
+        trappedCharacter = LevelManager.Instance?.Players[0];
         qteManager = QTEManager.Instance;
     }
 
     private void Update()
     {
+
         if (isTrapped)
         {
             display.UpdateUI(requiredClicks - qteManager.clickCount, 0, requiredClicks, 0);
@@ -41,6 +42,7 @@ public class Vines : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        trappedCharacter = LevelManager.Instance.Players[0];
         GetComponent<SpriteRenderer>().color = Color.red;
         if (!collision.gameObject.TryGetComponent(out Character character) || isTrapped)
         {

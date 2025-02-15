@@ -96,6 +96,13 @@ namespace MoreMountains.CorgiEngine
             objectToMove.position = targetPosition;
 			DestroyFeedback.PlayFeedbacks();
         }
+		public void SetDashUIActive()
+		{
+            foreach (var bar in GUIManager.Instance.dashCooldownBars)
+            {
+                bar.gameObject.SetActive(true);
+            }
+        }
     
 	}
 }
