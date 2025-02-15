@@ -1,10 +1,12 @@
 using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class CharacterEventTrigger : MonoBehaviour
 {
     public Character _currentCharacter;
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

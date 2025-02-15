@@ -10,7 +10,7 @@ public class AudioHealthController : MonoBehaviour
     [HideInInspector]public float audioLevelAll; // Audio level in dB
     [HideInInspector]public float audioLevelMusic;        
     public float lerpSpeed = 0.05f;        
-    public AudioSource musicAudioSource;
+    private AudioSource musicAudioSource;
     public bool scriptEnabled;
     public bool dieable;
     public CinemachineCameraController cc;
@@ -42,6 +42,8 @@ public class AudioHealthController : MonoBehaviour
 
     void Update()
     {
+
+        OnVolumeNullTriggerDeath();
         if (!scriptEnabled) return;
         if (musicAudioSource == null)
         {
@@ -59,8 +61,7 @@ public class AudioHealthController : MonoBehaviour
         }
         BarSetter(GetDifferenceOfDecibles());
         audioBar = Mathf.RoundToInt(smoothedValue);
-                
-        OnVolumeNullTriggerDeath();                       
+                                      
 
     }
 
