@@ -1725,7 +1725,7 @@ MonoBehaviour:
           ButtonText: 
         Owner: {fileID: 5488913189607150151}
         DebugActive: 0
-        PauseDuration: 0.05
+        PauseDuration: 0.2
         RandomizePauseDuration: 0
         MinPauseDuration: 1
         MaxPauseDuration: 3
