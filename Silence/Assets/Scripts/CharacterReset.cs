@@ -25,7 +25,7 @@ public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     {
         character = LevelManager.Instance.Players[0];
         character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = CharacterAnimator;
-        ChangeMaterial();
+        //ChangeMaterial();
     }
     public virtual void OnMMEvent(CorgiEngineEvent engineEvent)
     {
@@ -42,6 +42,7 @@ public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         if (GhostMat == null) return;
         character.CharacterModel.GetComponent<SpriteRenderer>().material = GhostMat;
         character.CharacterModel.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.black);
+        character.CharacterModel.GetComponent<SpriteRenderer>().material.SetVector("_Color", new Vector4(0,0,0,1));
     }
     protected virtual void OnEnable()
     {

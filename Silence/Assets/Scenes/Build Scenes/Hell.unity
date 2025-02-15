@@ -7431,7 +7431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe052b91c95c534b8bf0f64fb0b9151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 99
   InactiveAlpha: 0
   ActiveAlpha: 1
   ForcedInitState: 2
@@ -8271,14 +8271,13 @@ GameObject:
   m_Component:
   - component: {fileID: 990375311}
   - component: {fileID: 990375310}
-  - component: {fileID: 990375312}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &990375310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8286,13 +8285,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990375309}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50dfe57b03522e148b2bd9f2b37504bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InitializationTime: 0
-  SoundClip: {fileID: 8300000, guid: 53da61bf470ed694ba5712ae81cb5ee5, type: 3}
+  SoundClip: {fileID: 8300000, guid: d37dd49bf33862c4baf90d645daa4a66, type: 3}
   Loop: 1
   ID: 255
 --- !u!4 &990375311
@@ -8310,104 +8309,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &990375312
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 990375309}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: fd147b0481bf4e04c9c676daf776c0f9,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: 53da61bf470ed694ba5712ae81cb5ee5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 53da61bf470ed694ba5712ae81cb5ee5, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1001295707
 GameObject:
   m_ObjectHideFlags: 0
@@ -9807,9 +9708,11 @@ MonoBehaviour:
   ActivableMoreThanOnce: 0
   InactiveTime: 2
   Dialogue:
-  - My Child
-  - Die
-  - SWORD
+  - 'Silence consumes your world. '
+  - To restore balance, you must find the Four Shards of Resonance.
+  - <rainb>The first, I grant you.</rainb> The rest are scattered across the world.
+  - "<color=\"red\">Seek the shards.</color> Restore the harmony\u2026 or be lost
+    to the void"
 --- !u!61 &1096256596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11507,6 +11410,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222427869}
   m_CullTransparentMesh: 1
+--- !u!114 &1226417220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9034827963909642054, guid: 3643a0c7743945648889b9dd54734a6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135601254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923a01d66c4618446abb082250646478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1228024059
 GameObject:
   m_ObjectHideFlags: 0
@@ -11693,6 +11608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264438639}
   - component: {fileID: 1264438640}
+  - component: {fileID: 1264438641}
   m_Layer: 0
   m_Name: GiveWeapon
   m_TagString: Untagged
@@ -11992,7 +11908,7 @@ MonoBehaviour:
         PlayEvents:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 0}
+            - m_Target: {fileID: 1264438641}
               m_TargetAssemblyTypeName: CharacterReset, Assembly-CSharp
               m_MethodName: ResetCharacter
               m_Mode: 1
@@ -12013,6 +11929,20 @@ MonoBehaviour:
         ResetEvents:
           m_PersistentCalls:
             m_Calls: []
+--- !u!114 &1264438641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264438638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc69be1141e7e449accd3e3bafd047b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterAnimator: {fileID: 9100000, guid: 09d9ecfd314702144b16392b1608a5db, type: 2}
+  GhostMat: {fileID: 0}
 --- !u!21 &1272014571
 Material:
   serializedVersion: 8
@@ -16639,7 +16569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe052b91c95c534b8bf0f64fb0b9151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 99
   InactiveAlpha: 0
   ActiveAlpha: 1
   ForcedInitState: 2
@@ -21688,6 +21618,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 1195047762603023741, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: UseOrthographicZoom
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1200561756946808275, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: MasterAudioMixerGroup
@@ -21702,7 +21637,7 @@ PrefabInstance:
     - target: {fileID: 1558137670199775183, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1558137670199775183, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
@@ -21855,6 +21790,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -109
       objectReference: {fileID: 0}
+    - target: {fileID: 4927099509027624975, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5240076792278956361, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -21896,6 +21836,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5632770623774615418, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: DebugSpawn
+      value: 
+      objectReference: {fileID: 1226417220}
     - target: {fileID: 5632770623774615418, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: LevelBounds.m_Center.x
@@ -21984,12 +21929,12 @@ PrefabInstance:
     - target: {fileID: 9034827963902885510, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2079.07
+      value: 2693.33
       objectReference: {fileID: 0}
     - target: {fileID: 9034827963902885510, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 240.36
+      value: 252.45
       objectReference: {fileID: 0}
     - target: {fileID: 9216657284108268447, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}

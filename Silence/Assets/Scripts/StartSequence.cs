@@ -46,6 +46,10 @@ public class StartSequence : MonoBehaviour
     }
     void Update()
     {
+        if(player == null && LevelManager.Instance)
+        {
+            player = LevelManager.Instance.Players[0];
+        }
         if(player != null && Vector2.Distance(player.transform.position, killer.position) > 0.1f)
         {
             FollowPlayer = true;
