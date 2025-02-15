@@ -5,7 +5,7 @@ using MoreMountains.Tools;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Sacrifice : MonoBehaviour
+public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
 {
     [SerializeField] private float holdDuration = 2f;
     [SerializeField] private KeyCode interactionKey = KeyCode.Space;
@@ -13,8 +13,13 @@ public class Sacrifice : MonoBehaviour
     [HideInInspector]
     public GameObject player;
     private bool isSuccess = false;
-    public MMF_Player FadeFeedback;
+    public MMF_Player FadeOutFeedback;
+    public MMF_Player FadeInFeedback;
     public Material DefaultMat;
+
+    private void OnEnable() => this.MMEventStartListening<CorgiEngineEvent>();
+    private void OnDisable() => this.MMEventStopListening<CorgiEngineEvent>();
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
@@ -52,6 +57,8 @@ public class Sacrifice : MonoBehaviour
 
         if (isSuccess)
         {
+            FadeInFeedback.PlayFeedbacks();
+            if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
             SacrificeCompleted();
         }
     }
@@ -64,7 +71,14 @@ public class Sacrifice : MonoBehaviour
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
-        FadeFeedback.PlayFeedbacks();
-        if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
+    }
+
+    public void OnMMEvent(CorgiEngineEvent eventType)
+    {
+        if (eventType.EventType == CorgiEngineEventTypes.Respawn)
+        {
+            FadeOutFeedback.PlayFeedbacks();
+            if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
+        }
     }
 }
