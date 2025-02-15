@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEvent>
 {
-    [SerializeField] private int initialRequiredPoints = 10; // Required points to survive -> If points less than threshold || Minimum Points to avoid losing life
+    //[SerializeField] private int initialRequiredPoints = 10; // Required points to survive -> If points less than threshold || Minimum Points to avoid losing life
     [SerializeField] private int pointIncreaseThreshold = 40; // Threshold after which required points to survive will increase
     [SerializeField] private int afterThresholdRequiredPoints = 20; //  Required points to survive -> If points greater than threshold
 
@@ -49,9 +49,9 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
         // Checks If Character has enough points on death
         if (eventType.EventType == CorgiEngineEventTypes.PlayerDeath)
         {
-            if (gameManager.Points >= initialRequiredPoints)
+            if (gameManager.Points > 0)
             {
-                int pointsToSurvive = gameManager.Points >= pointIncreaseThreshold ? afterThresholdRequiredPoints : initialRequiredPoints;
+                int pointsToSurvive = gameManager.Points >= pointIncreaseThreshold ? afterThresholdRequiredPoints : gameManager.Points;
                 gameManager.AddPoints(-pointsToSurvive);
                 coinDropHandler.DropRandomCoins(pointsToSurvive);
             }
