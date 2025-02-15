@@ -8,8 +8,11 @@ using UnityEngine;
 public class QTEManager : MonoBehaviour
 {
     public static QTEManager Instance;
-    public float holdTime; 
     public bool holding = false;
+    public float holdTime;
+
+    public int clickCount;
+    public float clickElapsedTime;
     private void Awake()
     {
         if (Instance == null)
@@ -20,10 +23,10 @@ public class QTEManager : MonoBehaviour
 
     public async Task<bool> RapidClickAsync(float tappingDuration, int requiredClicks, KeyCode interactionKey)
     {
-        float elapsedTime = 0f;
-        int clickCount = 0;
+        clickElapsedTime = 0f;
+        clickCount = 0;
 
-        while (elapsedTime < tappingDuration)
+        while (clickElapsedTime < tappingDuration)
         {
             if (Input.GetKeyDown(interactionKey))
             {
@@ -36,7 +39,7 @@ public class QTEManager : MonoBehaviour
                 }
             }
 
-            elapsedTime += Time.deltaTime;
+            clickElapsedTime += Time.deltaTime;
             await Task.Yield();
         }
 

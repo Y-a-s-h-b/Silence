@@ -11,14 +11,32 @@ public class Vines : MonoBehaviour
 
     private Character trappedCharacter;
     private CharacterHorizontalMovement characterHorizontalMovement;
+    private GUIDisplay display;
+    private QTEManager qteManager;
     private float originalSpeedMultiplier;
     private float abilitySpeedMultiplier;
 
     private bool isTrapped = false;
 
+    private void Awake()
+    {
+        display = GetComponentInParent<GUIDisplay>();
+        display.Deactivate();
+    }
+
     private void Start()
     {
         trappedCharacter = LevelManager.Instance.SceneCharacters[0];
+        qteManager = QTEManager.Instance;
+    }
+
+    private void Update()
+    {
+        if (isTrapped)
+        {
+            display.UpdateUI(requiredClicks - qteManager.clickCount, 0, requiredClicks, 0);
+            display.UpdateUI(tappingDuration - qteManager.clickElapsedTime, 0, tappingDuration, 1);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,6 +47,12 @@ public class Vines : MonoBehaviour
             return;
         }
 
+        if (character.MovementState.CurrentState == CharacterStates.MovementStates.Dashing)
+        {
+            return;
+        }
+
+
         isTrapped = true;
         trappedCharacter = character;
 
@@ -36,6 +60,7 @@ public class Vines : MonoBehaviour
 
         RestrictCharacter();
         StartRapidClicks();
+        display.Activate();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -46,6 +71,11 @@ public class Vines : MonoBehaviour
 
     private async void StartRapidClicks()
     {
+        if (qteManager == null)
+        {
+            qteManager = QTEManager.Instance;
+        }
+
         bool isSuccess = await QTEManager.Instance.RapidClickAsync(tappingDuration, requiredClicks, interactionKey);
 
         if (isSuccess)
@@ -88,6 +118,9 @@ public class Vines : MonoBehaviour
         //Other Ability 
         trappedCharacter.GetComponent<CharacterJump>().AbilityPermitted = true;
         trappedCharacter.GetComponent<CharacterDashBreakable>().AbilityPermitted = true;
+
+        //Update Display
+        display.Deactivate();
     }
 
     #region Reworked
