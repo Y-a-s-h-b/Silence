@@ -10417,7 +10417,6 @@ MonoBehaviour:
   audioLevelAll: 0
   audioLevelMusic: 0
   lerpSpeed: 0.5
-  musicAudioSource: {fileID: 0}
   scriptEnabled: 0
   dieable: 0
   cc: {fileID: 0}
@@ -11247,7 +11246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacfa4d7be0c0234ebd646a6c25e4474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialRequiredPoints: 10
   pointIncreaseThreshold: 40
   afterThresholdRequiredPoints: 20
 --- !u!1 &1622702577201251552
@@ -39369,7 +39367,7 @@ Animator:
   m_GameObject: {fileID: 4537877254104301185}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09d9ecfd314702144b16392b1608a5db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8ec27a97b1d78f942b9e7d848f0d928f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

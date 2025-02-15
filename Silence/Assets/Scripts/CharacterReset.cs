@@ -6,11 +6,12 @@ using MoreMountains.Tools;
 using System.Collections.Generic;
 using System;
 using Unity.VisualScripting.Antlr3.Runtime;
-public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
+using Demo_Project;
+public class CharacterReset : MonoBehaviour
 {
     private Character character;
     public RuntimeAnimatorController CharacterAnimator;
-    public Material GhostMat;
+
     private Animator Animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void ResetCharacter()
@@ -27,34 +28,4 @@ public class CharacterReset : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = CharacterAnimator;
         //ChangeMaterial();
     }
-    public virtual void OnMMEvent(CorgiEngineEvent engineEvent)
-    {
-        switch (engineEvent.EventType)
-        {
-            case CorgiEngineEventTypes.PlayerDeath:
-                ChangeMaterial();
-                break;
-        }
-    }
-    public void ChangeMaterial()
-    {
-        if (character == null) character = LevelManager.Instance.Players[0];
-        if (GhostMat == null) return;
-        character.CharacterModel.GetComponent<SpriteRenderer>().material = GhostMat;
-        character.CharacterModel.GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.black);
-        character.CharacterModel.GetComponent<SpriteRenderer>().material.SetVector("_Color", new Vector4(0,0,0,1));
-    }
-    protected virtual void OnEnable()
-    {
-        this.MMEventStartListening<CorgiEngineEvent>();
-    }
-
-    /// <summary>
-    /// OnDisable, we stop listening to events.
-    /// </summary>
-    protected virtual void OnDisable()
-    {
-       this.MMEventStopListening<CorgiEngineEvent>();
-    }
-
 }

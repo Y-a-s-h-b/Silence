@@ -33,6 +33,12 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Build Scenes/Level 3.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Build Scenes/Level 4.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Build Scenes/Level 5.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Build Scenes/Level 6.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Build Scenes/Hell.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:

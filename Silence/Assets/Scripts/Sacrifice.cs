@@ -70,6 +70,7 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         player.GetComponent<AudioHealthController>().dieable = true;
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
+        if(!GUIManager.Instance.HUD.activeSelf) GUIManager.Instance.SetHUDActive(true);
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
     }
 
