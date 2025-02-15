@@ -10417,8 +10417,8 @@ MonoBehaviour:
   audioLevelAll: 0
   audioLevelMusic: 0
   lerpSpeed: 0.5
-  audioSourceTest: {fileID: 0}
-  scriptEnabled: 1
+  musicAudioSource: {fileID: 0}
+  scriptEnabled: 0
   dieable: 0
   cc: {fileID: 0}
   audioBar: 0

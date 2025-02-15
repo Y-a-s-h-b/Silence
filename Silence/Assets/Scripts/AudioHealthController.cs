@@ -10,7 +10,7 @@ public class AudioHealthController : MonoBehaviour
     [HideInInspector]public float audioLevelAll; // Audio level in dB
     [HideInInspector]public float audioLevelMusic;        
     public float lerpSpeed = 0.05f;        
-    public AudioSource audioSourceTest;
+    public AudioSource musicAudioSource;
     public bool scriptEnabled;
     public bool dieable;
     public CinemachineCameraController cc;
@@ -43,7 +43,12 @@ public class AudioHealthController : MonoBehaviour
     void Update()
     {
         if (!scriptEnabled) return;
-        if(audioSourceTest == null) audioSourceTest = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        if (musicAudioSource == null)
+        {
+            musicAudioSource = GameObject.Find("MMAudioSourcePool_0").GetComponent<AudioSource>();
+            musicAudioSource.volume = 0.052f;
+        }
+
         if (dieable)
         {
             time += Time.deltaTime;
@@ -62,7 +67,7 @@ public class AudioHealthController : MonoBehaviour
     float GetDifferenceOfDecibles()
     {
         AudioListener.GetOutputData(samplesAll, 0);
-        audioSourceTest.GetOutputData(samplesMusic, 0);
+        musicAudioSource.GetOutputData(samplesMusic, 0);
         float rms = 0f;
         foreach (float sample in samplesAll)
         {
