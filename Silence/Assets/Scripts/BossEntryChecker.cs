@@ -56,6 +56,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             bossEnemy.GetComponent<AIBrain>().enabled = true;
             // ChangeLayerOfWall(true);
             cam.Follow = camTarget.transform;
+            cam.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-0.4f, 1, -10f);
+            cam.Lens.OrthographicSize = 5.6f;
             
         }
     }
@@ -71,6 +73,10 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             ahc.dieable = true;
             bossEnemy.GetComponent<AIBrain>().enabled = false;
             cam.Follow = player.transform;
+            cam.Lens.OrthographicSize = 8.39f;
+            cam.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-0f, 2, -10f);
+
+
         }
     }
 
