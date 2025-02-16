@@ -84041,6 +84041,7 @@ GameObject:
   - component: {fileID: 6234678139273724927}
   - component: {fileID: 3237350767786493053}
   - component: {fileID: 6666321510054557069}
+  - component: {fileID: 7470008293776722664}
   m_Layer: 13
   m_Name: BossEnemy
   m_TagString: Untagged
@@ -84127,7 +84128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022800505, y: 0.7311418}
+  m_Offset: {x: -0.022800505, y: 0.5460299}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -84137,7 +84138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.98337543, y: 1.7622838}
+  m_Size: {x: 0.98337543, y: 1.39206}
   m_EdgeRadius: 0
 --- !u!114 &1979530856726566780
 MonoBehaviour:
@@ -84238,7 +84239,7 @@ MonoBehaviour:
     DisplayWarnings: 1
   PlatformMask:
     serializedVersion: 2
-    m_Bits: 671088896
+    m_Bits: 671105280
   MovingPlatformMask:
     serializedVersion: 2
     m_Bits: 262144
@@ -84297,8 +84298,8 @@ MonoBehaviour:
   CurrentHealth: 0
   TemporarilyInvulnerable: 0
   PostDamageInvulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 1000
+  MaximumHealth: 1000
   Invulnerable: 0
   ImmuneToDamage: 0
   DamageFeedbacks: {fileID: 3794542326992474987}
@@ -84751,11 +84752,11 @@ MonoBehaviour:
   DetectMethod: 1
   DetectionDirection: 0
   RayWidth: 1
-  DetectionDistance: 3
+  DetectionDistance: 3.5
   DetectionOriginOffset: {x: 0, y: 2, z: 0}
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 16384
   ObstaclesLayer:
     serializedVersion: 2
     m_Bits: 264192
@@ -84766,7 +84767,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7826666809499463198}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eec89e4158bf96841b9bc830fc5385ca, type: 3}
   m_Name: 
@@ -84777,12 +84778,12 @@ MonoBehaviour:
     Actions:
       array:
       - {fileID: 2203815943695477277}
-      - {fileID: 8783091396645317584}
+      - {fileID: 7470008293776722664}
       - {fileID: 5993947633267991409}
     Transitions:
       array:
       - Decision: {fileID: 8415172899715778668}
-        TrueState: ThrowAttack
+        TrueState: RollAttack
         FalseState: 
   - StateName: MeleeAttack
     Actions:
@@ -84812,12 +84813,12 @@ MonoBehaviour:
     Transitions:
       array:
       - Decision: {fileID: 6061244231805571201}
-        TrueState: DoNothing
+        TrueState: RollAttack
         FalseState: 
   - StateName: stop
     Actions:
       array:
-      - {fileID: 8783091396645317584}
+      - {fileID: 7470008293776722664}
       - {fileID: 5993947633267991409}
     Transitions:
       array:
@@ -84922,7 +84923,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 0}
-  bossEnemySpeakers: []
+  bossEnemySpeakers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6666321510054557069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85109,6 +85114,22 @@ MonoBehaviour:
   TestMaxHealth: 100
   TestCurrentHealth: 25
   TestUpdateHealthButton: 0
+--- !u!114 &7470008293776722664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7826666809499463198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e0dc15aecb9564d823ee78d18fd48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  TargetName: DeafBastard
+  OnlyRunOnce: 1
 --- !u!1 &7921771160818709248
 GameObject:
   m_ObjectHideFlags: 0
@@ -91091,7 +91112,7 @@ MonoBehaviour:
           ButtonText: Automatic Shaker Setup
         Owner: {fileID: 3794542326992474987}
         DebugActive: 0
-        Sfx: {fileID: 8300000, guid: fc6a8ed8f767ee7449dc2f51593060a7, type: 3}
+        Sfx: {fileID: 8300000, guid: 250bd78fb0a0df043af37ef79d9b3902, type: 3}
         RandomSfx: []
         TestPlayButton:
           ButtonText: Debug Play Sound

@@ -27,7 +27,7 @@ public class BossEnemyHealthModifier : MonoBehaviour, MMEventListener<HealthDeat
     {
         if (e.AffectedHealth.transform.CompareTag("EnemyBreakableSpeaker"))
         {
-            health.Damage(25, this.gameObject, 0.2f, 0.2f, Vector3.up);
+            health.Damage(300, this.gameObject, 0.2f, 0.2f, Vector3.up);
         }        
     }
 }
