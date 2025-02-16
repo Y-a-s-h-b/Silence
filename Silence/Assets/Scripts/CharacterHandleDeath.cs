@@ -16,6 +16,7 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
 
     private bool isDead = false;
     private bool isGameOver = false;
+    private int currentPoints = 0;
 
     private void OnEnable() => this.MMEventStartListening<CorgiEngineEvent>();
     private void OnDisable() => this.MMEventStopListening<CorgiEngineEvent>();
@@ -53,6 +54,7 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
             {
                 int pointsToSurvive = gameManager.Points >= pointIncreaseThreshold ? afterThresholdRequiredPoints : gameManager.Points;
                 gameManager.AddPoints(-pointsToSurvive);
+                currentPoints = gameManager.Points;
                 coinDropHandler.DropRandomCoins(pointsToSurvive);
             }
             else
@@ -93,6 +95,11 @@ public class CharacterHandleDeath : MonoBehaviour, MMEventListener<CorgiEngineEv
                 hellCheckPoint.SpawnPlayer(character);
             }
             isDead = false;
+        }
+
+        if (eventType.EventType == CorgiEngineEventTypes.Respawn && !isDead)
+        {
+            gameManager.SetPoints(currentPoints);
         }
 
     }
