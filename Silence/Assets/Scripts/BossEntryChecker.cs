@@ -9,9 +9,11 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     private CinemachineCameraController cc;
     private CinemachineCamera cam;
     private AudioHealthController ahc;
-    private GameObject bossEnemy;
-    public GameObject[] walls;
+    private GameObject bossEnemy;    
     public GameObject camTarget;
+    public GameObject playerEntryGate;
+    public GameObject playerExitGate;
+    
 
     private void OnEnable()
     {
@@ -58,7 +60,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             cam.Follow = camTarget.transform;
             cam.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-0.4f, 1, -10f);
             cam.Lens.OrthographicSize = 5.6f;
-            
+            CloseBossEntryExitGate(true);
+            bossEnemy.GetComponent<Health>().ResetHealthToMaxHealth();
         }
     }
 
@@ -75,28 +78,13 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             cam.Follow = player.transform;
             cam.Lens.OrthographicSize = 8.39f;
             cam.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-0f, 2, -10f);
-
+            bossEnemy.GetComponent<Health>().ResetHealthToMaxHealth();
+            CloseBossEntryExitGate(false);
 
         }
     }
 
-    private void ChangeLayerOfWall(bool flag) // if true -> player cannot movefrom wall
-    {
-        if (flag)
-        {
-            foreach (var wall in walls)
-            {
-                wall.layer = LayerMask.NameToLayer("Platforms");
-            }
-        }
-        else
-        {
-            foreach (var wall in walls)
-            {
-                wall.layer = LayerMask.NameToLayer("EnemyPlatform");
-            }
-        }
-    }
+   
 
     public void OnMMEvent(CorgiEngineEvent eventType)
     {
@@ -105,5 +93,11 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         {
             Debug.Log("death");
         }
+    }
+
+    private void CloseBossEntryExitGate(bool flag) //if true it will close
+    {
+        playerEntryGate.GetComponent<Collider2D>().enabled = flag;
+        playerExitGate.GetComponent<Collider2D>().enabled = flag;
     }
 }
