@@ -56,6 +56,7 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             bossEnemy.GetComponent<AIBrain>().enabled = true;
             // ChangeLayerOfWall(true);
             cam.Follow = camTarget.transform;
+            
         }
     }
 
@@ -65,8 +66,9 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         if (player.CompareTag("Player"))
         {
             if (!ahc) ahc = player.GetComponent<AudioHealthController>();
-            player.GetComponent<Collider2D>().isTrigger = false;
+            player.GetComponent<Collider2D>().isTrigger = true;
             ahc.scriptEnabled = true;
+            ahc.dieable = true;
             bossEnemy.GetComponent<AIBrain>().enabled = false;
             cam.Follow = player.transform;
         }

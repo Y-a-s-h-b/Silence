@@ -9,10 +9,7 @@ public class PlayerInHell : MonoBehaviour
         inHell = false;
     }
 
-    private void Update()
-    {
-        Debug.Log("in hell" + inHell);
-    }
+   
 
     private void OnTriggerStay2D(Collider2D collision)
     {
