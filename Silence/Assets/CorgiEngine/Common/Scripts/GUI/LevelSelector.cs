@@ -38,6 +38,10 @@ namespace MoreMountains.CorgiEngine
 			// we trigger an unPause event for the GameManager (and potentially other classes)
 			//CorgiEngineEvent.Trigger(CorgiEngineEventTypes.UnPause);
 			//LoadingSceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		}		
+		}	
+		public void Respawn()
+		{
+			LevelManager.Instance.CurrentCheckPoint.SpawnPlayer(LevelManager.Instance.Players[0]);
+		}
 	}
 }
