@@ -10132,24 +10132,18 @@ GameObject:
   - component: {fileID: 7910356310910671068}
   - component: {fileID: -7701550964989212567}
   - component: {fileID: 6316581119124564773}
-  - component: {fileID: 5285547584846283083}
   - component: {fileID: 5572637428127691658}
   - component: {fileID: 2600788682234557398}
   - component: {fileID: 8435766905576682756}
-  - component: {fileID: 478682469526808790}
   - component: {fileID: 7389007516657526004}
   - component: {fileID: 3742416773171785225}
   - component: {fileID: 2364979648073674527}
-  - component: {fileID: 9130444919993048318}
   - component: {fileID: 2437906541551382887}
   - component: {fileID: 7816835375658965062}
   - component: {fileID: 5906798493931939070}
   - component: {fileID: 9021737355107934107}
   - component: {fileID: 6645748065317304330}
-  - component: {fileID: 8870705986949854375}
   - component: {fileID: 1487120447019618524}
-  - component: {fileID: 9064449495831105880}
-  - component: {fileID: 8491392089442273163}
   - component: {fileID: 1517440452253416037}
   - component: {fileID: 8801968159231555383}
   - component: {fileID: 209845864945572825}
@@ -10537,7 +10531,7 @@ MonoBehaviour:
   BlockingConditionStates: 
   BlockingWeaponStates: 
   runThresholdTime: 0.6
-  sprintThresholdTime: 2
+  sprintThresholdTime: 999
   stateTextTest: {fileID: 0}
 --- !u!114 &6316581119124564773
 MonoBehaviour:
@@ -10567,26 +10561,6 @@ MonoBehaviour:
   InATunnel: 0
   MoveCameraTarget: 1
   CameraTargetOffset: {x: 0, y: -3, z: 0}
---- !u!114 &5285547584846283083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 157b891c059034cea94ae0c9e235df50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 5697135402746794240}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  ShakeParameters: {x: 1.5, y: 0.5, z: 1}
-  DiveAcceleration: 2
 --- !u!114 &5572637428127691658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10601,7 +10575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 2145035329045699151}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
@@ -10670,34 +10644,6 @@ MonoBehaviour:
   ReadInput: 0
   AutoRun: 0
   AutoRunThreshold: 0.6
---- !u!114 &478682469526808790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d37391d2147a467db78bf732ae24daa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 4250648618440605756}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  MovingPlatformsJumpCollisionOffDuration: 0.05
-  ParticleEmitter: {fileID: 0}
-  JetpackForce: 2.5
-  JetpackUnlimited: 0
-  JetpackFuelDuration: 5
-  JetpackRefuelCooldown: 0.5
-  RefuelSpeed: 1.5
-  MinimumFuelRequirement: 0.2
-  JetpackRefueledSfx: {fileID: 0}
-  JetpackFuelDurationLeft: 0
 --- !u!114 &7389007516657526004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10769,30 +10715,6 @@ MonoBehaviour:
   NumberOfWalljumpsLeft: 0
   AllowCoyoteTime: 0
   CoyoteTimeDuration: 0.2
---- !u!114 &9130444919993048318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d96ed8ea1ca8048f6a2b90871e211025, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  LadderClimbingSpeed: 2
-  ForceRightFacing: 0
-  ForceAnchorToGroundOnExit: 0
-  MinimumTimeAfterLadderJump: 0.5
-  NoInputClimb: 0
-  NoInputClimbAirOnly: 0
 --- !u!114 &2437906541551382887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10934,31 +10856,6 @@ MonoBehaviour:
   TransitionForcesMode: 1
   ResetCharacterStateOnGravityChange: 1
   DrawDebugGravityArrow: 1
---- !u!114 &8870705986949854375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f6acc45a765d864ba3d69b6c84471f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  InWater: 0
-  SwimHeight: 1
-  SwimAnimationDuration: 0.8
-  OnSwimFeedback: {fileID: 0}
-  WaterEntryEffect: {fileID: 143758, guid: 14f27396ac5b4d84cb17d403de44b8a1, type: 3}
-  WaterExitEffect: {fileID: 143758, guid: 14f27396ac5b4d84cb17d403de44b8a1, type: 3}
-  WaterExitForce: {x: 0, y: 12}
 --- !u!114 &1487120447019618524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10983,47 +10880,6 @@ MonoBehaviour:
   PushWhenGroundedOnly: 1
   DetectionRaycastLength: 0.2
   MinimumPushSpeed: 5
---- !u!114 &9064449495831105880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15be9d1db94cd13409db60706f5bc5cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 5804647778352297107}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  VerticalForce: -0.1
-  GlideOnlyIfNoJumpsLeft: 1
---- !u!114 &8491392089442273163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432795268487586649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02eb8e682804dbf4e911358f7de6d3d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  IdleAnimationName: PixelCorgiIdle
-  ClimbingAnimationDuration: 0.6
-  MinimumHangingTime: 0.2
 --- !u!114 &1517440452253416037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11205,7 +11061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AbilityStartFeedbacks: {fileID: 1181275090622403911}
   AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
+  AbilityPermitted: 0
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
@@ -39384,7 +39240,7 @@ Animator:
   m_GameObject: {fileID: 4537877254104301185}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09d9ecfd314702144b16392b1608a5db, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8ec27a97b1d78f942b9e7d848f0d928f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
