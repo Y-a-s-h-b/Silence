@@ -2,6 +2,7 @@ using Febucci.UI.Effects;
 using MoreMountains.CorgiEngine;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
+using Unity.Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -18,7 +19,8 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     public Material DefaultMat;    
     private PlayerInHell playerInHell;
     private int jumpMax = 0;
-
+    private CinemachineCamera camera;
+    private CinemachineCameraController cc;
     private void OnEnable() => this.MMEventStartListening<CorgiEngineEvent>();
     private void OnDisable() => this.MMEventStopListening<CorgiEngineEvent>();
 
@@ -85,6 +87,13 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
         if(!GUIManager.Instance.HUD.activeSelf) GUIManager.Instance.SetHUDActive(true);
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
+        camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera;
+        cc = camera.GetComponent<CinemachineCameraController>();
+        if (!cc.enabled)
+        {
+            cc.enabled = true;
+            cc.UseOrthographicZoom = true;
+        }
     }
 
     

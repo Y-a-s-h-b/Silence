@@ -82,7 +82,7 @@ public class StartSequence : MonoBehaviour
         {
             npc.transform.position = Vector2.MoveTowards(npc.transform.position, jailDoorPosition.position, speed * Time.deltaTime);
             //camera.transform.position = Vector2.MoveTowards(camera.transform.position,
-            camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-8, 5, -10);
+            camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-8, 4, -10);
             camera.Follow = npc.transform;
             yield return null;
         }
@@ -96,7 +96,7 @@ public class StartSequence : MonoBehaviour
         InputManager.Instance.InputDetectionActive = true;
         yield return new WaitUntil(() => InputManager.Instance.PrimaryMovement.x > 0);
         player = LevelManager.Instance.Players[0];
-        camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(2, 5, -10);
+        camera.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(2, 4, -10);
         camera.Follow = player.CameraTarget.transform;
         player.CharacterAnimator.SetBool("Vibing",false);
         yield return new WaitUntil(() => (npc.transform.position.x < player.transform.position.x + 1));

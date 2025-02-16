@@ -62,6 +62,7 @@ namespace MoreMountains.CorgiEngine
 			(_character.gameObject.GetComponent(AbilityTypeAsString) as CharacterAbility)?.PermitAbility(newState);
             StartCoroutine(FreezePlayerFor(timeToFreeze, _character));
             StartCoroutine(MoveObjectCoroutine(this.transform, _character.gameObject.transform.position + new Vector3(0, 3, 0)));
+			SetDashUIActive();
         }
         public IEnumerator FreezePlayerFor(float timeToFreeze, Character playerGO)
         {

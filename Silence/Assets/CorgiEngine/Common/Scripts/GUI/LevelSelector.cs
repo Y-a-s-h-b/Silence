@@ -42,6 +42,8 @@ namespace MoreMountains.CorgiEngine
 		public void Respawn()
 		{
 			LevelManager.Instance.CurrentCheckPoint.SpawnPlayer(LevelManager.Instance.Players[0]);
-		}
+            CorgiEngineEvent.Trigger(CorgiEngineEventTypes.UnPause);
+			LevelManager.Instance.Players[0].UnFreeze();
+        }
 	}
 }
