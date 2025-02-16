@@ -16096,6 +16096,8 @@ GameObject:
   - component: {fileID: 743403210}
   - component: {fileID: 743403212}
   - component: {fileID: 743403211}
+  - component: {fileID: 743403214}
+  - component: {fileID: 743403213}
   m_Layer: 0
   m_Name: Stone thorns (6)
   m_TagString: Untagged
@@ -16177,7 +16179,25 @@ MonoBehaviour:
   m_BoundsScale: 2
   m_Creator: {fileID: 0}
   m_Modifiers: []
-  m_ColliderSegment: []
+  m_ColliderSegment:
+  - {x: -3.0041225, y: -1.2418219}
+  - {x: -2.3677542, y: -1.4643028}
+  - {x: -1.9194872, y: -1.582341}
+  - {x: -1.4703153, y: -1.6734486}
+  - {x: -0.909001, y: -1.7571189}
+  - {x: -0.24246743, y: -1.8182179}
+  - {x: 0.12808448, y: -1.8354851}
+  - {x: 0.5223198, y: -1.8412958}
+  - {x: 0.9391917, y: -1.8337017}
+  - {x: 1.493863, y: -1.8075981}
+  - {x: 2.0132759, y: -1.7705374}
+  - {x: 2.4970913, y: -1.7244599}
+  - {x: 2.9448566, y: -1.6713071}
+  - {x: 3.730452, y: -1.5514491}
+  - {x: 4.366501, y: -1.4260763}
+  - {x: 5.032321, y: -1.2600437}
+  - {x: 5.3623405, y: -1.1570493}
+  - {x: 5.8432245, y: -0.98719525}
   m_ShadowSegment: []
 --- !u!1971053207 &743403212
 SpriteShapeRenderer:
@@ -16233,6 +16253,77 @@ SpriteShapeRenderer:
     m_Center: {x: 1.4183922, y: -1.4582798, z: 0}
     m_Extent: {x: 4.6674705, y: 1.1607857, z: 0}
   m_SpriteSortPoint: 0
+--- !u!68 &743403213
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743403209}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.0041225, y: -1.2418219}
+  - {x: -2.3677542, y: -1.4643028}
+  - {x: -1.9194872, y: -1.582341}
+  - {x: -1.4703153, y: -1.6734486}
+  - {x: -0.909001, y: -1.7571189}
+  - {x: -0.24246743, y: -1.8182179}
+  - {x: 0.12808448, y: -1.8354851}
+  - {x: 0.5223198, y: -1.8412958}
+  - {x: 0.9391917, y: -1.8337017}
+  - {x: 1.493863, y: -1.8075981}
+  - {x: 2.0132759, y: -1.7705374}
+  - {x: 2.4970913, y: -1.7244599}
+  - {x: 2.9448566, y: -1.6713071}
+  - {x: 3.730452, y: -1.5514491}
+  - {x: 4.366501, y: -1.4260763}
+  - {x: 5.032321, y: -1.2600437}
+  - {x: 5.3623405, y: -1.1570493}
+  - {x: 5.8432245, y: -0.98719525}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &743403214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743403209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea70cd4b789a4b5593a26c4f4ace44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745172624
 GameObject:
   m_ObjectHideFlags: 0
@@ -24748,6 +24839,8 @@ GameObject:
   - component: {fileID: 1053691277}
   - component: {fileID: 1053691279}
   - component: {fileID: 1053691278}
+  - component: {fileID: 1053691281}
+  - component: {fileID: 1053691280}
   m_Layer: 0
   m_Name: Stone thorns (4)
   m_TagString: Untagged
@@ -24829,7 +24922,21 @@ MonoBehaviour:
   m_BoundsScale: 2
   m_Creator: {fileID: 0}
   m_Modifiers: []
-  m_ColliderSegment: []
+  m_ColliderSegment:
+  - {x: -5.1278915, y: -0.8648681}
+  - {x: -4.4794903, y: -1.09142}
+  - {x: -3.9492204, y: -1.2066556}
+  - {x: -3.3726566, y: -1.2888086}
+  - {x: -3.012279, y: -1.3249202}
+  - {x: -2.6015284, y: -1.3547915}
+  - {x: -2.138669, y: -1.3762025}
+  - {x: -1.4501251, y: -1.3862184}
+  - {x: -1.0497001, y: -1.3846081}
+  - {x: -0.42014197, y: -1.3669904}
+  - {x: 1.7573475, y: -1.249503}
+  - {x: 3.6557784, y: -1.1696944}
+  - {x: 4.962128, y: -1.1306332}
+  - {x: 5.471994, y: -1.1189137}
   m_ShadowSegment: []
 --- !u!1971053207 &1053691279
 SpriteShapeRenderer:
@@ -24885,6 +24992,73 @@ SpriteShapeRenderer:
     m_Center: {x: 0.05618477, y: -1.1664121, z: 0}
     m_Extent: {x: 5.432551, y: 0.98914725, z: 0}
   m_SpriteSortPoint: 0
+--- !u!68 &1053691280
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053691276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.1278915, y: -0.8648681}
+  - {x: -4.4794903, y: -1.09142}
+  - {x: -3.9492204, y: -1.2066556}
+  - {x: -3.3726566, y: -1.2888086}
+  - {x: -3.012279, y: -1.3249202}
+  - {x: -2.6015284, y: -1.3547915}
+  - {x: -2.138669, y: -1.3762025}
+  - {x: -1.4501251, y: -1.3862184}
+  - {x: -1.0497001, y: -1.3846081}
+  - {x: -0.42014197, y: -1.3669904}
+  - {x: 1.7573475, y: -1.249503}
+  - {x: 3.6557784, y: -1.1696944}
+  - {x: 4.962128, y: -1.1306332}
+  - {x: 5.471994, y: -1.1189137}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &1053691281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053691276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea70cd4b789a4b5593a26c4f4ace44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1056090675
 GameObject:
   m_ObjectHideFlags: 0
