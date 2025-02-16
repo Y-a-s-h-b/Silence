@@ -10,7 +10,7 @@ using TMPro;
 public class CrystalHandler : MMSingleton<CrystalHandler>
 {
     public Image[] shards; // Assign the 4 shard UI images
-    private int currentShardIndex = 0;
+    public int currentShardIndex = 0;
 
     public float fadeDuration = 0.5f;
     public float moveDuration = 0.5f;
@@ -77,7 +77,11 @@ public class CrystalHandler : MMSingleton<CrystalHandler>
         }
         else if (currentShardIndex == 3)
         {
-            DoubleJump.FadeIn(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+            DashFader.FadeIn(DoubleJump.DefaultDuration, DoubleJump.DefaultTween, true);
+        }
+        else if (currentShardIndex == 4)
+        {
+            GameManager.Instance.UnPause(PauseMethods.NoPauseMenu);
         }
 
     }

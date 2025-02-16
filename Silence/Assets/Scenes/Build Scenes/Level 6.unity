@@ -4897,15 +4897,15 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 49.80375, y: 0.25147152, z: 0}
-      leftTangent: {x: 0, y: 0, z: 0}
-      rightTangent: {x: 0, y: 0, z: 0}
-      mode: 0
+    - position: {x: 91.04411, y: 6.2857227, z: 0}
+      leftTangent: {x: -15.729279, y: -5.714286, z: 0}
+      rightTangent: {x: 4.6470413, y: -3.458906, z: 0}
+      mode: 2
       height: 1
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 53.629753, y: -7.9441614, z: 0}
+    - position: {x: 93.88626, y: -10.857135, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -4994,8 +4994,8 @@ SpriteShapeRenderer:
   - {fileID: -4936887299264201902, guid: a8154c1117a050841834ee7cffcc401c, type: 3}
   - {fileID: -360925147101630463, guid: a8154c1117a050841834ee7cffcc401c, type: 3}
   m_LocalAABB:
-    m_Center: {x: 9.149097, y: 7.3602657, z: 0}
-    m_Extent: {x: 45.839737, y: 16.581676, z: 0}
+    m_Center: {x: 29.379986, y: 5.9221363, z: 0}
+    m_Extent: {x: 66.070625, y: 18.019806, z: 0}
   m_SpriteSortPoint: 0
 --- !u!1 &957983474
 GameObject:
@@ -5959,8 +5959,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -5.573599, y: -18.808998, z: 0}
-    m_Extent: {x: 48.956398, y: 42.6273, z: 0}
+    m_Center: {x: -5.57495, y: -18.8085, z: 0}
+    m_Extent: {x: 33.25665, y: 26.9279, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5968,7 +5968,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 30
+  m_ShapeLightFalloffSize: 14.3
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -22.657959, y: -31.435654, z: 0}
@@ -12082,7 +12082,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 20.65, y: 23.044054, z: 0}
+    - position: {x: 20.65, y: 37.4, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -12090,7 +12090,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 53.88626, y: 23.428581, z: 0}
+    - position: {x: 53.88626, y: 37.784527, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -12187,8 +12187,8 @@ SpriteShapeRenderer:
   - {fileID: -4936887299264201902, guid: a8154c1117a050841834ee7cffcc401c, type: 3}
   - {fileID: -360925147101630463, guid: a8154c1117a050841834ee7cffcc401c, type: 3}
   m_LocalAABB:
-    m_Center: {x: 37.202713, y: 17.28206, z: 0}
-    m_Extent: {x: 17.908016, y: 7.0881443, z: 0}
+    m_Center: {x: 37.233177, y: 24.460032, z: 0}
+    m_Extent: {x: 17.877544, y: 14.266115, z: 0}
   m_SpriteSortPoint: 0
 --- !u!1 &2124813466
 GameObject:
