@@ -45,11 +45,12 @@ public class AudioHealthController : MonoBehaviour
 
         OnVolumeNullTriggerDeath();
         if (!scriptEnabled) return;
+        /*
         if (musicAudioSource == null)
         {
             musicAudioSource = GameObject.Find("MMAudioSourcePool_0").GetComponent<AudioSource>();
             musicAudioSource.volume = 0.052f;
-        }
+        }*/
 
         if (dieable)
         {
@@ -68,7 +69,7 @@ public class AudioHealthController : MonoBehaviour
     float GetDifferenceOfDecibles()
     {
         AudioListener.GetOutputData(samplesAll, 0);
-        musicAudioSource.GetOutputData(samplesMusic, 0);
+        //musicAudioSource.GetOutputData(samplesMusic, 0);
         float rms = 0f;
         foreach (float sample in samplesAll)
         {
@@ -79,7 +80,9 @@ public class AudioHealthController : MonoBehaviour
         audioLevelAll = rms > 0 ? 20f * Mathf.Log10(rms) : -74.8f; // -80 dB is silence
         audioLevelAll = Mathf.Clamp(audioLevelAll, -74.8f, 0f); // Clamp to a reasonable range        
         currentValueAll = ((audioLevelAll + 74.8f) / 74.8f) * 100f;
-
+        var val = Math.Max(currentValueAll, 0f);
+        return val;
+        /*
         float rmsN = 0f;
         foreach (float sample in samplesMusic)
         {
@@ -92,7 +95,7 @@ public class AudioHealthController : MonoBehaviour
         currentValueMusic = ((audioLevelMusic + 74.8f) / 74.8f) * 100f;
         var val = Math.Max(currentValueAll - currentValueMusic, 0f);
             
-        return val;
+        return val;*/
     }
 
     void BarSetter(float value)
