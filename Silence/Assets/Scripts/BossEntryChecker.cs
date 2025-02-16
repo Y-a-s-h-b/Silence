@@ -11,6 +11,7 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     private AudioHealthController ahc;
     private GameObject bossEnemy;
     public GameObject[] walls;
+    public GameObject camTarget;
 
     private void OnEnable()
     {
@@ -53,8 +54,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         if (player.CompareTag("Player"))
         {
             bossEnemy.GetComponent<AIBrain>().enabled = true;
-           // ChangeLayerOfWall(true);
-
+            // ChangeLayerOfWall(true);
+            cam.Follow = camTarget.transform;
         }
     }
 
@@ -67,6 +68,7 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             player.GetComponent<Collider2D>().isTrigger = false;
             ahc.scriptEnabled = true;
             bossEnemy.GetComponent<AIBrain>().enabled = false;
+            cam.Follow = player.transform;
         }
     }
 
