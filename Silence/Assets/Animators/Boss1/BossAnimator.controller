@@ -958,7 +958,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3100369314251171874, guid: b380334b9776bcc439e3ddfa8f06470a,
+  m_Motion: {fileID: 4362794303157540682, guid: c4e9ea17ca47b6d4b8a70d2c2b7bf5d2,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1222,7 +1222,7 @@ AnimatorStateMachine:
     m_Position: {x: 1280, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110286862}
-    m_Position: {x: 1300, y: 20, z: 0}
+    m_Position: {x: 1300, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110228966}
     m_Position: {x: 1300, y: 80, z: 0}
@@ -1249,7 +1249,7 @@ AnimatorStateMachine:
     m_Position: {x: 1280, y: 730, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5992032663532690606}
-    m_Position: {x: 1300, y: 200, z: 0}
+    m_Position: {x: 1660, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5044591802738392638}
     m_Position: {x: 1290, y: -40, z: 0}
@@ -1390,7 +1390,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShockwaveAttack
-  m_Speed: 1
+  m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -1402,7 +1402,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -6424775960854986163, guid: 9af9b06ab4262944988888d0af8e46e1,
+  m_Motion: {fileID: 6429319719660510949, guid: c4e9ea17ca47b6d4b8a70d2c2b7bf5d2,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -1533,8 +1533,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7510267551523866039, guid: c4e9ea17ca47b6d4b8a70d2c2b7bf5d2,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 92aab00c2c85b294c91b84d716e605e7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1756,7 +1755,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RollContinue
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

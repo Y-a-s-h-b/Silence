@@ -87,9 +87,9 @@ MonoBehaviour:
   MirrorCharacterAnimatorParameters: 0
   EquippedAnimationParameter: 
   IdleAnimationParameter: 
-  StartAnimationParameter: RangedAttackStart
+  StartAnimationParameter: 
   DelayBeforeUseAnimationParameter: 
-  SingleUseAnimationParameter: 
+  SingleUseAnimationParameter: RangedAttackStart
   UseAnimationParameter: 
   DelayBetweenUsesAnimationParameter: 
   InCooldownAnimationParameter: 

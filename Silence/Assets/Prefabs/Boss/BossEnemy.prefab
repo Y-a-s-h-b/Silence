@@ -48221,7 +48221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3332290315265338335
 Transform:
   m_ObjectHideFlags: 0
@@ -68585,7 +68585,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da00467d14642e4449d99327701d5737, type: 2}
+  - {fileID: 2100000, guid: a9cb7f5f7a179604e886b305e3736e8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -68606,7 +68606,7 @@ SpriteRenderer:
   m_SortingLayerID: -1628607475
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5240932346908226813, guid: b380334b9776bcc439e3ddfa8f06470a,
+  m_Sprite: {fileID: -8468403147689342020, guid: c4e9ea17ca47b6d4b8a70d2c2b7bf5d2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84128,7 +84128,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022800505, y: 0.5460299}
+  m_Offset: {x: -0.022800505, y: 0.6156732}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -84138,7 +84138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.98337543, y: 1.39206}
+  m_Size: {x: 0.98337543, y: 1.2527735}
   m_EdgeRadius: 0
 --- !u!114 &1979530856726566780
 MonoBehaviour:
@@ -84510,7 +84510,7 @@ MonoBehaviour:
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 2}
-  InvincibilityDuration: 0.5
+  InvincibilityDuration: 2
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1
