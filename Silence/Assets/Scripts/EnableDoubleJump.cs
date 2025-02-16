@@ -14,4 +14,14 @@ public class EnableDoubleJump : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<CharacterJump>().NumberOfJumps = 2;
+            CollectFeedback.PlayFeedbacks();
+            Destroy(gameObject);
+        }
+    }
 }
