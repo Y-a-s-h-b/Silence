@@ -81,26 +81,21 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
     }
 
+
+
     public void OnMMEvent(CorgiEngineEvent eventType)
     {
         if (eventType.EventType == CorgiEngineEventTypes.Respawn)
         {
+            
             player = LevelManager.Instance.Players[0].gameObject;
-            //Debug.Log("respawnnnnn" + "hell?:"+playerInHell.inHell);
-            if (playerInHell.inHell)
-            {
-                //enable script
-                player.GetComponent<AudioHealthController>().dieable = true;
-                player.GetComponent<AudioHealthController>().scriptEnabled = true;
-            }
-            else
-            {
-                //disable
-                player.GetComponent<AudioHealthController>().scriptEnabled = false;
-                player.GetComponent<AudioHealthController>().dieable = false;
-            }
+            Debug.Log("respawnnnnn" + "hell?:"+playerInHell.inHell);
+
+            player.GetComponent<AudioHealthController>().smoothedValue = 60f;
+            
             FadeOutFeedback.PlayFeedbacks();
             if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
+
         }
     }
 }

@@ -9,6 +9,11 @@ public class PlayerInHell : MonoBehaviour
         inHell = false;
     }
 
+    private void Update()
+    {
+        Debug.Log("in hell" + inHell);
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -17,11 +22,27 @@ public class PlayerInHell : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var player = collision.gameObject;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            player.GetComponent<AudioHealthController>().dieable = false;
+            player.GetComponent<AudioHealthController>().scriptEnabled = false;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             inHell = false;
+            var player = collision.gameObject;
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                player.GetComponent<AudioHealthController>().dieable = true;
+                player.GetComponent<AudioHealthController>().scriptEnabled = true;
+            }
         }
     }
 }
