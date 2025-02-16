@@ -8463,6 +8463,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960556333}
   m_CullTransparentMesh: 1
+--- !u!114 &962885651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9034827963909642054, guid: 3643a0c7743945648889b9dd54734a6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135601254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923a01d66c4618446abb082250646478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!28 &967902708
 Texture2D:
   m_ObjectHideFlags: 0
@@ -9955,7 +9967,7 @@ MonoBehaviour:
         DebugActive: 0
         Players:
         - TargetPlayer: {fileID: 1264438640}
-          Delay: {x: 6, y: 0}
+          Delay: {x: 9, y: 0}
           Inactive: 0
           WaitUntilComplete: 0
 --- !u!114 &1096256595
@@ -22288,7 +22300,7 @@ PrefabInstance:
         type: 3}
       propertyPath: DebugSpawn
       value: 
-      objectReference: {fileID: 2135601257}
+      objectReference: {fileID: 962885651}
     - target: {fileID: 5632770623774615418, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: LevelBounds.m_Center.x
@@ -22475,18 +22487,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2135601254}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2135601257 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7396280753095914453, guid: 3643a0c7743945648889b9dd54734a6f,
-    type: 3}
-  m_PrefabInstance: {fileID: 2135601254}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923a01d66c4618446abb082250646478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2139775396
 GameObject:
   m_ObjectHideFlags: 0
