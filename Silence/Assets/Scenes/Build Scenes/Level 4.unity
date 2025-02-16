@@ -16283,7 +16283,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -25022,7 +25022,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -28124,6 +28124,8 @@ GameObject:
   - component: {fileID: 1183149313}
   - component: {fileID: 1183149315}
   - component: {fileID: 1183149314}
+  - component: {fileID: 1183149317}
+  - component: {fileID: 1183149316}
   m_Layer: 0
   m_Name: Stone thorns (3)
   m_TagString: Untagged
@@ -28205,7 +28207,21 @@ MonoBehaviour:
   m_BoundsScale: 2
   m_Creator: {fileID: 0}
   m_Modifiers: []
-  m_ColliderSegment: []
+  m_ColliderSegment:
+  - {x: -5.1278915, y: -0.8648681}
+  - {x: -4.4794903, y: -1.09142}
+  - {x: -3.9492204, y: -1.2066556}
+  - {x: -3.3726566, y: -1.2888086}
+  - {x: -3.012279, y: -1.3249202}
+  - {x: -2.6015284, y: -1.3547915}
+  - {x: -2.138669, y: -1.3762025}
+  - {x: -1.4501251, y: -1.3862184}
+  - {x: -1.0497001, y: -1.3846081}
+  - {x: -0.42014197, y: -1.3669904}
+  - {x: 1.7573475, y: -1.249503}
+  - {x: 3.6557784, y: -1.1696944}
+  - {x: 4.962128, y: -1.1306332}
+  - {x: 5.471994, y: -1.1189137}
   m_ShadowSegment: []
 --- !u!1971053207 &1183149315
 SpriteShapeRenderer:
@@ -28261,6 +28277,73 @@ SpriteShapeRenderer:
     m_Center: {x: 0.05618477, y: -1.1664121, z: 0}
     m_Extent: {x: 5.432551, y: 0.98914725, z: 0}
   m_SpriteSortPoint: 0
+--- !u!68 &1183149316
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183149312}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -5.1278915, y: -0.8648681}
+  - {x: -4.4794903, y: -1.09142}
+  - {x: -3.9492204, y: -1.2066556}
+  - {x: -3.3726566, y: -1.2888086}
+  - {x: -3.012279, y: -1.3249202}
+  - {x: -2.6015284, y: -1.3547915}
+  - {x: -2.138669, y: -1.3762025}
+  - {x: -1.4501251, y: -1.3862184}
+  - {x: -1.0497001, y: -1.3846081}
+  - {x: -0.42014197, y: -1.3669904}
+  - {x: 1.7573475, y: -1.249503}
+  - {x: 3.6557784, y: -1.1696944}
+  - {x: 4.962128, y: -1.1306332}
+  - {x: 5.471994, y: -1.1189137}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &1183149317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183149312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea70cd4b789a4b5593a26c4f4ace44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1197970465
 GameObject:
   m_ObjectHideFlags: 0
@@ -38495,6 +38578,8 @@ GameObject:
   - component: {fileID: 1790529898}
   - component: {fileID: 1790529900}
   - component: {fileID: 1790529899}
+  - component: {fileID: 1790529902}
+  - component: {fileID: 1790529901}
   m_Layer: 0
   m_Name: Stone thorns (5)
   m_TagString: Untagged
@@ -38576,7 +38661,25 @@ MonoBehaviour:
   m_BoundsScale: 2
   m_Creator: {fileID: 0}
   m_Modifiers: []
-  m_ColliderSegment: []
+  m_ColliderSegment:
+  - {x: -3.0702481, y: -1.1773292}
+  - {x: -2.430105, y: -1.4146281}
+  - {x: -1.964824, y: -1.5464256}
+  - {x: -1.5020225, y: -1.6485193}
+  - {x: -0.92750174, y: -1.74278}
+  - {x: -0.25011167, y: -1.8124826}
+  - {x: 0.12438391, y: -1.8328125}
+  - {x: 0.52124995, y: -1.8405993}
+  - {x: 0.93917924, y: -1.833702}
+  - {x: 1.478999, y: -1.8074855}
+  - {x: 1.9563396, y: -1.7701887}
+  - {x: 2.375126, y: -1.7238557}
+  - {x: 2.739143, y: -1.6704656}
+  - {x: 3.3180358, y: -1.5500497}
+  - {x: 3.7233331, y: -1.4234908}
+  - {x: 4.071681, y: -1.252886}
+  - {x: 4.2042766, y: -1.138295}
+  - {x: 4.513535, y: -0.7327595}
   m_ShadowSegment: []
 --- !u!1971053207 &1790529900
 SpriteShapeRenderer:
@@ -38632,6 +38735,77 @@ SpriteShapeRenderer:
     m_Center: {x: 0.8823645, y: -1.4538244, z: 0}
     m_Extent: {x: 4.210482, y: 1.1646143, z: 0}
   m_SpriteSortPoint: 0
+--- !u!114 &1790529901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790529897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea70cd4b789a4b5593a26c4f4ace44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!68 &1790529902
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790529897}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.0702481, y: -1.1773292}
+  - {x: -2.430105, y: -1.4146281}
+  - {x: -1.964824, y: -1.5464256}
+  - {x: -1.5020225, y: -1.6485193}
+  - {x: -0.92750174, y: -1.74278}
+  - {x: -0.25011167, y: -1.8124826}
+  - {x: 0.12438391, y: -1.8328125}
+  - {x: 0.52124995, y: -1.8405993}
+  - {x: 0.93917924, y: -1.833702}
+  - {x: 1.478999, y: -1.8074855}
+  - {x: 1.9563396, y: -1.7701887}
+  - {x: 2.375126, y: -1.7238557}
+  - {x: 2.739143, y: -1.6704656}
+  - {x: 3.3180358, y: -1.5500497}
+  - {x: 3.7233331, y: -1.4234908}
+  - {x: 4.071681, y: -1.252886}
+  - {x: 4.2042766, y: -1.138295}
+  - {x: 4.513535, y: -0.7327595}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1791456681
 GameObject:
   m_ObjectHideFlags: 0
