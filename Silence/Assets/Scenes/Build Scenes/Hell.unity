@@ -22331,6 +22331,11 @@ PrefabInstance:
       objectReference: {fileID: 962885651}
     - target: {fileID: 5632770623774615418, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
+      propertyPath: RespawnDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632770623774615418, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
       propertyPath: LevelBounds.m_Center.x
       value: 9000
       objectReference: {fileID: 0}
