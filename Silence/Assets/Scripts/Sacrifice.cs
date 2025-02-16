@@ -85,6 +85,7 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     {
         if (eventType.EventType == CorgiEngineEventTypes.Respawn)
         {
+            player = LevelManager.Instance.Players[0].gameObject;
             //Debug.Log("respawnnnnn" + "hell?:"+playerInHell.inHell);
             if (playerInHell.inHell)
             {
