@@ -10158,6 +10158,7 @@ GameObject:
   - component: {fileID: 4088242004591875224}
   - component: {fileID: 2910317873284941129}
   - component: {fileID: 7614903237269623975}
+  - component: {fileID: 3335001108099774370}
   m_Layer: 9
   m_Name: DeafBastard
   m_TagString: Player
@@ -11246,8 +11247,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacfa4d7be0c0234ebd646a6c25e4474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointIncreaseThreshold: 40
-  afterThresholdRequiredPoints: 20
+  pointIncreaseThreshold: 20
+  afterThresholdRequiredPoints: 15
+--- !u!114 &3335001108099774370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432795268487586649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c538a225604dd544eb0e5b30bff9eeba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 4921041097675467668, guid: 4c7e0da207bf63e4782eec03cdfba0a8,
+    type: 3}
+  positionUpdateDuration: 1.5
+  dropRange: {x: 4, y: 1}
 --- !u!1 &1622702577201251552
 GameObject:
   m_ObjectHideFlags: 0
