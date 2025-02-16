@@ -15,11 +15,17 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     private bool isSuccess = false;
     public MMF_Player FadeOutFeedback;
     public MMF_Player FadeInFeedback;
-    public Material DefaultMat;
+    public Material DefaultMat;    
+    private PlayerInHell playerInHell;
 
     private void OnEnable() => this.MMEventStartListening<CorgiEngineEvent>();
     private void OnDisable() => this.MMEventStopListening<CorgiEngineEvent>();
 
+    private void Start()
+    {
+        GameObject hellCollider = GameObject.Find("HellCollider");
+        playerInHell = hellCollider.GetComponent<PlayerInHell>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
@@ -68,6 +74,7 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         //enable dieable
         Debug.Log("enable dying");
         player.GetComponent<AudioHealthController>().dieable = true;
+        player.GetComponent<AudioHealthController>().scriptEnabled = true;
         GameManager.Instance.LoseLife();
         LevelManager.Instance.PlayerDead(player.GetComponent<Character>());
         if(!GUIManager.Instance.HUD.activeSelf) GUIManager.Instance.SetHUDActive(true);
@@ -78,6 +85,19 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     {
         if (eventType.EventType == CorgiEngineEventTypes.Respawn)
         {
+            //Debug.Log("respawnnnnn" + "hell?:"+playerInHell.inHell);
+            if (playerInHell.inHell)
+            {
+                //enable script
+                player.GetComponent<AudioHealthController>().dieable = true;
+                player.GetComponent<AudioHealthController>().scriptEnabled = true;
+            }
+            else
+            {
+                //disable
+                player.GetComponent<AudioHealthController>().scriptEnabled = false;
+                player.GetComponent<AudioHealthController>().dieable = false;
+            }
             FadeOutFeedback.PlayFeedbacks();
             if (OnTriggerPlayFeedback.Instance) OnTriggerPlayFeedback.Instance.m_IsPlaying = false;
         }
