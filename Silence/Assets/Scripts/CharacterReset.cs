@@ -19,6 +19,7 @@ public class CharacterReset : MonoBehaviour
         character = LevelManager.Instance.Players[0];
         //Animator.runtimeAnimatorController = CharacterAnimator;
         character.GetComponent<CharacterHorizontalMovement>().PermitAbility(true);
+        character.GetComponent<CharacterCrouch>().PermitAbility(true);
         character.GetComponent<CharacterMovementController>().sprintThresholdTime = 2;
         character.GetComponent<CharacterJump>().PermitAbility(true);
     }

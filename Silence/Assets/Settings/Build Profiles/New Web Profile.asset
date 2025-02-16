@@ -39,6 +39,8 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Build Scenes/Level 6.unity
   - m_enabled: 1
+    m_path: Assets/Scenes/Build Scenes/Level 6 real boss.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Build Scenes/Level 7.unity
   - m_enabled: 1
     m_path: Assets/Scenes/Build Scenes/Level 8.unity

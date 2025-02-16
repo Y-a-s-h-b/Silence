@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7665900626680475260}
   - component: {fileID: 3005505846996314216}
   - component: {fileID: 3236812351594746025}
+  - component: {fileID: 1807317091175744884}
   m_Layer: 0
   m_Name: PickableDashAbility
   m_TagString: Untagged
@@ -262,8 +263,8 @@ MonoBehaviour:
   DebugActive: 0
   InScriptDrivenPause: 0
   FeedbacksList:
-  - rid: 8088416819766886400
   - rid: 8088416819766886489
+  - rid: 8088416819766886400
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   RestoreInitialValuesOnDisable: 0
@@ -452,6 +453,18 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
+            - m_Target: {fileID: 1807317091175744884}
+              m_TargetAssemblyTypeName: ShowCrystalUI, Assembly-CSharp
+              m_MethodName: ShowUI
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
         StopEvents:
           m_PersistentCalls:
             m_Calls: []
@@ -527,6 +540,18 @@ MonoBehaviour:
   OnCharacterExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1807317091175744884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522013792850062665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4f12b3293a4bb4a8a31ff0cffcd9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6490984655968730825
 PrefabInstance:
   m_ObjectHideFlags: 0
