@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Build Scenes/Start.unity
     guid: b84486b5985ad6a41ac842a4533d86a6
   - enabled: 1
-    path: Assets/Scenes/Build Scenes/Level 1.unity
-    guid: f5a6c9e481589ad47907c0402a88d7d0
-  - enabled: 1
     path: Assets/Scenes/Build Scenes/Hell.unity
     guid: e763be4c4cd9e4b40b5d839537a65392
+  - enabled: 1
+    path: Assets/Scenes/Build Scenes/Level 1.unity
+    guid: f5a6c9e481589ad47907c0402a88d7d0
   - enabled: 1
     path: Assets/Scenes/Build Scenes/Level 3.unity
     guid: 649d70a2babc6e443895aef2a3ad9e81
@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Build Scenes/Level 4.unity
     guid: 8e3336cbbfe39044b9308257cc4271f7
+  - enabled: 1
+    path: Assets/Scenes/Build Scenes/Level 5.unity
+    guid: 11212c54cb037f448b8fe54c8b0bdacf
+  - enabled: 1
+    path: Assets/Scenes/Build Scenes/Level 6 real boss.unity
+    guid: d5075ba4f61115749a11e6b3573e0213
+  - enabled: 1
+    path: Assets/Scenes/Build Scenes/Level 7.unity
+    guid: ac25589916effe34cb1337e2db9799d0
+  - enabled: 1
+    path: Assets/Scenes/Build Scenes/Level 8.unity
+    guid: bd7cb627c3aa2e4488148b126f36e44b
   - enabled: 1
     path: Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Core/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
