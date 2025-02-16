@@ -17,6 +17,7 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     public MMF_Player FadeInFeedback;
     public Material DefaultMat;    
     private PlayerInHell playerInHell;
+    private int jumpMax = 0;
 
     private void OnEnable() => this.MMEventStartListening<CorgiEngineEvent>();
     private void OnDisable() => this.MMEventStopListening<CorgiEngineEvent>();
@@ -25,6 +26,7 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
     {
         GameObject hellCollider = GameObject.Find("HellCollider");
         playerInHell = hellCollider.GetComponent<PlayerInHell>();
+        jumpMax = 0;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -44,12 +46,16 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
 
     private void Update()
     {
+        if (player == null) { player = GameObject.Find("DeafBastard"); }
+        if (player) jumpMax = Mathf.Max(player.GetComponent<CharacterJump>().NumberOfJumps, jumpMax);
+
         if (!isActive) return;
 
         if (Input.GetKeyDown(interactionKey))
         {
             StartSacrifice();
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -81,16 +87,18 @@ public class Sacrifice : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         player.GetComponent<Character>().CharacterModel.GetComponent<SpriteRenderer>().material = DefaultMat;
     }
 
-
+    
 
     public void OnMMEvent(CorgiEngineEvent eventType)
     {
         if (eventType.EventType == CorgiEngineEventTypes.Respawn)
         {
             
-            player = LevelManager.Instance.Players[0].gameObject;
-            Debug.Log("respawnnnnn" + "hell?:"+playerInHell.inHell);
+            player = LevelManager.Instance.Players[0].gameObject;            
+            if (jumpMax > 1) {
 
+                player.GetComponent<CharacterJump>().NumberOfJumps = 2;
+            }
             player.GetComponent<AudioHealthController>().smoothedValue = 60f;
             
             FadeOutFeedback.PlayFeedbacks();
