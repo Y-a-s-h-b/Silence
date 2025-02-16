@@ -84922,7 +84922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c856def54c23346a49ac917d67f8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
   bossEnemySpeakers:
   - {fileID: 0}
   - {fileID: 0}
