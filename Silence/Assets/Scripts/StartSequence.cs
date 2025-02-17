@@ -29,6 +29,7 @@ public class StartSequence : MonoBehaviour
     public MMF_Player playerFeedback;
     public MMF_Player runFeedback;
     private bool playFeedback = false;
+    public Transform Spawn;
     void Start()
     {
         InputManager.Instance.InputDetectionActive = false; 
@@ -42,6 +43,7 @@ public class StartSequence : MonoBehaviour
         }
         GUIManager.Instance.SetHUDActive(false);
         StartCoroutine(StartSequenceCo());
+        StartCoroutine(SpawnCo());
 
     }
     void Update()
@@ -73,6 +75,16 @@ public class StartSequence : MonoBehaviour
         }
         //if(camera == null) camera = GameObject.Find("CinemachineCamera").GetComponent<CinemachineCamera>(); 
         if(camera == null) camera = Camera.main.GetComponent<CinemachineBrain>().ActiveVirtualCamera as CinemachineCamera; 
+    }
+    IEnumerator SpawnCo()
+    {
+        yield return new WaitForSeconds(2);
+        if(player == null)
+        {
+            player = LevelManager.Instance.Players[0];
+            player.transform.position = Spawn.transform.position;
+        }
+        player.transform.position = Spawn.transform.position;
     }
     IEnumerator StartSequenceCo()
     {

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AbsurdSoftware_WithBackground (1)_0: -3611717905021839056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

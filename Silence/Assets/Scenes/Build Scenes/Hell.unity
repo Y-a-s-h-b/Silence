@@ -22773,6 +22773,11 @@ PrefabInstance:
       propertyPath: CurrentLives
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5990582653100782252, guid: 3643a0c7743945648889b9dd54734a6f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6232397438535668906, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -22806,7 +22811,7 @@ PrefabInstance:
     - target: {fileID: 7396280753106770453, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.281
+      value: -8.43
       objectReference: {fileID: 0}
     - target: {fileID: 7550920973661392209, guid: 3643a0c7743945648889b9dd54734a6f,
         type: 3}
