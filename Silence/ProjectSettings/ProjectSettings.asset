@@ -16,9 +16,9 @@ PlayerSettings:
   productName: Silence
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 1, g: 0.30879685, b: 0, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.17254902, g: 0.16470589, b: 0.17254902, a: 1}
   m_ShowUnitySplashScreen: 1
-  m_ShowUnitySplashLogo: 1
+  m_ShowUnitySplashLogo: 0
   m_SplashScreenOverlayOpacity: 0.5
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: a5240da7fff0bf34da21c7edff42b1d4, type: 3}
+  - logo: {fileID: -3611717905021839056, guid: 7730260da0aea1e46815ee4ceeb6b580, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
