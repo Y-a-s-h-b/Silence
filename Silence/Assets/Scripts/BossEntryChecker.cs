@@ -56,6 +56,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
         var player = collision.gameObject;
         if (player.CompareTag("Player"))
         {
+            cc.enabled = false;
+            cc.UseOrthographicZoom = false;
             bossEnemy.GetComponent<AIBrain>().enabled = true;
             // ChangeLayerOfWall(true);
             cam.Follow = camTarget.transform;
@@ -81,6 +83,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             cam.GetComponent<CinemachineFollow>().FollowOffset = new Vector3(-0f, 2, -10f);
             bossEnemy.GetComponent<Health>().ResetHealthToMaxHealth();
             CloseBossEntryExitGate(false);
+            cc.enabled = true;
+            cc.UseOrthographicZoom = true;
 
         }
     }

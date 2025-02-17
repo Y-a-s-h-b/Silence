@@ -68,7 +68,6 @@ namespace MoreMountains.CorgiEngine
         {
             _character.ChangeCharacterConditionTemporarily(CharacterStates.CharacterConditions.Stunned,timeToFreeze,true,false);
             _character._animator.SetBool("AbilityGain", true);
-			_character.Reset();
             yield return new WaitForSeconds(timeToFreeze);
             
         }
