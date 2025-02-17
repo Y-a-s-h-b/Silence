@@ -46,7 +46,8 @@ public class BossEntryChecker : MonoBehaviour, MMEventListener<CorgiEngineEvent>
             player.GetComponent<Collider2D>().isTrigger = false;
             ahc.smoothedValue = 60f;
             ahc.scriptEnabled = false;
-            
+            cam.Lens.OrthographicSize = 5.6f;
+
         }
     }
 
