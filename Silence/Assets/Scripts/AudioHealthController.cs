@@ -68,7 +68,24 @@ public class AudioHealthController : MonoBehaviour
 
     float GetDifferenceOfDecibles()
     {
-        AudioListener.GetOutputData(samplesAll, 0);
+        float[] spectrumData = new float[256]; // You can adjust the size based on accuracy and performance
+        AudioListener.GetSpectrumData(spectrumData, 0, FFTWindow.BlackmanHarris); // Use a suitable FFT window
+
+        float rms = 0f;
+        foreach (float sample in spectrumData)
+        {
+            rms += sample * sample;
+        }
+
+        rms = Mathf.Sqrt(rms / spectrumData.Length); // Calculate RMS from spectrum data
+        float audioLevelAll = rms > 0 ? 20f * Mathf.Log10(rms) : -74.8f; // Convert RMS to dB
+        audioLevelAll = Mathf.Clamp(audioLevelAll, -74.8f, 0f); // Clamp to a reasonable range
+        float currentValueAll = ((audioLevelAll + 74.8f) / 74.8f) * 100f; // Normalize to 0-100 scale
+        float val = Mathf.Max(currentValueAll, 0f); // Ensure no negative values
+
+        return val;
+
+        /*AudioListener.GetOutputData(samplesAll, 0);
         //musicAudioSource.GetOutputData(samplesMusic, 0);
         float rms = 0f;
         foreach (float sample in samplesAll)
@@ -81,7 +98,8 @@ public class AudioHealthController : MonoBehaviour
         audioLevelAll = Mathf.Clamp(audioLevelAll, -74.8f, 0f); // Clamp to a reasonable range        
         currentValueAll = ((audioLevelAll + 74.8f) / 74.8f) * 100f;
         var val = Math.Max(currentValueAll, 0f);
-        return val;
+        return val;*/
+
         /*
         float rmsN = 0f;
         foreach (float sample in samplesMusic)
