@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class PlayerInHell : MonoBehaviour
+using MoreMountains.Tools;
+    public class PlayerInHell : MonoBehaviour
 {
     public bool inHell;
 
