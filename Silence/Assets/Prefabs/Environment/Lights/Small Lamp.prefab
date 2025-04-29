@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8806187835932216748}
   - component: {fileID: 7646260298356068781}
   - component: {fileID: 1992809575856994677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fixture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 8498542293584717271}
   - component: {fileID: 8636099369582665117}
   - component: {fileID: 1362492613928876743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 2647310451023018824}
   - component: {fileID: 7256826316589681001}
   - component: {fileID: 6948743744475627360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4018802860311456062}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Small Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,15 +999,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2483745226955520851, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7935089473269195797, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
         type: 3}
       propertyPath: m_Name
       value: PF Dungeon Props - Ceiling Chain
       objectReference: {fileID: 0}
+    - target: {fileID: 7935089473269195797, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8042611394871323952, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8415586439914832642, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9072807208709021889, guid: 86d0e9a36a60f6a4485bfb64f13d2ac1,
         type: 3}
@@ -1198,6 +1213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Dungeon Props - Fence Outfall Side 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 390456860282783827, guid: 50730224809c0e44996fa328b77aaa28,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6265670936862214329, guid: 50730224809c0e44996fa328b77aaa28,
         type: 3}
@@ -2001,6 +2021,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4018802860311456062}
     m_Modifications:
+    - target: {fileID: 937346694149598351, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017768416759451464, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072544917711833325, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2582352092538700614, guid: 431e51c0b410e5548b0c958cf3d15a71,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -2061,10 +2096,25 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 4f935b17ca3c4d84fbcb73997407334c, type: 2}
+    - target: {fileID: 5735316943426960261, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7935089473269195797, guid: 431e51c0b410e5548b0c958cf3d15a71,
         type: 3}
       propertyPath: m_Name
       value: PF Dungeon Props - Lamp 01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7935089473269195797, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407000672557572730, guid: 431e51c0b410e5548b0c958cf3d15a71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9072807208709021889, guid: 431e51c0b410e5548b0c958cf3d15a71,
         type: 3}

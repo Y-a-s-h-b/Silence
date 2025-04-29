@@ -40,8 +40,8 @@ namespace MoreMountains.CorgiEngine
 			if (_characterHandleWeapon != null)
 			{
 				_characterHandleWeapon.ChangeWeapon(WeaponToGive, null);
-				
-				if (weaponAnimatorController != null)
+                
+                if (weaponAnimatorController != null)
 				{
 					character.CharacterModel.GetComponent<Animator>().runtimeAnimatorController = weaponAnimatorController;
 				}

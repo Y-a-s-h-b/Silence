@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5362370254107198463}
   - component: {fileID: 4042102901042317038}
   - component: {fileID: 3997380771747467273}
-  - component: {fileID: 8711789436799485137}
   - component: {fileID: 1111887625834269246}
   - component: {fileID: 8556374907457012439}
   - component: {fileID: 3413167019494621528}
+  - component: {fileID: 1282676226179637190}
   m_Layer: 0
   m_Name: Pickable Sword
   m_TagString: Untagged
@@ -139,30 +139,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.72, y: 1.0903218}
   m_EdgeRadius: 0
---- !u!114 &8711789436799485137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2822398426950322177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a57209c136fe49c7877bef014f22ff4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PickFeedbacks: {fileID: 8556374907457012439}
-  DisableObjectOnPick: 1
-  DisableRendererOnPick: 0
-  DisableColliderOnPick: 0
-  DisableTargetObjectOnPick: 0
-  TargetObjectToDisable: {fileID: 0}
-  TargetObjectDisableDelay: 1
-  WeaponToGive: {fileID: 7293977679009917868, guid: 72dc23ebc7ea0034eac93426a28c8679,
-    type: 3}
-  HandleWeaponID: 1
-  weaponAnimatorController: {fileID: 9100000, guid: 0d8d1a5040fc91748bb1aedd35a95a23,
-    type: 2}
 --- !u!114 &1111887625834269246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +424,30 @@ MonoBehaviour:
   OnCharacterExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1282676226179637190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2822398426950322177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99c84ca9c9503745be193538c480539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickFeedbacks: {fileID: 8556374907457012439}
+  DisableObjectOnPick: 1
+  DisableRendererOnPick: 0
+  DisableColliderOnPick: 0
+  DisableTargetObjectOnPick: 0
+  TargetObjectToDisable: {fileID: 0}
+  TargetObjectDisableDelay: 1
+  WeaponToGive: {fileID: 7293977679009917868, guid: 72dc23ebc7ea0034eac93426a28c8679,
+    type: 3}
+  HandleWeaponID: 1
+  weaponAnimatorController: {fileID: 9100000, guid: 0d8d1a5040fc91748bb1aedd35a95a23,
+    type: 2}
 --- !u!1001 &3028090909953948845
 PrefabInstance:
   m_ObjectHideFlags: 0

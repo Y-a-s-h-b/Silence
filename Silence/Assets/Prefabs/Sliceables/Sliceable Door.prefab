@@ -453,7 +453,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 163.58, y: 22, z: 0}
-  m_LocalScale: {x: 1.0878, y: 0.98105973, z: 1.0878}
+  m_LocalScale: {x: 1.0878, y: 1.0878, z: 1.0878}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560707869914665405}
@@ -2352,6 +2352,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2738271139722350673}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: set_layer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 21
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7088358273378434305}
+        m_TargetAssemblyTypeName: Destructible2D.D2dCollider, Destructible2D
+        m_MethodName: Rebuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 3841229954449075871}
         m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
         m_MethodName: set_angularVelocity
@@ -2420,4 +2444,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cce6e3a872e0ec49aeaf85e9bf2cccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0.97, z: 0}
+  offset: {x: 0, y: 0.32, z: 0}
