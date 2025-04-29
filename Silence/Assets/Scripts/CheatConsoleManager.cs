@@ -2,12 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Feedbacks;
 using MoreMountains.CorgiEngine;
-using UnityEditor.Animations;
-using Unity.VisualScripting;
-using UnityEngine.TextCore.Text;
 using Unity.Cinemachine;
-using Demo_Project;
-using System.Collections;
+
 
 public class CheatConsoleManager : MonoBehaviour
 {
@@ -21,7 +17,7 @@ public class CheatConsoleManager : MonoBehaviour
 
     private Dictionary<string, System.Action<bool>> cheatCommands;
     private Dictionary<string, bool> cheatStates = new Dictionary<string, bool>();
-    public AnimatorController playerAnimator;
+    public RuntimeAnimatorController playerAnimator;
     public Weapon WeaponToGive;
     public SceneLoadTrigger sceneLoadTrigger;
     private int currentCheckpointIndex = 0;
@@ -166,6 +162,7 @@ public class CheatConsoleManager : MonoBehaviour
     {
         var levelManager = LevelManager.Instance;
         if (levelManager == null || levelManager.Checkpoints == null || levelManager.Checkpoints.Count == 0) return;
+        levelManager.Initialization();
 
         currentCheckpointIndex = Mathf.Clamp(currentCheckpointIndex + 1, 0, levelManager.Checkpoints.Count - 1);
         TeleportToCheckpoint(levelManager.Checkpoints[currentCheckpointIndex]);
@@ -177,6 +174,7 @@ public class CheatConsoleManager : MonoBehaviour
     {
         var levelManager = LevelManager.Instance;
         if (levelManager == null || levelManager.Checkpoints == null || levelManager.Checkpoints.Count == 0) return;
+        levelManager.Initialization();
 
         currentCheckpointIndex = Mathf.Clamp(currentCheckpointIndex - 1, 0, levelManager.Checkpoints.Count - 1);
         TeleportToCheckpoint(levelManager.Checkpoints[currentCheckpointIndex]);
