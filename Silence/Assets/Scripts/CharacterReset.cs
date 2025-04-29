@@ -20,7 +20,7 @@ public class CharacterReset : MonoBehaviour
         //Animator.runtimeAnimatorController = CharacterAnimator;
         character.GetComponent<CharacterHorizontalMovement>().PermitAbility(true);
         character.GetComponent<CharacterCrouch>().PermitAbility(true);
-        character.GetComponent<CharacterMovementController>().sprintThresholdTime = 2;
+        character.GetComponent<CharacterMovementController>().sprintThresholdTime = 1.5f;
         character.GetComponent<CharacterJump>().PermitAbility(true);
     }
     public void ResetAnimator()

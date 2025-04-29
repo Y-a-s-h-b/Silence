@@ -144,4 +144,8 @@ public class StartSequence : MonoBehaviour
         }
         playFeedback = false;
     }
+    private void OnDisable()
+    {
+        runFeedback.StopFeedbacks() ;   
+    }
 }

@@ -10594,8 +10594,8 @@ MonoBehaviour:
   JumpIsProportionalToThePressTime: 1
   JumpMinimumAirTime: 0.1
   JumpReleaseForceFactor: 2
-  CoyoteTime: 0
-  InputBufferDuration: 0
+  CoyoteTime: 0.1
+  InputBufferDuration: 0.25
   OneWayPlatformsJumpCollisionOffDuration: 0.3
   MovingOneWayPlatformsJumpCollisionOffDuration: 0.2
   MovingPlatformsJumpCollisionOffDuration: 0.05
@@ -10625,7 +10625,7 @@ MonoBehaviour:
   RunLowSpeedThreshold: 1
   ReadInput: 0
   AutoRun: 0
-  AutoRunThreshold: 0.6
+  AutoRunThreshold: 0.3
 --- !u!114 &8435766905576682756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10649,7 +10649,7 @@ MonoBehaviour:
   RunLowSpeedThreshold: 1
   ReadInput: 0
   AutoRun: 0
-  AutoRunThreshold: 0.6
+  AutoRunThreshold: 0.5
 --- !u!114 &7389007516657526004
 MonoBehaviour:
   m_ObjectHideFlags: 0
