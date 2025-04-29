@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine.TextCore.Text;
 using Unity.Cinemachine;
 using Demo_Project;
+using System.Collections;
 
 public class CheatConsoleManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CheatConsoleManager : MonoBehaviour
     private Dictionary<string, bool> cheatStates = new Dictionary<string, bool>();
     public AnimatorController playerAnimator;
     public Weapon WeaponToGive;
+    public SceneLoadTrigger sceneLoadTrigger;
     private int currentCheckpointIndex = 0;
 
     private void Start()
@@ -33,7 +35,8 @@ public class CheatConsoleManager : MonoBehaviour
             { "money", AddMoney },
             { "next", GoToNextCheckpoint },
             { "prev", GoToPreviousCheckpoint },
-            { "skip", SkipCutscene }
+            { "skip", SkipCutscene },
+            { "boss", BossFight }
         };
     }
 
@@ -237,5 +240,20 @@ public class CheatConsoleManager : MonoBehaviour
         }
         TeleportToCheckpoint(levelManager.Checkpoints[currentCheckpointIndex]); 
        
+    }
+    void BossFight(bool isActive)
+    {
+        sceneLoadTrigger.LoadScenes();
+        GoToLastCheckpoint(true);
+    }
+    private void GoToLastCheckpoint(bool isActive)
+    {
+        var levelManager = LevelManager.Instance;
+        if (levelManager == null || levelManager.Checkpoints == null || levelManager.Checkpoints.Count == 0) return;
+        levelManager.Initialization();
+        currentCheckpointIndex = levelManager.Checkpoints.Count - 1;
+        TeleportToCheckpoint(levelManager.Checkpoints[currentCheckpointIndex]);
+
+        Debug.Log("Teleported to last checkpoint.");
     }
 }

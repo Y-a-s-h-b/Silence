@@ -285,7 +285,7 @@ namespace MoreMountains.CorgiEngine
 		/// <summary>
 		/// Gets current camera, points number, start time, etc.
 		/// </summary>
-		protected virtual void Initialization()
+		public virtual void Initialization()
 		{
 			// storage
 			LevelCameraController = FindFirstObjectByType<CameraController>();

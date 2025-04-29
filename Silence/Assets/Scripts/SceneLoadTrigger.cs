@@ -39,7 +39,7 @@ public class SceneLoadTrigger : MonoBehaviour
         }
     }
 
-    private void LoadScenes()
+    public void LoadScenes()
     {
         for (int i = 0; i < _sceneToLoad.Length; i++)
         {
